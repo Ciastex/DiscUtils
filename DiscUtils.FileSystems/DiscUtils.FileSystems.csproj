@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="../common-library.props" />
+
+  <PropertyGroup>
+    <Description>DiscUtils, meta-package with filesystems</Description>
+    <Authors>Kenneth Bell;LordMike</Authors>
+    <PackageTags>DiscUtils;Filesystem;NTFS;</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DiscUtils.Core\DiscUtils.Core.csproj" />
+    <ProjectReference Include="..\DiscUtils.Ntfs\DiscUtils.Ntfs.csproj" />
+  </ItemGroup>
+
+</Project>
