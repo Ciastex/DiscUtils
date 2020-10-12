@@ -4,8 +4,7 @@
     <e p="C:\Users\tcich\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
     <e p="C:\Users\tcich\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_DiscUtils.2037695614.00" t="ExcludeRecursive" />
     <e p="H:\Visual Studio\Projects\DiscUtils" t="IncludeFlat">
-      <e p="DiscUtils.sln" t="IncludeFlat" />
-      <e p="Library\DiscUtils.Containers" t="IncludeRecursive">
+      <e p="DiscUtils.Containers" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="DiscUtils.Containers.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
@@ -20,7 +19,7 @@
         </e>
         <e p="SetupHelper.cs" t="Include" />
       </e>
-      <e p="Library\DiscUtils.Core" t="IncludeRecursive">
+      <e p="DiscUtils.Core" t="IncludeRecursive">
         <e p="ApplePartitionMap" t="Include">
           <e p="BlockZero.cs" t="Include" />
           <e p="PartitionMap.cs" t="Include" />
@@ -206,7 +205,7 @@
         <e p="VolumeManager.cs" t="Include" />
         <e p="WindowsFileInformation.cs" t="Include" />
       </e>
-      <e p="Library\DiscUtils.FileSystems" t="IncludeRecursive">
+      <e p="DiscUtils.FileSystems" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="DiscUtils.FileSystems.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
@@ -221,7 +220,7 @@
         </e>
         <e p="SetupHelper.cs" t="Include" />
       </e>
-      <e p="Library\DiscUtils.Ntfs" t="IncludeRecursive">
+      <e p="DiscUtils.Ntfs" t="IncludeRecursive">
         <e p="AllocateFileFn.cs" t="Include" />
         <e p="AttributeCollationRule.cs" t="Include" />
         <e p="AttributeDefinitionRecord.cs" t="Include" />
@@ -338,7 +337,8 @@
         <e p="VolumeInformationFlags.cs" t="Include" />
         <e p="VolumeName.cs" t="Include" />
       </e>
-      <e p="Library\DiscUtils.Streams" t="IncludeRecursive">
+      <e p="DiscUtils.sln" t="IncludeFlat" />
+      <e p="DiscUtils.Streams" t="IncludeRecursive">
         <e p="AligningStream.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Block" t="Include">
@@ -422,7 +422,7 @@
         <e p="WrappingStream.cs" t="Include" />
         <e p="ZeroStream.cs" t="Include" />
       </e>
-      <e p="Library\DiscUtils.Vhd" t="IncludeRecursive">
+      <e p="DiscUtils.Vhd" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="DiscUtils.Vhd.csproj" t="IncludeRecursive" />
         <e p="Disk.cs" t="Include" />
