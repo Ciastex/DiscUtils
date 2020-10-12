@@ -24,7 +24,6 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
-using System.Security.Principal;
 using DiscUtils.Streams;
 
 namespace DiscUtils.Ntfs
@@ -48,7 +47,7 @@ namespace DiscUtils.Ntfs
             IndexView<OwnerKey, OwnerRecord> ownerIndexView = new IndexView<OwnerKey, OwnerRecord>(ownerIndex);
             IndexView<OwnerRecord, QuotaRecord> quotaIndexView = new IndexView<OwnerRecord, QuotaRecord>(quotaIndox);
 
-            OwnerKey adminSid = new OwnerKey(new SecurityIdentifier(WellKnownSidType.BuiltinAdministratorsSid, null));
+            OwnerKey adminSid = new OwnerKey();
             OwnerRecord adminOwnerId = new OwnerRecord(256);
 
             ownerIndexView[adminSid] = adminOwnerId;

@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\tcich\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\tcich\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_DiscUtils.2037695614.00" t="ExcludeRecursive" />
-    <e p="H:\Visual Studio\Projects\DiscUtils" t="IncludeFlat">
+    <e p="$USER_HOME$/.cache/JetBrains/Rider2020.2/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.cache/JetBrains/Rider2020.2/resharper-host/local/Transient/Rider/v202/SolutionCaches/_DiscUtils.968719703.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="DiscUtils.Containers" t="IncludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
         <e p="DiscUtils.Containers.csproj" t="IncludeRecursive" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netstandard2.0" t="Include">
-              <e p="DiscUtils.Containers.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
         </e>
         <e p="SetupHelper.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard20" t="Include">
+              <e p="DiscUtils.Containers.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
       </e>
       <e p="DiscUtils.Core" t="IncludeRecursive">
         <e p="ApplePartitionMap" t="Include">
@@ -34,20 +34,19 @@
           <e p="TarHeaderExtent.cs" t="Include" />
           <e p="UnixBuildFileRecord.cs" t="Include" />
         </e>
-        <e p="bin" t="ExcludeRecursive" />
         <e p="ChsAddress.cs" t="Include" />
         <e p="ClusterMap.cs" t="Include" />
         <e p="ClusterRoles.cs" t="Include" />
         <e p="Compression" t="Include">
           <e p="Adler32.cs" t="Include" />
-          <e p="BigEndianBitStream.cs" t="Include" />
-          <e p="BitStream.cs" t="Include" />
-          <e p="BlockCompressor.cs" t="Include" />
           <e p="BZip2BlockDecoder.cs" t="Include" />
           <e p="BZip2CombinedHuffmanTrees.cs" t="Include" />
           <e p="BZip2DecoderStream.cs" t="Include" />
           <e p="BZip2Randomizer.cs" t="Include" />
           <e p="BZip2RleStream.cs" t="Include" />
+          <e p="BigEndianBitStream.cs" t="Include" />
+          <e p="BitStream.cs" t="Include" />
+          <e p="BlockCompressor.cs" t="Include" />
           <e p="CompressionResult.cs" t="Include" />
           <e p="DataBlockTransform.cs" t="Include" />
           <e p="HuffmanTree.cs" t="Include" />
@@ -85,6 +84,8 @@
         <e p="IClusterBasedFileSystem.cs" t="Include" />
         <e p="IDiagnosticTraceable.cs" t="Include" />
         <e p="IFileSystem.cs" t="Include" />
+        <e p="IUnixFileSystem.cs" t="Include" />
+        <e p="IWindowsFileSystem.cs" t="Include" />
         <e p="Internal" t="Include">
           <e p="Crc32.cs" t="Include" />
           <e p="Crc32Algorithm.cs" t="Include" />
@@ -101,8 +102,6 @@
           <e p="VirtualDiskTransportAttribute.cs" t="Include" />
         </e>
         <e p="InvalidFileSystemException.cs" t="Include" />
-        <e p="IUnixFileSystem.cs" t="Include" />
-        <e p="IWindowsFileSystem.cs" t="Include" />
         <e p="LogicalDiskManager" t="Include">
           <e p="ComponentRecord.cs" t="Include" />
           <e p="Database.cs" t="Include" />
@@ -125,20 +124,13 @@
         <e p="LogicalVolumeInfo.cs" t="Include" />
         <e p="LogicalVolumeStatus.cs" t="Include" />
         <e p="NativeFileSystem.cs" t="Include" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netstandard2.0" t="Include">
-              <e p="DiscUtils.Core.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
         <e p="Partitions" t="Include">
           <e p="BiosExtendedPartitionTable.cs" t="Include" />
-          <e p="BiosPartitionedDiskBuilder.cs" t="Include" />
           <e p="BiosPartitionInfo.cs" t="Include" />
           <e p="BiosPartitionRecord.cs" t="Include" />
           <e p="BiosPartitionTable.cs" t="Include" />
           <e p="BiosPartitionTypes.cs" t="Include" />
+          <e p="BiosPartitionedDiskBuilder.cs" t="Include" />
           <e p="DefaultPartitionTableFactory.cs" t="Include" />
           <e p="GptEntry.cs" t="Include" />
           <e p="GptHeader.cs" t="Include" />
@@ -204,10 +196,22 @@
         <e p="VolumeInfo.cs" t="Include" />
         <e p="VolumeManager.cs" t="Include" />
         <e p="WindowsFileInformation.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="DiscUtils.Core.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
       </e>
       <e p="DiscUtils.FileSystems" t="IncludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
         <e p="DiscUtils.FileSystems.csproj" t="IncludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="SetupHelper.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netstandard2.0" t="Include">
@@ -215,10 +219,6 @@
             </e>
           </e>
         </e>
-        <e p="Properties" t="Include">
-          <e p="AssemblyInfo.cs" t="Include" />
-        </e>
-        <e p="SetupHelper.cs" t="Include" />
       </e>
       <e p="DiscUtils.Ntfs" t="IncludeRecursive">
         <e p="AllocateFileFn.cs" t="Include" />
@@ -232,7 +232,6 @@
         <e p="AttributeReference.cs" t="Include" />
         <e p="AttributeType.cs" t="Include" />
         <e p="AttributeTypeFlags.cs" t="Include" />
-        <e p="bin" t="ExcludeRecursive" />
         <e p="BiosParameterBlock.cs" t="Include" />
         <e p="Bitmap.cs" t="Include" />
         <e p="ClusterBitmap.cs" t="Include" />
@@ -259,6 +258,9 @@
         <e p="GetDirectoryByRefFn.cs" t="Include" />
         <e p="GetFileByIndexFn.cs" t="Include" />
         <e p="GetFileByRefFn.cs" t="Include" />
+        <e p="INtfsContext.cs" t="Include" />
+        <e p="IdentifierAuthority.cs" t="Include" />
+        <e p="IdentityReference.cs" t="Include" />
         <e p="Index.cs" t="Include" />
         <e p="IndexBlock.cs" t="Include" />
         <e p="IndexEntry.cs" t="Include" />
@@ -288,10 +290,10 @@
           <e p="StandardInformationAttribute.cs" t="Include" />
           <e p="UnknownAttribute.cs" t="Include" />
         </e>
-        <e p="INtfsContext.cs" t="Include" />
         <e p="LZNT1.cs" t="Include" />
         <e p="LzWindowDictionary.cs" t="Include" />
         <e p="MasterFileTable.cs" t="Include" />
+        <e p="NTAccount.cs" t="Include" />
         <e p="NewFileOptions.cs" t="Include" />
         <e p="NonResidentAttributeBuffer.cs" t="Include" />
         <e p="NonResidentAttributeRecord.cs" t="Include" />
@@ -307,13 +309,6 @@
         <e p="NtfsOptions.cs" t="Include" />
         <e p="NtfsStream.cs" t="Include" />
         <e p="NtfsTransaction.cs" t="Include" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netstandard2.0" t="Include">
-              <e p="DiscUtils.Ntfs.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
         <e p="ObjectId.cs" t="Include" />
         <e p="ObjectIdRecord.cs" t="Include" />
         <e p="ObjectIds.cs" t="Include" />
@@ -328,6 +323,7 @@
         <e p="SecurityDescriptor.cs" t="Include" />
         <e p="SecurityDescriptorRecord.cs" t="Include" />
         <e p="SecurityDescriptors.cs" t="Include" />
+        <e p="SecurityIdentifier.cs" t="Include" />
         <e p="ShortFileNameOption.cs" t="Include" />
         <e p="SparseClusterStream.cs" t="Include" />
         <e p="StandardInformation.cs" t="Include" />
@@ -336,11 +332,18 @@
         <e p="VolumeInformation.cs" t="Include" />
         <e p="VolumeInformationFlags.cs" t="Include" />
         <e p="VolumeName.cs" t="Include" />
+        <e p="WellKnownSidType.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="DiscUtils.Ntfs.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
       </e>
-      <e p="DiscUtils.sln" t="IncludeFlat" />
       <e p="DiscUtils.Streams" t="IncludeRecursive">
         <e p="AligningStream.cs" t="Include" />
-        <e p="bin" t="ExcludeRecursive" />
         <e p="Block" t="Include">
           <e p="Block.cs" t="Include" />
           <e p="BlockCache.cs" t="Include" />
@@ -375,13 +378,6 @@
         <e p="LengthWrappingStream.cs" t="Include" />
         <e p="MappedStream.cs" t="Include" />
         <e p="MirrorStream.cs" t="Include" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netstandard2.0" t="Include">
-              <e p="DiscUtils.Streams.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
         <e p="PositionWrappingStream.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
@@ -421,9 +417,28 @@
         <e p="WrappingMappedStream.cs" t="Include" />
         <e p="WrappingStream.cs" t="Include" />
         <e p="ZeroStream.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="DiscUtils.Streams.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="DiscUtils.Test" t="IncludeRecursive">
+        <e p="DiscUtils.Test.csproj" t="IncludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="DiscUtils.Test.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
       </e>
       <e p="DiscUtils.Vhd" t="IncludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
         <e p="DiscUtils.Vhd.csproj" t="IncludeRecursive" />
         <e p="Disk.cs" t="Include" />
         <e p="DiskBuilder.cs" t="Include" />
@@ -438,6 +453,11 @@
         <e p="FileType.cs" t="Include" />
         <e p="Footer.cs" t="Include" />
         <e p="Header.cs" t="Include" />
+        <e p="ParentLocator.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netstandard2.0" t="Include">
@@ -445,11 +465,8 @@
             </e>
           </e>
         </e>
-        <e p="ParentLocator.cs" t="Include" />
-        <e p="Properties" t="Include">
-          <e p="AssemblyInfo.cs" t="Include" />
-        </e>
       </e>
+      <e p="DiscUtils.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
     </e>
   </component>

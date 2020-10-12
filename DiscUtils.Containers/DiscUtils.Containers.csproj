@@ -12,13 +12,7 @@
     <Authors>Kenneth Bell;LordMike</Authors>
     <PackageTags>DiscUtils;VHD;VHDX;XVA;VMDK;DMG</PackageTags>
 
-    <TargetFramework>netstandard2.0</TargetFramework>
-
-    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
-    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
-    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
-    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-    <GenerateNeutralResourcesLanguageAttribute>false</GenerateNeutralResourcesLanguageAttribute>
+    <TargetFramework>netstandard20</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>

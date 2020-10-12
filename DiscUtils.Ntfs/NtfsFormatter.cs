@@ -22,8 +22,7 @@
 
 using System;
 using System.IO;
-using System.Security.AccessControl;
-using System.Security.Principal;
+using System.Security.AccessControl; // to fix
 using DiscUtils.Streams;
 
 namespace DiscUtils.Ntfs
@@ -60,7 +59,7 @@ namespace DiscUtils.Ntfs
 
             string localAdminString = ComputerAccount == null
                 ? "LA"
-                : new SecurityIdentifier(WellKnownSidType.AccountAdministratorSid, ComputerAccount).ToString();
+                : "S-1-1-0";
 
             using (new NtfsTransaction())
             {
@@ -101,7 +100,7 @@ namespace DiscUtils.Ntfs
 
                 _context.Mft = new MasterFileTable(_context);
                 File mftFile = _context.Mft.InitializeNew(_context, mftBitmapCluster, (ulong)numMftBitmapClusters,
-                                           _mftCluster, (ulong)numMftClusters);
+                    _mftCluster, (ulong)numMftClusters);
 
                 File bitmapFile = CreateFixedSystemFile(MasterFileTable.BitmapIndex, _bitmapCluster,
                     (ulong)numBitmapClusters, true);
@@ -252,7 +251,7 @@ namespace DiscUtils.Ntfs
             ntfs.SetSecurity("System Volume Information", new RawSecurityDescriptor("O:BAG:SYD:(A;OICI;FA;;;SY)"));
 
             using (
-                Stream s = ntfs.OpenFile(@"System Volume Information\MountPointManagerRemoteDatabase", FileMode.Create)) {}
+                Stream s = ntfs.OpenFile(@"System Volume Information\MountPointManagerRemoteDatabase", FileMode.Create)) { }
 
             ntfs.SetAttributes(@"System Volume Information\MountPointManagerRemoteDatabase",
                 FileAttributes.Hidden | FileAttributes.System | FileAttributes.Archive);

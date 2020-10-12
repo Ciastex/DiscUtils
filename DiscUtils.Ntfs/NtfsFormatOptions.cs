@@ -20,8 +20,6 @@
 // DEALINGS IN THE SOFTWARE.
 //
 
-using System.Security.Principal;
-
 namespace DiscUtils.Ntfs
 {
     /// <summary>

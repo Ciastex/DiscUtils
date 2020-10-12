@@ -18,6 +18,7 @@
     <projectFile>Utilities/VHDXDump/VHDXDump.csproj</projectFile>
     <projectFile>Utilities/VirtualDiskConvert/VirtualDiskConvert.csproj</projectFile>
     <projectFile>Utilities/VolInfo/VolInfo.csproj</projectFile>
+    <projectFile>DiscUtils.Test/DiscUtils.Test.csproj</projectFile>
   </component>
   <component name="BranchesTreeState">
     <expand>
@@ -45,14 +46,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d474c619-74ba-4a7b-a15d-3a1eb8a72c59" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/IdentifierAuthority.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/IdentityReference.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/NTAccount.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/SecurityIdentifier.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/WellKnownSidType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiscUtils.Test/DiscUtils.Test.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiscUtils.Test/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DiscUtils/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DiscUtils/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DiscUtils/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DiscUtils/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Containers/DiscUtils.Containers.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Containers/DiscUtils.Containers.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/DiscUtils.Core.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/DiscUtils.Core.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.FileSystems/DiscUtils.FileSystems.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.FileSystems/DiscUtils.FileSystems.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/DiscUtils.Ntfs.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/DiscUtils.Ntfs.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Streams/DiscUtils.Streams.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Streams/DiscUtils.Streams.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Vhd/DiscUtils.Vhd.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Vhd/DiscUtils.Vhd.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsFormatOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsFormatOptions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsFormatter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsFormatter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/Quotas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/Quotas.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.sln" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +69,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/E791C011-E6DD-4D31-9D04-518086BDE4C9/1/System.Security.Principal.Windows.notsupported.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DiscUtils.Test/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/97A7E728-A244-46EF-A446-E63997EF076D/74/105e0a04/RawSecurityDescriptor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E791C011-E6DD-4D31-9D04-518086BDE4C9/3d/540bdc95/WellKnownSidType.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3936499B-20A3-477B-9BBB-3A7637354E96/3/System.Security.AccessControl.notsupported.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -79,10 +94,22 @@
         <option value="$PROJECT_DIR$/Library/DiscUtils.FileSystems/DiscUtils.FileSystems.csproj" />
         <option value="$PROJECT_DIR$/DiscUtils.Streams/DiscUtils.Streams.csproj" />
         <option value="$PROJECT_DIR$/DiscUtils.Vhd/DiscUtils.Vhd.csproj" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/DiscUtils.Ntfs.csproj" />
         <option value="$PROJECT_DIR$/DiscUtils.FileSystems/DiscUtils.FileSystems.csproj" />
         <option value="$PROJECT_DIR$/DiscUtils.Core/DiscUtils.Core.csproj" />
         <option value="$PROJECT_DIR$/DiscUtils.Containers/DiscUtils.Containers.csproj" />
+        <option value="$PROJECT_DIR$/DiscUtils.Test/DiscUtils.Test.csproj" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/DiscUtils.Ntfs.csproj" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/IdentityReference.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/NTAccount.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsFormatOptions.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/IdentifierAuthority.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Test/Program.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WellKnownSidType.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/Quotas.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsFileSystem.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/SecurityIdentifier.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/GenericSecurityDescriptor.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsFormatter.cs" />
       </list>
     </option>
   </component>
@@ -95,312 +122,28 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.35035914" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30007982" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="SolutionBuilderGeneralOptionsPageId" />
   </component>
-  <component name="RunManager" selected=".NET Project.BCDDump">
-    <configuration name="BCDDump" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
+  <component name="RunManager">
+    <configuration name="DiscUtils.Test" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/DiscUtils.Test/bin/Debug/netcoreapp3.1/DiscUtils.Test.dll" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DiscUtils.Test/bin/Debug/netcoreapp3.1" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/Utilities/BCDDump/BCDDump.csproj" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/DiscUtils.Test/DiscUtils.Test.csproj" />
       <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
       <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
-      <method v="2">
-        <option name="Build" />
-      </method>
-    </configuration>
-    <configuration name="DiskClone" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="USE_MONO" value="0" />
-      <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/Utilities/DiskClone/DiskClone.csproj" />
-      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
-      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
-      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
-      <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
-      <method v="2">
-        <option name="Build" />
-      </method>
-    </configuration>
-    <configuration name="DiskDump" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="USE_MONO" value="0" />
-      <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/Utilities/DiskDump/DiskDump.csproj" />
-      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
-      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
-      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
-      <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
-      <method v="2">
-        <option name="Build" />
-      </method>
-    </configuration>
-    <configuration name="DmgExtract" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="USE_MONO" value="0" />
-      <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/Utilities/DmgExtract/DmgExtract.csproj" />
-      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
-      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
-      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
-      <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
-      <method v="2">
-        <option name="Build" />
-      </method>
-    </configuration>
-    <configuration name="ExternalFileSystem" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="USE_MONO" value="0" />
-      <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/Utilities/ExternalFileSystem/ExternalFileSystem.csproj" />
-      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
-      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
-      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
-      <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
-      <method v="2">
-        <option name="Build" />
-      </method>
-    </configuration>
-    <configuration name="FileExtract" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="USE_MONO" value="0" />
-      <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/Utilities/FileExtract/FileExtract.csproj" />
-      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
-      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
-      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
-      <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
-      <method v="2">
-        <option name="Build" />
-      </method>
-    </configuration>
-    <configuration name="FileRecover" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="USE_MONO" value="0" />
-      <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/Utilities/FileRecover/FileRecover.csproj" />
-      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
-      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
-      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
-      <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
-      <method v="2">
-        <option name="Build" />
-      </method>
-    </configuration>
-    <configuration name="ISOCreate" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="USE_MONO" value="0" />
-      <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/Utilities/ISOCreate/ISOCreate.csproj" />
-      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
-      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
-      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
-      <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
-      <method v="2">
-        <option name="Build" />
-      </method>
-    </configuration>
-    <configuration name="NTFSDump" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="USE_MONO" value="0" />
-      <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/Utilities/NTFSDump/NTFSDump.csproj" />
-      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
-      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
-      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
-      <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
-      <method v="2">
-        <option name="Build" />
-      </method>
-    </configuration>
-    <configuration name="ODSBrowse" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="USE_MONO" value="0" />
-      <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/Utilities/ODSBrowse/ODSBrowse.csproj" />
-      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
-      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
-      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
-      <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
-      <method v="2">
-        <option name="Build" />
-      </method>
-    </configuration>
-    <configuration name="OSClone" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="USE_MONO" value="0" />
-      <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/Utilities/OSClone/OSClone.csproj" />
-      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
-      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
-      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
-      <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
-      <method v="2">
-        <option name="Build" />
-      </method>
-    </configuration>
-    <configuration name="VHDCreate" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="USE_MONO" value="0" />
-      <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/Utilities/VHDCreate/VHDCreate.csproj" />
-      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
-      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
-      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
-      <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
-      <method v="2">
-        <option name="Build" />
-      </method>
-    </configuration>
-    <configuration name="VHDDump" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="USE_MONO" value="0" />
-      <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/Utilities/VHDDump/VHDDump.csproj" />
-      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
-      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
-      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
-      <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
-      <method v="2">
-        <option name="Build" />
-      </method>
-    </configuration>
-    <configuration name="VHDXDump" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="USE_MONO" value="0" />
-      <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/Utilities/VHDXDump/VHDXDump.csproj" />
-      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
-      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
-      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
-      <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
-      <method v="2">
-        <option name="Build" />
-      </method>
-    </configuration>
-    <configuration name="VirtualDiskConvert" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="USE_MONO" value="0" />
-      <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/Utilities/VirtualDiskConvert/VirtualDiskConvert.csproj" />
-      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
-      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
-      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
-      <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
-      <method v="2">
-        <option name="Build" />
-      </method>
-    </configuration>
-    <configuration name="VolInfo" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="USE_MONO" value="0" />
-      <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/Utilities/VolInfo/VolInfo.csproj" />
-      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
-      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
-      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
-      <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
-      <method v="2">
-        <option name="Build" />
-      </method>
-    </configuration>
-    <configuration name="iSCSIBrowse" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="USE_MONO" value="0" />
-      <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/Utilities/iSCSIBrowse/iSCSIBrowse.csproj" />
-      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
-      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
-      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
-      <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v3.1" />
       <method v="2">
         <option name="Build" />
       </method>
@@ -417,8 +160,139 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="165" y="0" width="1071" height="768" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602515042809">
+      <screen x="36" y="0" width="1330" height="768" />
+    </state>
+    <state x="165" y="0" width="1071" height="768" key="#com.intellij.execution.impl.EditConfigurationsDialog/36.0.1330.768@36.0.1330.768" timestamp="1602515042809" />
+    <state x="495" y="142" key="FileChooserDialogImpl" timestamp="1602511472353">
+      <screen x="36" y="0" width="1330" height="768" />
+    </state>
+    <state x="495" y="142" key="FileChooserDialogImpl/36.0.1330.768@36.0.1330.768" timestamp="1602511472353" />
+    <state width="1284" height="256" key="GridCell.Tab.0.bottom" timestamp="1602522543314">
+      <screen x="36" y="0" width="1330" height="768" />
+    </state>
+    <state width="1284" height="256" key="GridCell.Tab.0.bottom/36.0.1330.768@36.0.1330.768" timestamp="1602522543314" />
+    <state width="1284" height="256" key="GridCell.Tab.0.center" timestamp="1602522543314">
+      <screen x="36" y="0" width="1330" height="768" />
+    </state>
+    <state width="1284" height="256" key="GridCell.Tab.0.center/36.0.1330.768@36.0.1330.768" timestamp="1602522543314" />
+    <state width="1284" height="256" key="GridCell.Tab.0.left" timestamp="1602522543313">
+      <screen x="36" y="0" width="1330" height="768" />
+    </state>
+    <state width="1284" height="256" key="GridCell.Tab.0.left/36.0.1330.768@36.0.1330.768" timestamp="1602522543313" />
+    <state width="1284" height="256" key="GridCell.Tab.0.right" timestamp="1602522543314">
+      <screen x="36" y="0" width="1330" height="768" />
+    </state>
+    <state width="1284" height="256" key="GridCell.Tab.0.right/36.0.1330.768@36.0.1330.768" timestamp="1602522543314" />
+    <state width="1284" height="256" key="GridCell.Tab.1.bottom" timestamp="1602522543315">
+      <screen x="36" y="0" width="1330" height="768" />
+    </state>
+    <state width="1284" height="256" key="GridCell.Tab.1.bottom/36.0.1330.768@36.0.1330.768" timestamp="1602522543315" />
+    <state width="1284" height="256" key="GridCell.Tab.1.center" timestamp="1602522543314">
+      <screen x="36" y="0" width="1330" height="768" />
+    </state>
+    <state width="1284" height="256" key="GridCell.Tab.1.center/36.0.1330.768@36.0.1330.768" timestamp="1602522543314" />
+    <state width="1284" height="256" key="GridCell.Tab.1.left" timestamp="1602522543314">
+      <screen x="36" y="0" width="1330" height="768" />
+    </state>
+    <state width="1284" height="256" key="GridCell.Tab.1.left/36.0.1330.768@36.0.1330.768" timestamp="1602522543314" />
+    <state width="1284" height="256" key="GridCell.Tab.1.right" timestamp="1602522543314">
+      <screen x="36" y="0" width="1330" height="768" />
+    </state>
+    <state width="1284" height="256" key="GridCell.Tab.1.right/36.0.1330.768@36.0.1330.768" timestamp="1602522543314" />
+    <state width="1284" height="256" key="GridCell.Tab.2.bottom" timestamp="1602522543315">
+      <screen x="36" y="0" width="1330" height="768" />
+    </state>
+    <state width="1284" height="256" key="GridCell.Tab.2.bottom/36.0.1330.768@36.0.1330.768" timestamp="1602522543315" />
+    <state width="1284" height="256" key="GridCell.Tab.2.center" timestamp="1602522543315">
+      <screen x="36" y="0" width="1330" height="768" />
+    </state>
+    <state width="1284" height="256" key="GridCell.Tab.2.center/36.0.1330.768@36.0.1330.768" timestamp="1602522543315" />
+    <state width="1284" height="256" key="GridCell.Tab.2.left" timestamp="1602522543315">
+      <screen x="36" y="0" width="1330" height="768" />
+    </state>
+    <state width="1284" height="256" key="GridCell.Tab.2.left/36.0.1330.768@36.0.1330.768" timestamp="1602522543315" />
+    <state width="1284" height="256" key="GridCell.Tab.2.right" timestamp="1602522543315">
+      <screen x="36" y="0" width="1330" height="768" />
+    </state>
+    <state width="1284" height="256" key="GridCell.Tab.2.right/36.0.1330.768@36.0.1330.768" timestamp="1602522543315" />
+    <state width="1284" height="256" key="GridCell.Tab.3.bottom" timestamp="1602522543316">
+      <screen x="36" y="0" width="1330" height="768" />
+    </state>
+    <state width="1284" height="256" key="GridCell.Tab.3.bottom/36.0.1330.768@36.0.1330.768" timestamp="1602522543316" />
+    <state width="1284" height="256" key="GridCell.Tab.3.center" timestamp="1602522543315">
+      <screen x="36" y="0" width="1330" height="768" />
+    </state>
+    <state width="1284" height="256" key="GridCell.Tab.3.center/36.0.1330.768@36.0.1330.768" timestamp="1602522543315" />
+    <state width="1284" height="256" key="GridCell.Tab.3.left" timestamp="1602522543315">
+      <screen x="36" y="0" width="1330" height="768" />
+    </state>
+    <state width="1284" height="256" key="GridCell.Tab.3.left/36.0.1330.768@36.0.1330.768" timestamp="1602522543315" />
+    <state width="1284" height="256" key="GridCell.Tab.3.right" timestamp="1602522543316">
+      <screen x="36" y="0" width="1330" height="768" />
+    </state>
+    <state width="1284" height="256" key="GridCell.Tab.3.right/36.0.1330.768@36.0.1330.768" timestamp="1602522543316" />
+    <state width="1284" height="256" key="GridCell.Tab.4.bottom" timestamp="1602522543317">
+      <screen x="36" y="0" width="1330" height="768" />
+    </state>
+    <state width="1284" height="256" key="GridCell.Tab.4.bottom/36.0.1330.768@36.0.1330.768" timestamp="1602522543317" />
+    <state width="1284" height="256" key="GridCell.Tab.4.center" timestamp="1602522543316">
+      <screen x="36" y="0" width="1330" height="768" />
+    </state>
+    <state width="1284" height="256" key="GridCell.Tab.4.center/36.0.1330.768@36.0.1330.768" timestamp="1602522543316" />
+    <state width="1284" height="256" key="GridCell.Tab.4.left" timestamp="1602522543316">
+      <screen x="36" y="0" width="1330" height="768" />
+    </state>
+    <state width="1284" height="256" key="GridCell.Tab.4.left/36.0.1330.768@36.0.1330.768" timestamp="1602522543316" />
+    <state width="1284" height="256" key="GridCell.Tab.4.right" timestamp="1602522543316">
+      <screen x="36" y="0" width="1330" height="768" />
+    </state>
+    <state width="1284" height="256" key="GridCell.Tab.4.right/36.0.1330.768@36.0.1330.768" timestamp="1602522543316" />
+    <state x="301" y="119" key="Rider.ProjectTemplateDialog.Size" timestamp="1602510534533">
+      <screen x="36" y="0" width="1330" height="768" />
+    </state>
+    <state x="301" y="119" key="Rider.ProjectTemplateDialog.Size/36.0.1330.768@36.0.1330.768" timestamp="1602510534533" />
+    <state x="202" y="19" key="SettingsEditor" timestamp="1602511542496">
+      <screen x="36" y="0" width="1330" height="768" />
+    </state>
+    <state x="202" y="19" key="SettingsEditor/36.0.1330.768@36.0.1330.768" timestamp="1602511542496" />
+    <state x="509" y="299" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602520065036">
+      <screen x="36" y="0" width="1330" height="768" />
+    </state>
+    <state x="509" y="299" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/36.0.1330.768@36.0.1330.768" timestamp="1602520065036" />
+    <state x="36" y="0" width="688" height="768" key="find.popup" timestamp="1602514334145">
+      <screen x="36" y="0" width="1330" height="768" />
+    </state>
+    <state x="36" y="0" width="688" height="768" key="find.popup/36.0.1330.768@36.0.1330.768" timestamp="1602514334145" />
+    <state x="364" y="88" width="672" height="678" key="search.everywhere.popup" timestamp="1602521784168">
+      <screen x="36" y="0" width="1330" height="768" />
+    </state>
+    <state x="364" y="88" width="672" height="678" key="search.everywhere.popup/36.0.1330.768@36.0.1330.768" timestamp="1602521784168" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/DiscUtils.Test/Program.cs</url>
+          <line>23</line>
+          <properties documentPath="$PROJECT_DIR$/DiscUtils.Test/Program.cs" initialLine="23">
+            <startOffsets>
+              <option value="727" />
+            </startOffsets>
+            <endOffsets>
+              <option value="796" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
