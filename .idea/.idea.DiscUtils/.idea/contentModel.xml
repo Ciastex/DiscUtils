@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="$USER_HOME$/.cache/JetBrains/Rider2020.2/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/.cache/JetBrains/Rider2020.2/resharper-host/local/Transient/Rider/v202/SolutionCaches/_DiscUtils.968719703.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/.cache/JetBrains/Rider2020.2/resharper-host/local/Transient/Rider/v202/SolutionCaches/_DiscUtils.700737081.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="DiscUtils.Containers" t="IncludeRecursive">
         <e p="DiscUtils.Containers.csproj" t="IncludeRecursive" />
@@ -259,8 +259,6 @@
         <e p="GetFileByIndexFn.cs" t="Include" />
         <e p="GetFileByRefFn.cs" t="Include" />
         <e p="INtfsContext.cs" t="Include" />
-        <e p="IdentifierAuthority.cs" t="Include" />
-        <e p="IdentityReference.cs" t="Include" />
         <e p="Index.cs" t="Include" />
         <e p="IndexBlock.cs" t="Include" />
         <e p="IndexEntry.cs" t="Include" />
@@ -293,7 +291,6 @@
         <e p="LZNT1.cs" t="Include" />
         <e p="LzWindowDictionary.cs" t="Include" />
         <e p="MasterFileTable.cs" t="Include" />
-        <e p="NTAccount.cs" t="Include" />
         <e p="NewFileOptions.cs" t="Include" />
         <e p="NonResidentAttributeBuffer.cs" t="Include" />
         <e p="NonResidentAttributeRecord.cs" t="Include" />
@@ -323,7 +320,6 @@
         <e p="SecurityDescriptor.cs" t="Include" />
         <e p="SecurityDescriptorRecord.cs" t="Include" />
         <e p="SecurityDescriptors.cs" t="Include" />
-        <e p="SecurityIdentifier.cs" t="Include" />
         <e p="ShortFileNameOption.cs" t="Include" />
         <e p="SparseClusterStream.cs" t="Include" />
         <e p="StandardInformation.cs" t="Include" />
@@ -333,6 +329,12 @@
         <e p="VolumeInformationFlags.cs" t="Include" />
         <e p="VolumeName.cs" t="Include" />
         <e p="WellKnownSidType.cs" t="Include" />
+        <e p="WindowsSecurity" t="Include">
+          <e p="IdentifierAuthority.cs" t="Include" />
+          <e p="IdentityReference.cs" t="Include" />
+          <e p="NTAccount.cs" t="Include" />
+          <e p="SecurityIdentifier.cs" t="Include" />
+        </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">

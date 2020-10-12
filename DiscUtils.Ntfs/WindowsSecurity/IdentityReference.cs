@@ -1,6 +1,6 @@
 using System;
 
-namespace DiscUtils.Ntfs
+namespace DiscUtils.Ntfs.WindowsSecurity
 {
 	public abstract class IdentityReference
 	{

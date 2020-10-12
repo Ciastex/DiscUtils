@@ -1,8 +1,9 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 
-namespace DiscUtils.Ntfs
+namespace DiscUtils.Ntfs.WindowsSecurity
 {
     [ComVisible(false)]
     public sealed class SecurityIdentifier : IdentityReference, IComparable<SecurityIdentifier>
@@ -10,16 +11,18 @@ namespace DiscUtils.Ntfs
         private string _value;
         private byte[] _binaryForm;
 
+        private IdentifierAuthority _identifierAuthority;
+        private int[] _subAuthorities;
+
         public static readonly int MaxBinaryLength;
         public static readonly int MinBinaryLength;
 
+        public int BinaryLength => _binaryForm.Length;
+        public override string Value => _value;
+
         public SecurityIdentifier(string sddlForm)
         {
-            if (sddlForm == null)
-            {
-                throw new ArgumentNullException("sddlForm");
-            }
-            this._value = sddlForm.ToUpperInvariant();
+            _value = sddlForm.ToUpperInvariant();
         }
 
         public SecurityIdentifier(byte[] binaryForm, int offset)
@@ -29,59 +32,15 @@ namespace DiscUtils.Ntfs
 
         public SecurityIdentifier(WellKnownSidType sidType, SecurityIdentifier domainSid)
         {
-            CreateFromBinaryForm(new byte[] {1, 1, 0, 0, 0, 0, 0, 0, 0}, 0);
+            GetBinaryForm($"S-1-1-{(int)domainSid._identifierAuthority}-{sidType}");
         }
-
-        public SecurityIdentifier AccountDomainSid => throw new ArgumentNullException("AccountDomainSid");
-
-        public int BinaryLength => -1;
-
-        public override string Value => _value;
-
-        public int CompareTo(SecurityIdentifier sid)
-            => Value.CompareTo(sid.Value);
-
-        public override bool Equals(object o)
-            => Equals(o as SecurityIdentifier);
-
-        public bool Equals(SecurityIdentifier sid)
-            => !(sid == null) && sid.Value == this.Value;
-
-        public void GetBinaryForm(byte[] binaryForm, int offset)
-        {
-            if (binaryForm == null)
-            {
-                throw new ArgumentNullException("binaryForm");
-            }
-            if (offset < 0 || offset > binaryForm.Length - 1 - this.BinaryLength)
-            {
-                throw new ArgumentException("offset");
-            }
-        }
-
-        public override int GetHashCode()
-            => Value.GetHashCode();
-
-        public override bool IsValidTargetType(Type targetType)
-            => targetType == typeof(SecurityIdentifier) || targetType == typeof(NTAccount);
-
-        public override string ToString()
-            => Value;
 
         private void CreateFromBinaryForm(byte[] binaryForm, int offset)
         {
-            //
-            // Give us something to work with
-            //
-
             if (binaryForm == null)
             {
                 throw new ArgumentNullException(nameof(binaryForm));
             }
-
-            //
-            // Negative offsets are not allowed
-            //
 
             if (offset < 0)
             {
@@ -90,10 +49,6 @@ namespace DiscUtils.Ntfs
                     offset,
                     "need non negative num");
             }
-
-            //
-            // At least a minimum-size SID should fit in the buffer
-            //
 
             if (binaryForm.Length - offset < MinBinaryLength)
             {
@@ -105,43 +60,21 @@ namespace DiscUtils.Ntfs
             IdentifierAuthority Authority;
             int[] SubAuthorities;
 
-            //
-            // Extract the elements of a SID
-            //
-
             if (binaryForm[offset] != 1)
             {
-                //
-                // Revision is incorrect
-                //
-
-                throw new ArgumentException(
-                    "sid revision invalid",
-                    nameof(binaryForm));
+                throw new ArgumentException("sid revision invalid", nameof(binaryForm));
             }
-
-            //
-            // Insist on the correct number of subauthorities
-            //
 
             if (binaryForm[offset + 1] > 15)
             {
-                throw new ArgumentException(
-                    "max is 15",
-                    nameof(binaryForm));
+                throw new ArgumentException("max authorities is 15", nameof(binaryForm));
             }
 
-            //
-            // Make sure the buffer is big enough
-            //
+            int length = 1 + 1 + 6 + 4 * binaryForm[offset + 1];
 
-            int Length = 1 + 1 + 6 + 4 * binaryForm[offset + 1];
-
-            if (binaryForm.Length - offset < Length)
+            if (binaryForm.Length - offset < length)
             {
-                throw new ArgumentException(
-                    "array too smol",
-                    nameof(binaryForm));
+                throw new ArgumentException("array too small", nameof(binaryForm));
             }
 
             Authority =
@@ -154,10 +87,6 @@ namespace DiscUtils.Ntfs
                     (((long)binaryForm[offset + 7])));
 
             SubAuthorities = new int[binaryForm[offset + 1]];
-
-            //
-            // Subauthorities are represented in big-endian format
-            //
 
             for (byte i = 0; i < binaryForm[offset + 1]; i++)
             {
@@ -173,12 +102,55 @@ namespace DiscUtils.Ntfs
             }
 
             CreateFromParts(Authority, SubAuthorities);
-
-            return;
         }
 
-        private IdentifierAuthority _identifierAuthority;
-        private int[] _subAuthorities;
+        public void GetBinaryForm(byte[] bytes, int offset)
+            => _binaryForm = bytes;
+
+        public void GetBinaryForm(string sddlForm)
+        {
+            if (sddlForm == null)
+            {
+                throw new ArgumentNullException("sddlForm");
+            }
+
+            var bytes = new List<byte>();
+            var nums = sddlForm.Split('-').Skip(1).ToArray();
+
+            bytes.AddRange(BitConverter.GetBytes(byte.Parse(nums[0]))); // revision
+            bytes.AddRange(BitConverter.GetBytes(byte.Parse(nums[1]))); // dash count
+            bytes.AddRange(new byte[] {0, 0});
+            bytes.AddRange(BitConverter.GetBytes(int.Parse(nums[2])).Reverse());
+            bytes.AddRange(BitConverter.GetBytes(int.Parse(nums[3])));
+
+            if (nums.Length > 4)
+            {
+                for (var i = 4; i < nums.Length; i++)
+                {
+                    bytes.AddRange(BitConverter.GetBytes(int.Parse(nums[i])));
+                }
+            }
+
+            _binaryForm = bytes.ToArray();
+        }
+
+        public int CompareTo(SecurityIdentifier sid)
+            => string.Compare(Value, sid.Value, StringComparison.Ordinal);
+
+        public override bool Equals(object o)
+            => Equals(o as SecurityIdentifier);
+
+        public bool Equals(SecurityIdentifier sid)
+            => !(sid == null) && sid.Value == Value;
+
+        public override int GetHashCode()
+            => Value.GetHashCode();
+
+        public override bool IsValidTargetType(Type targetType)
+            => targetType == typeof(SecurityIdentifier) || targetType == typeof(NTAccount);
+
+        public override string ToString()
+            => Value;
 
         private void CreateFromParts(IdentifierAuthority identifierAuthority, int[] subAuthorities)
         {
@@ -187,72 +159,40 @@ namespace DiscUtils.Ntfs
                 throw new ArgumentNullException(nameof(subAuthorities));
             }
 
-            //
-            // Check the number of subauthorities passed in
-            //
-
             if (subAuthorities.Length > 15)
             {
                 throw new ArgumentOutOfRangeException(
                     "subAuthorities.Length",
                     subAuthorities.Length,
-                    "max authorities is 15");
+                    "max authorities is 15"
+                );
             }
-
-            //
-            // Identifier authority is at most 6 bytes long
-            //
 
             if (identifierAuthority < 0 ||
                 (long)identifierAuthority > 0xFFFFFFFFFFFF)
             {
-                throw new ArgumentOutOfRangeException(
+                throw new ArgumentOutOfRangeException
+                (
                     nameof(identifierAuthority),
                     identifierAuthority,
-                    "too large");
+                    "too large"
+                );
             }
-
-            //
-            // Create a local copy of the data passed in
-            //
 
             _identifierAuthority = identifierAuthority;
             _subAuthorities = new int[subAuthorities.Length];
             subAuthorities.CopyTo(_subAuthorities, 0);
 
-            //
-            // Compute and store the binary form
-            //
-            // typedef struct _SID {
-            //     UCHAR Revision;
-            //     UCHAR SubAuthorityCount;
-            //     SID_IDENTIFIER_AUTHORITY IdentifierAuthority;
-            //     ULONG SubAuthority[ANYSIZE_ARRAY]
-            // } SID, *PISID;
-            //
-
             byte i;
             _binaryForm = new byte[1 + 1 + 6 + 4 * _subAuthorities.Length];
 
-            //
-            // First two bytes contain revision and subauthority count
-            //
-
             _binaryForm[0] = 1;
             _binaryForm[1] = (byte)_subAuthorities.Length;
-
-            //
-            // Identifier authority takes up 6 bytes
-            //
 
             for (i = 0; i < 6; i++)
             {
                 _binaryForm[2 + i] = (byte)((((ulong)_identifierAuthority) >> ((5 - i) * 8)) & 0xFF);
             }
-
-            //
-            // Subauthorities go last, preserving big-endian representation
-            //
 
             for (i = 0; i < _subAuthorities.Length; i++)
             {

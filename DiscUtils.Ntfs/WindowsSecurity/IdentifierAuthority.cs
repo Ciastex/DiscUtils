@@ -1,4 +1,4 @@
-namespace DiscUtils.Ntfs
+namespace DiscUtils.Ntfs.WindowsSecurity
 {
     internal enum IdentifierAuthority : long
     {
