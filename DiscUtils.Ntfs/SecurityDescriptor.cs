@@ -21,7 +21,7 @@
 //
 
 using System.IO;
-using System.Security.AccessControl;
+using DiscUtils.Ntfs.WindowsSecurity.AccessControl;
 using DiscUtils.Streams;
 
 namespace DiscUtils.Ntfs
@@ -37,10 +37,7 @@ namespace DiscUtils.Ntfs
 
         public RawSecurityDescriptor Descriptor { get; set; }
 
-        public int Size
-        {
-            get { return Descriptor.BinaryLength; }
-        }
+        public int Size => Descriptor.BinaryLength;
 
         public int ReadFrom(byte[] buffer, int offset)
         {

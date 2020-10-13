@@ -24,8 +24,8 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
-using System.Security.AccessControl;
 using DiscUtils.Internal;
+using DiscUtils.Ntfs.WindowsSecurity.AccessControl;
 using DiscUtils.Streams;
 
 namespace DiscUtils.Ntfs
@@ -299,7 +299,7 @@ namespace DiscUtils.Ntfs
         {
             public uint Id;
 
-            public IdIndexKey() {}
+            public IdIndexKey() { }
 
             public IdIndexKey(uint id)
             {

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="$USER_HOME$/.cache/JetBrains/Rider2020.2/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/.cache/JetBrains/Rider2020.2/resharper-host/local/Transient/Rider/v202/SolutionCaches/_DiscUtils.700737081.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/.cache/JetBrains/Rider2020.2/resharper-host/local/Transient/Rider/v202/SolutionCaches/_DiscUtils.968719703.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="DiscUtils.Containers" t="IncludeRecursive">
         <e p="DiscUtils.Containers.csproj" t="IncludeRecursive" />
@@ -196,6 +196,35 @@
         <e p="VolumeInfo.cs" t="Include" />
         <e p="VolumeManager.cs" t="Include" />
         <e p="WindowsFileInformation.cs" t="Include" />
+        <e p="WindowsSecurity" t="Include">
+          <e p="AccessControl" t="Include">
+            <e p="AccessControlSections.cs" t="Include" />
+            <e p="AceEnumerator.cs" t="Include" />
+            <e p="AceFlags.cs" t="Include" />
+            <e p="AceQualifier.cs" t="Include" />
+            <e p="AceType.cs" t="Include" />
+            <e p="AuditFlags.cs" t="Include" />
+            <e p="CommonAce.cs" t="Include" />
+            <e p="ControlFlags.cs" t="Include" />
+            <e p="GenericAce.cs" t="Include" />
+            <e p="GenericAcl.cs" t="Include" />
+            <e p="GenericSecurityDescriptor.cs" t="Include" />
+            <e p="InheritanceFlags.cs" t="Include" />
+            <e p="KnownAce.cs" t="Include" />
+            <e p="ObjectAce.cs" t="Include" />
+            <e p="ObjectAceFlags.cs" t="Include" />
+            <e p="PropagationFlags.cs" t="Include" />
+            <e p="QualifiedAce.cs" t="Include" />
+            <e p="RawAcl.cs" t="Include" />
+            <e p="RawSecurityDescriptor.cs" t="Include" />
+            <e p="SddlAccessRight.cs" t="Include" />
+          </e>
+          <e p="IdentityReference.cs" t="Include" />
+          <e p="NTAccount.cs" t="Include" />
+          <e p="SecurityIdentifier.cs" t="Include" />
+          <e p="WellKnownAccount.cs" t="Include" />
+          <e p="WellKnownSidType.cs" t="Include" />
+        </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -328,13 +357,6 @@
         <e p="VolumeInformation.cs" t="Include" />
         <e p="VolumeInformationFlags.cs" t="Include" />
         <e p="VolumeName.cs" t="Include" />
-        <e p="WellKnownSidType.cs" t="Include" />
-        <e p="WindowsSecurity" t="Include">
-          <e p="IdentifierAuthority.cs" t="Include" />
-          <e p="IdentityReference.cs" t="Include" />
-          <e p="NTAccount.cs" t="Include" />
-          <e p="SecurityIdentifier.cs" t="Include" />
-        </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">

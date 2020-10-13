@@ -46,15 +46,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d474c619-74ba-4a7b-a15d-3a1eb8a72c59" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/AccessControlSections.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/AceEnumerator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/AceFlags.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/AceQualifier.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/AceType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/AuditFlags.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/CommonAce.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/ControlFlags.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/GenericAce.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/GenericAcl.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/GenericSecurityDescriptor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/InheritanceFlags.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/KnownAce.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/ObjectAce.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/ObjectAceFlags.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/PropagationFlags.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/QualifiedAce.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/RawAcl.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/RawSecurityDescriptor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/SddlAccessRight.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/IdentityReference.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/NTAccount.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/SecurityIdentifier.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/WellKnownAccount.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/WellKnownSidType.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DiscUtils/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DiscUtils/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DiscUtils/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DiscUtils/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/IdentifierAuthority.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/IdentifierAuthority.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/IdentityReference.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/IdentityReference.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/NTAccount.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/NTAccount.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsFormatOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsFormatOptions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/DiscUtils.Core.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/DiscUtils.Core.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/IWindowsFileSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/IWindowsFileSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/DiscUtils.Ntfs.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/DiscUtils.Ntfs.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/NewFileOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/NewFileOptions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsFileSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsFileSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsFormatter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsFormatter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/Quotas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/Quotas.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/SecurityIdentifier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/SecurityIdentifier.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/SecurityDescriptor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/SecurityDescriptor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/SecurityDescriptors.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/SecurityDescriptors.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/WellKnownSidType.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/IdentifierAuthority.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/IdentityReference.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/NTAccount.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/SecurityIdentifier.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,46 +97,66 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/E791C011-E6DD-4D31-9D04-518086BDE4C9/1/System.Security.Principal.Windows.notsupported.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DiscUtils.Test/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/97A7E728-A244-46EF-A446-E63997EF076D/74/105e0a04/RawSecurityDescriptor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E791C011-E6DD-4D31-9D04-518086BDE4C9/3d/540bdc95/WellKnownSidType.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3936499B-20A3-477B-9BBB-3A7637354E96/3/System.Security.AccessControl.notsupported.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Library/DiscUtils.Containers/SetupHelper.cs" />
-        <option value="$PROJECT_DIR$/Library/DiscUtils.FileSystems/SetupHelper.cs" />
-        <option value="$PROJECT_DIR$/Library/DiscUtils.Vhd/DiscUtils.Vhd.csproj" />
-        <option value="$PROJECT_DIR$/Library/DiscUtils.Containers/DiscUtils.Containers.csproj" />
-        <option value="$PROJECT_DIR$/Library/DiscUtils.Core/DiscUtils.Core.csproj" />
-        <option value="$PROJECT_DIR$/Library/DiscUtils.Core/ApplePartitionMap/BlockZero.cs" />
-        <option value="$PROJECT_DIR$/Library/DiscUtils.Core/ApplePartitionMap/PartitionMap.cs" />
-        <option value="$PROJECT_DIR$/Library/DiscUtils.Core/ApplePartitionMap/PartitionMapEntry.cs" />
-        <option value="$PROJECT_DIR$/Library/DiscUtils.Core/ApplePartitionMap/PartitionMapFactory.cs" />
-        <option value="$PROJECT_DIR$/Library/DiscUtils.Ntfs/DiscUtils.Ntfs.csproj" />
-        <option value="$PROJECT_DIR$/Library/DiscUtils.Core/Properties/AssemblyInfo.cs" />
-        <option value="$PROJECT_DIR$/Library/DiscUtils.FileSystems/DiscUtils.FileSystems.csproj" />
-        <option value="$PROJECT_DIR$/DiscUtils.Streams/DiscUtils.Streams.csproj" />
         <option value="$PROJECT_DIR$/DiscUtils.Vhd/DiscUtils.Vhd.csproj" />
         <option value="$PROJECT_DIR$/DiscUtils.FileSystems/DiscUtils.FileSystems.csproj" />
-        <option value="$PROJECT_DIR$/DiscUtils.Core/DiscUtils.Core.csproj" />
         <option value="$PROJECT_DIR$/DiscUtils.Containers/DiscUtils.Containers.csproj" />
         <option value="$PROJECT_DIR$/DiscUtils.Test/DiscUtils.Test.csproj" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/DiscUtils.Ntfs.csproj" />
         <option value="$PROJECT_DIR$/DiscUtils.Ntfs/IdentityReference.cs" />
         <option value="$PROJECT_DIR$/DiscUtils.Ntfs/NTAccount.cs" />
         <option value="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsFormatOptions.cs" />
         <option value="$PROJECT_DIR$/DiscUtils.Ntfs/IdentifierAuthority.cs" />
         <option value="$PROJECT_DIR$/DiscUtils.Test/Program.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WellKnownSidType.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/Quotas.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsFileSystem.cs" />
         <option value="$PROJECT_DIR$/DiscUtils.Ntfs/SecurityIdentifier.cs" />
         <option value="$PROJECT_DIR$/DiscUtils.Ntfs/GenericSecurityDescriptor.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsFormatter.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WellKnownSidType.cs" />
         <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/IdentifierAuthority.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/DiscUtils.Ntfs.csproj" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/WellKnownAccount.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/SecurityIdentifier.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/WellKnownSidType.cs" />
         <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/IdentityReference.cs" />
         <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/NTAccount.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/SecurityIdentifier.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/ControlFlags.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/AceType.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/AceFlags.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/SddlAccessRight.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/KnownAce.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/AuditFlags.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/InheritanceFlags.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/PropagationFlags.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/GenericAce.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/AceQualifier.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/QualifiedAce.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/ObjectAceFlags.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/AceEnumerator.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/GenericAcl.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/AccessControlSections.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/GenericSecurityDescriptor.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/CommonAce.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/ObjectAce.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/RawAcl.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/RawSecurityDescriptor.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsFormatter.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Core/IWindowsFileSystem.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/NewFileOptions.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/SecurityDescriptor.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/SecurityDescriptors.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/NTAccount.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/GenericAce.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Core/DiscUtils.Core.csproj" />
+        <option value="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/WellKnownAccount.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/SecurityIdentifier.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsFileSystem.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/Quotas.cs" />
       </list>
     </option>
   </component>
@@ -118,8 +170,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.35051546" />
-    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30005425" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.35035914" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30007982" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="SolutionBuilderGeneralOptionsPageId" />
@@ -166,110 +218,118 @@
       <screen x="36" y="0" width="1330" height="768" />
     </state>
     <state x="165" y="0" width="1071" height="768" key="#com.intellij.execution.impl.EditConfigurationsDialog/36.0.1330.768@36.0.1330.768" timestamp="1602515042809" />
+    <state width="410" height="478" key="DebuggerActiveHint" timestamp="1602560968308">
+      <screen x="36" y="0" width="1330" height="768" />
+    </state>
+    <state width="410" height="478" key="DebuggerActiveHint/36.0.1330.768@36.0.1330.768" timestamp="1602560968308" />
     <state x="495" y="142" key="FileChooserDialogImpl" timestamp="1602511472353">
       <screen x="36" y="0" width="1330" height="768" />
     </state>
     <state x="495" y="142" key="FileChooserDialogImpl/36.0.1330.768@36.0.1330.768" timestamp="1602511472353" />
-    <state width="1874" height="367" key="GridCell.Tab.0.bottom" timestamp="1602534339198">
-      <screen x="0" y="0" width="1920" height="1044" />
+    <state width="1284" height="255" key="GridCell.Tab.0.bottom" timestamp="1602561461290">
+      <screen x="36" y="0" width="1330" height="768" />
     </state>
     <state width="1874" height="367" key="GridCell.Tab.0.bottom/0.0.1920.1044@0.0.1920.1044" timestamp="1602534339198" />
-    <state width="1284" height="256" key="GridCell.Tab.0.bottom/36.0.1330.768@36.0.1330.768" timestamp="1602522543314" />
-    <state width="1874" height="367" key="GridCell.Tab.0.center" timestamp="1602534339198">
-      <screen x="0" y="0" width="1920" height="1044" />
+    <state width="1284" height="255" key="GridCell.Tab.0.bottom/36.0.1330.768@36.0.1330.768" timestamp="1602561461290" />
+    <state width="1284" height="255" key="GridCell.Tab.0.center" timestamp="1602561461289">
+      <screen x="36" y="0" width="1330" height="768" />
     </state>
     <state width="1874" height="367" key="GridCell.Tab.0.center/0.0.1920.1044@0.0.1920.1044" timestamp="1602534339198" />
-    <state width="1284" height="256" key="GridCell.Tab.0.center/36.0.1330.768@36.0.1330.768" timestamp="1602522543314" />
-    <state width="1874" height="367" key="GridCell.Tab.0.left" timestamp="1602534339198">
-      <screen x="0" y="0" width="1920" height="1044" />
+    <state width="1284" height="255" key="GridCell.Tab.0.center/36.0.1330.768@36.0.1330.768" timestamp="1602561461289" />
+    <state width="1284" height="255" key="GridCell.Tab.0.left" timestamp="1602561461289">
+      <screen x="36" y="0" width="1330" height="768" />
     </state>
     <state width="1874" height="367" key="GridCell.Tab.0.left/0.0.1920.1044@0.0.1920.1044" timestamp="1602534339198" />
-    <state width="1284" height="256" key="GridCell.Tab.0.left/36.0.1330.768@36.0.1330.768" timestamp="1602522543313" />
-    <state width="1874" height="367" key="GridCell.Tab.0.right" timestamp="1602534339198">
-      <screen x="0" y="0" width="1920" height="1044" />
+    <state width="1284" height="255" key="GridCell.Tab.0.left/36.0.1330.768@36.0.1330.768" timestamp="1602561461289" />
+    <state width="1284" height="255" key="GridCell.Tab.0.right" timestamp="1602561461289">
+      <screen x="36" y="0" width="1330" height="768" />
     </state>
     <state width="1874" height="367" key="GridCell.Tab.0.right/0.0.1920.1044@0.0.1920.1044" timestamp="1602534339198" />
-    <state width="1284" height="256" key="GridCell.Tab.0.right/36.0.1330.768@36.0.1330.768" timestamp="1602522543314" />
-    <state width="1874" height="367" key="GridCell.Tab.1.bottom" timestamp="1602534340198">
-      <screen x="0" y="0" width="1920" height="1044" />
+    <state width="1284" height="255" key="GridCell.Tab.0.right/36.0.1330.768@36.0.1330.768" timestamp="1602561461289" />
+    <state width="1284" height="255" key="GridCell.Tab.1.bottom" timestamp="1602561461290">
+      <screen x="36" y="0" width="1330" height="768" />
     </state>
     <state width="1874" height="367" key="GridCell.Tab.1.bottom/0.0.1920.1044@0.0.1920.1044" timestamp="1602534340198" />
-    <state width="1284" height="256" key="GridCell.Tab.1.bottom/36.0.1330.768@36.0.1330.768" timestamp="1602522543315" />
-    <state width="1874" height="367" key="GridCell.Tab.1.center" timestamp="1602534340197">
-      <screen x="0" y="0" width="1920" height="1044" />
+    <state width="1284" height="255" key="GridCell.Tab.1.bottom/36.0.1330.768@36.0.1330.768" timestamp="1602561461290" />
+    <state width="1284" height="255" key="GridCell.Tab.1.center" timestamp="1602561461290">
+      <screen x="36" y="0" width="1330" height="768" />
     </state>
     <state width="1874" height="367" key="GridCell.Tab.1.center/0.0.1920.1044@0.0.1920.1044" timestamp="1602534340197" />
-    <state width="1284" height="256" key="GridCell.Tab.1.center/36.0.1330.768@36.0.1330.768" timestamp="1602522543314" />
-    <state width="1874" height="367" key="GridCell.Tab.1.left" timestamp="1602534340197">
-      <screen x="0" y="0" width="1920" height="1044" />
+    <state width="1284" height="255" key="GridCell.Tab.1.center/36.0.1330.768@36.0.1330.768" timestamp="1602561461290" />
+    <state width="1284" height="255" key="GridCell.Tab.1.left" timestamp="1602561461290">
+      <screen x="36" y="0" width="1330" height="768" />
     </state>
     <state width="1874" height="367" key="GridCell.Tab.1.left/0.0.1920.1044@0.0.1920.1044" timestamp="1602534340197" />
-    <state width="1284" height="256" key="GridCell.Tab.1.left/36.0.1330.768@36.0.1330.768" timestamp="1602522543314" />
-    <state width="1874" height="367" key="GridCell.Tab.1.right" timestamp="1602534340198">
-      <screen x="0" y="0" width="1920" height="1044" />
+    <state width="1284" height="255" key="GridCell.Tab.1.left/36.0.1330.768@36.0.1330.768" timestamp="1602561461290" />
+    <state width="1284" height="255" key="GridCell.Tab.1.right" timestamp="1602561461290">
+      <screen x="36" y="0" width="1330" height="768" />
     </state>
     <state width="1874" height="367" key="GridCell.Tab.1.right/0.0.1920.1044@0.0.1920.1044" timestamp="1602534340198" />
-    <state width="1284" height="256" key="GridCell.Tab.1.right/36.0.1330.768@36.0.1330.768" timestamp="1602522543314" />
-    <state width="1874" height="367" key="GridCell.Tab.2.bottom" timestamp="1602534339200">
-      <screen x="0" y="0" width="1920" height="1044" />
+    <state width="1284" height="255" key="GridCell.Tab.1.right/36.0.1330.768@36.0.1330.768" timestamp="1602561461290" />
+    <state width="1284" height="255" key="GridCell.Tab.2.bottom" timestamp="1602561461291">
+      <screen x="36" y="0" width="1330" height="768" />
     </state>
     <state width="1874" height="367" key="GridCell.Tab.2.bottom/0.0.1920.1044@0.0.1920.1044" timestamp="1602534339200" />
-    <state width="1284" height="256" key="GridCell.Tab.2.bottom/36.0.1330.768@36.0.1330.768" timestamp="1602522543315" />
-    <state width="1874" height="367" key="GridCell.Tab.2.center" timestamp="1602534339199">
-      <screen x="0" y="0" width="1920" height="1044" />
+    <state width="1284" height="255" key="GridCell.Tab.2.bottom/36.0.1330.768@36.0.1330.768" timestamp="1602561461291" />
+    <state width="1284" height="255" key="GridCell.Tab.2.center" timestamp="1602561461291">
+      <screen x="36" y="0" width="1330" height="768" />
     </state>
     <state width="1874" height="367" key="GridCell.Tab.2.center/0.0.1920.1044@0.0.1920.1044" timestamp="1602534339199" />
-    <state width="1284" height="256" key="GridCell.Tab.2.center/36.0.1330.768@36.0.1330.768" timestamp="1602522543315" />
-    <state width="1874" height="367" key="GridCell.Tab.2.left" timestamp="1602534339199">
-      <screen x="0" y="0" width="1920" height="1044" />
+    <state width="1284" height="255" key="GridCell.Tab.2.center/36.0.1330.768@36.0.1330.768" timestamp="1602561461291" />
+    <state width="1284" height="255" key="GridCell.Tab.2.left" timestamp="1602561461291">
+      <screen x="36" y="0" width="1330" height="768" />
     </state>
     <state width="1874" height="367" key="GridCell.Tab.2.left/0.0.1920.1044@0.0.1920.1044" timestamp="1602534339199" />
-    <state width="1284" height="256" key="GridCell.Tab.2.left/36.0.1330.768@36.0.1330.768" timestamp="1602522543315" />
-    <state width="1874" height="367" key="GridCell.Tab.2.right" timestamp="1602534339200">
-      <screen x="0" y="0" width="1920" height="1044" />
+    <state width="1284" height="255" key="GridCell.Tab.2.left/36.0.1330.768@36.0.1330.768" timestamp="1602561461291" />
+    <state width="1284" height="255" key="GridCell.Tab.2.right" timestamp="1602561461291">
+      <screen x="36" y="0" width="1330" height="768" />
     </state>
     <state width="1874" height="367" key="GridCell.Tab.2.right/0.0.1920.1044@0.0.1920.1044" timestamp="1602534339200" />
-    <state width="1284" height="256" key="GridCell.Tab.2.right/36.0.1330.768@36.0.1330.768" timestamp="1602522543315" />
-    <state width="1874" height="367" key="GridCell.Tab.3.bottom" timestamp="1602534339189">
-      <screen x="0" y="0" width="1920" height="1044" />
+    <state width="1284" height="255" key="GridCell.Tab.2.right/36.0.1330.768@36.0.1330.768" timestamp="1602561461291" />
+    <state width="1284" height="255" key="GridCell.Tab.3.bottom" timestamp="1602561461292">
+      <screen x="36" y="0" width="1330" height="768" />
     </state>
     <state width="1874" height="367" key="GridCell.Tab.3.bottom/0.0.1920.1044@0.0.1920.1044" timestamp="1602534339189" />
-    <state width="1284" height="256" key="GridCell.Tab.3.bottom/36.0.1330.768@36.0.1330.768" timestamp="1602522543316" />
-    <state width="1874" height="367" key="GridCell.Tab.3.center" timestamp="1602534339189">
-      <screen x="0" y="0" width="1920" height="1044" />
+    <state width="1284" height="255" key="GridCell.Tab.3.bottom/36.0.1330.768@36.0.1330.768" timestamp="1602561461292" />
+    <state width="1284" height="255" key="GridCell.Tab.3.center" timestamp="1602561461292">
+      <screen x="36" y="0" width="1330" height="768" />
     </state>
     <state width="1874" height="367" key="GridCell.Tab.3.center/0.0.1920.1044@0.0.1920.1044" timestamp="1602534339189" />
-    <state width="1284" height="256" key="GridCell.Tab.3.center/36.0.1330.768@36.0.1330.768" timestamp="1602522543315" />
-    <state width="1874" height="367" key="GridCell.Tab.3.left" timestamp="1602534339189">
-      <screen x="0" y="0" width="1920" height="1044" />
+    <state width="1284" height="255" key="GridCell.Tab.3.center/36.0.1330.768@36.0.1330.768" timestamp="1602561461292" />
+    <state width="1284" height="255" key="GridCell.Tab.3.left" timestamp="1602561461292">
+      <screen x="36" y="0" width="1330" height="768" />
     </state>
     <state width="1874" height="367" key="GridCell.Tab.3.left/0.0.1920.1044@0.0.1920.1044" timestamp="1602534339189" />
-    <state width="1284" height="256" key="GridCell.Tab.3.left/36.0.1330.768@36.0.1330.768" timestamp="1602522543315" />
-    <state width="1874" height="367" key="GridCell.Tab.3.right" timestamp="1602534339189">
-      <screen x="0" y="0" width="1920" height="1044" />
+    <state width="1284" height="255" key="GridCell.Tab.3.left/36.0.1330.768@36.0.1330.768" timestamp="1602561461292" />
+    <state width="1284" height="255" key="GridCell.Tab.3.right" timestamp="1602561461292">
+      <screen x="36" y="0" width="1330" height="768" />
     </state>
     <state width="1874" height="367" key="GridCell.Tab.3.right/0.0.1920.1044@0.0.1920.1044" timestamp="1602534339189" />
-    <state width="1284" height="256" key="GridCell.Tab.3.right/36.0.1330.768@36.0.1330.768" timestamp="1602522543316" />
-    <state width="1284" height="256" key="GridCell.Tab.4.bottom" timestamp="1602522543317">
+    <state width="1284" height="255" key="GridCell.Tab.3.right/36.0.1330.768@36.0.1330.768" timestamp="1602561461292" />
+    <state width="1284" height="255" key="GridCell.Tab.4.bottom" timestamp="1602561461293">
       <screen x="36" y="0" width="1330" height="768" />
     </state>
-    <state width="1284" height="256" key="GridCell.Tab.4.bottom/36.0.1330.768@36.0.1330.768" timestamp="1602522543317" />
-    <state width="1284" height="256" key="GridCell.Tab.4.center" timestamp="1602522543316">
+    <state width="1284" height="255" key="GridCell.Tab.4.bottom/36.0.1330.768@36.0.1330.768" timestamp="1602561461293" />
+    <state width="1284" height="255" key="GridCell.Tab.4.center" timestamp="1602561461293">
       <screen x="36" y="0" width="1330" height="768" />
     </state>
-    <state width="1284" height="256" key="GridCell.Tab.4.center/36.0.1330.768@36.0.1330.768" timestamp="1602522543316" />
-    <state width="1284" height="256" key="GridCell.Tab.4.left" timestamp="1602522543316">
+    <state width="1284" height="255" key="GridCell.Tab.4.center/36.0.1330.768@36.0.1330.768" timestamp="1602561461293" />
+    <state width="1284" height="255" key="GridCell.Tab.4.left" timestamp="1602561461292">
       <screen x="36" y="0" width="1330" height="768" />
     </state>
-    <state width="1284" height="256" key="GridCell.Tab.4.left/36.0.1330.768@36.0.1330.768" timestamp="1602522543316" />
-    <state width="1284" height="256" key="GridCell.Tab.4.right" timestamp="1602522543316">
+    <state width="1284" height="255" key="GridCell.Tab.4.left/36.0.1330.768@36.0.1330.768" timestamp="1602561461292" />
+    <state width="1284" height="255" key="GridCell.Tab.4.right" timestamp="1602561461293">
       <screen x="36" y="0" width="1330" height="768" />
     </state>
-    <state width="1284" height="256" key="GridCell.Tab.4.right/36.0.1330.768@36.0.1330.768" timestamp="1602522543316" />
+    <state width="1284" height="255" key="GridCell.Tab.4.right/36.0.1330.768@36.0.1330.768" timestamp="1602561461293" />
     <state x="301" y="119" key="Rider.ProjectTemplateDialog.Size" timestamp="1602510534533">
       <screen x="36" y="0" width="1330" height="768" />
     </state>
     <state x="301" y="119" key="Rider.ProjectTemplateDialog.Size/36.0.1330.768@36.0.1330.768" timestamp="1602510534533" />
+    <state x="507" y="81" width="388" height="610" key="RiderGenerateDialog" timestamp="1602558702453">
+      <screen x="36" y="0" width="1330" height="768" />
+    </state>
+    <state x="507" y="81" width="388" height="610" key="RiderGenerateDialog/36.0.1330.768@36.0.1330.768" timestamp="1602558702453" />
     <state x="202" y="19" key="SettingsEditor" timestamp="1602511542496">
       <screen x="36" y="0" width="1330" height="768" />
     </state>
@@ -278,33 +338,14 @@
       <screen x="36" y="0" width="1330" height="768" />
     </state>
     <state x="509" y="299" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/36.0.1330.768@36.0.1330.768" timestamp="1602520065036" />
-    <state x="0" y="0" width="994" height="1044" key="find.popup" timestamp="1602534201456">
-      <screen x="0" y="0" width="1920" height="1044" />
+    <state x="36" y="0" width="688" height="768" key="find.popup" timestamp="1602560703111">
+      <screen x="36" y="0" width="1330" height="768" />
     </state>
     <state x="0" y="0" width="994" height="1044" key="find.popup/0.0.1920.1044@0.0.1920.1044" timestamp="1602534201456" />
-    <state x="36" y="0" width="688" height="768" key="find.popup/36.0.1330.768@36.0.1330.768" timestamp="1602514334145" />
+    <state x="36" y="0" width="688" height="768" key="find.popup/36.0.1330.768@36.0.1330.768" timestamp="1602560703111" />
     <state x="364" y="88" width="672" height="678" key="search.everywhere.popup" timestamp="1602521784168">
       <screen x="36" y="0" width="1330" height="768" />
     </state>
     <state x="364" y="88" width="672" height="678" key="search.everywhere.popup/36.0.1330.768@36.0.1330.768" timestamp="1602521784168" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/DiscUtils.Test/Program.cs</url>
-          <line>23</line>
-          <properties documentPath="$PROJECT_DIR$/DiscUtils.Test/Program.cs" initialLine="23">
-            <startOffsets>
-              <option value="727" />
-            </startOffsets>
-            <endOffsets>
-              <option value="796" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

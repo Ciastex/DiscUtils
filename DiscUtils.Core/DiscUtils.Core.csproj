@@ -5,6 +5,7 @@
     <Authors>Kenneth Bell;Quamotion;LordMike</Authors>
     <PackageTags>DiscUtils;VHD;VDI;XVA;VMDK;ISO;NTFS;EXT2FS</PackageTags>
 
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <TargetFramework>netstandard2.0</TargetFramework>
 
     <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
@@ -19,7 +20,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Security.AccessControl" Version="4.3.0" />
     <PackageReference Include="System.Xml.XmlDocument" Version="4.3.0" />
     <PackageReference Include="System.IO.FileSystem.DriveInfo" Version="4.3.0" />
     <PackageReference Include="System.Text.Encoding.CodePages" Version="4.3.0" />

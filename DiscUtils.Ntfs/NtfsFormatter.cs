@@ -22,8 +22,8 @@
 
 using System;
 using System.IO;
-using System.Security.AccessControl;
-using DiscUtils.Ntfs.WindowsSecurity; // to fix
+using DiscUtils.Ntfs.WindowsSecurity;
+using DiscUtils.Ntfs.WindowsSecurity.AccessControl; // to fix
 using DiscUtils.Streams;
 
 namespace DiscUtils.Ntfs

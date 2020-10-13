@@ -20,7 +20,7 @@
 // DEALINGS IN THE SOFTWARE.
 //
 
-using System.Security.AccessControl;
+using DiscUtils.Ntfs.WindowsSecurity.AccessControl;
 
 namespace DiscUtils
 {

@@ -89,7 +89,7 @@ namespace DiscUtils.Ntfs
 
         internal sealed class OwnerKey : IByteArraySerializable
         {
-            public SecurityIdentifier Sid;
+            public SecurityIdentifier Sid = new SecurityIdentifier("S-1-1-0");
 
             public OwnerKey() {}
 
@@ -98,10 +98,7 @@ namespace DiscUtils.Ntfs
                 Sid = sid;
             }
 
-            public int Size
-            {
-                get { return Sid.BinaryLength; }
-            }
+            public int Size => Sid?.BinaryLength ?? 0;
 
             public int ReadFrom(byte[] buffer, int offset)
             {
