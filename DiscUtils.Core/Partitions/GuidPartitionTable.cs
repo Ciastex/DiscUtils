@@ -15,6 +15,7 @@ namespace DiscUtils.Core.Partitions
     /// </summary>
     public sealed class GuidPartitionTable : PartitionTable
     {
+        private bool _establishReserved;
         private Stream _diskData;
         private Geometry _diskGeometry;
         private byte[] _entryBuffer;
@@ -68,13 +69,6 @@ namespace DiscUtils.Core.Partitions
                         .Cast<PartitionInfo>()
                         .ToList()
                 );
-                
-                // return new ReadOnlyCollection<PartitionInfo>(
-                //     Utilities.Map(
-                //         GetAllEntries(),
-                //         e => new GuidPartitionInfo(this, e)
-                //     )
-                // );
             }
         }
 
@@ -144,10 +138,13 @@ namespace DiscUtils.Core.Partitions
         /// </summary>
         /// <param name="disk">The disk to initialize.</param>
         /// <param name="type">The partition type for the single partition.</param>
+        ///         <param name="establishReserved">A value indicating whether or not to create a reserved data partition.</param>
         /// <returns>An object to access the newly created partition table.</returns>
-        public static GuidPartitionTable Initialize(VirtualDisk disk, WellKnownPartitionType type)
+        public static GuidPartitionTable Initialize(VirtualDisk disk, WellKnownPartitionType type, bool establishReserved = true)
         {
-            GuidPartitionTable pt = Initialize(disk);
+            var pt = Initialize(disk);
+            pt._establishReserved = establishReserved;
+            
             pt.Create(type, true);
             return pt;
         }
@@ -164,7 +161,8 @@ namespace DiscUtils.Core.Partitions
         {
             List<GptEntry> allEntries = new List<GptEntry>(GetAllEntries());
 
-            EstablishReservedPartition(allEntries);
+            if (_establishReserved)
+                EstablishReservedPartition(allEntries);
 
             // Fill the rest of the disk with the requested partition
             long start = FirstAvailableSector(allEntries);
@@ -216,7 +214,8 @@ namespace DiscUtils.Core.Partitions
 
             List<GptEntry> allEntries = new List<GptEntry>(GetAllEntries());
 
-            EstablishReservedPartition(allEntries);
+            if (_establishReserved)
+                EstablishReservedPartition(allEntries);
 
             // Fill the rest of the disk with the requested partition
             long start = MathUtilities.RoundUp(FirstAvailableSector(allEntries),

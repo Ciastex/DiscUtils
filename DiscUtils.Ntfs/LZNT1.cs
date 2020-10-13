@@ -1,6 +1,4 @@
-﻿
-
-using System;
+﻿using System;
 using DiscUtils.Core.Compression;
 using DiscUtils.Streams;
 using DiscUtils.Streams.Util;
