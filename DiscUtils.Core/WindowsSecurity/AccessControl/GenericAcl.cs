@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 
-namespace DiscUtils.Ntfs.WindowsSecurity.AccessControl
+namespace DiscUtils.Core.WindowsSecurity.AccessControl
 {
     public abstract class GenericAcl : ICollection
     {
@@ -16,8 +16,6 @@ namespace DiscUtils.Ntfs.WindowsSecurity.AccessControl
             AclRevisionDS = 4;
             MaxBinaryLength = 0x10000;
         }
-
-        protected GenericAcl() { }
 
         public abstract int BinaryLength { get; }
 
@@ -34,9 +32,9 @@ namespace DiscUtils.Ntfs.WindowsSecurity.AccessControl
         public void CopyTo(GenericAce[] array, int index)
         {
             if (array == null)
-                throw new ArgumentNullException("array");
+                throw new ArgumentNullException(nameof(array));
             if (index < 0 || array.Length - index < Count)
-                throw new ArgumentOutOfRangeException("index", "Index must be non-negative integer and must not exceed array length - count");
+                throw new ArgumentOutOfRangeException(nameof(index), "Index must be non-negative integer and must not exceed array length - count");
             for (int i = 0; i < Count; i++)
                 array[i + index] = this[i];
         }

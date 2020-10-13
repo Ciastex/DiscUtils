@@ -1,4 +1,4 @@
-namespace DiscUtils
+namespace DiscUtils.Core
 {
     /// <summary>
     /// Enumeration of possible types of physical volume.

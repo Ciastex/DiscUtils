@@ -22,7 +22,7 @@
 
 using System;
 
-namespace DiscUtils.Streams
+namespace DiscUtils.Streams.Util
 {
     internal static class Numbers<T>
         where T : struct, IComparable<T>, IEquatable<T>

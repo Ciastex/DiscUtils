@@ -1,6 +1,6 @@
 using System;
 
-namespace DiscUtils.Ntfs.WindowsSecurity.AccessControl
+namespace DiscUtils.Core.WindowsSecurity.AccessControl
 {
     [Flags]
     public enum PropagationFlags

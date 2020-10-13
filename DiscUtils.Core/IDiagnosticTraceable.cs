@@ -22,7 +22,7 @@
 
 using System.IO;
 
-namespace DiscUtils
+namespace DiscUtils.Core
 {
     /// <summary>
     /// Interface exposed by objects that can provide a structured trace of their content.

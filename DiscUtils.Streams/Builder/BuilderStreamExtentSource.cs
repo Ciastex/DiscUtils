@@ -22,7 +22,7 @@
 
 using System.IO;
 
-namespace DiscUtils.Streams
+namespace DiscUtils.Streams.Builder
 {
     public class BuilderStreamExtentSource : BuilderExtentSource
     {

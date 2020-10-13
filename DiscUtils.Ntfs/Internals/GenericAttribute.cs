@@ -21,6 +21,7 @@
 //
 
 using DiscUtils.Streams;
+using DiscUtils.Streams.Buffer;
 
 namespace DiscUtils.Ntfs.Internals
 {

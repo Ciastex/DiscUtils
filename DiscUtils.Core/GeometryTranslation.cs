@@ -20,7 +20,7 @@
 // DEALINGS IN THE SOFTWARE.
 //
 
-namespace DiscUtils
+namespace DiscUtils.Core
 {
     /// <summary>
     /// Enumeration of standard BIOS disk geometry translation methods.

@@ -2,7 +2,7 @@ using System;
 using System.Globalization;
 using System.Text;
 
-namespace DiscUtils.Ntfs.WindowsSecurity.AccessControl
+namespace DiscUtils.Core.WindowsSecurity.AccessControl
 {
     public abstract class GenericSecurityDescriptor
     {
@@ -40,11 +40,11 @@ namespace DiscUtils.Ntfs.WindowsSecurity.AccessControl
         public void GetBinaryForm(byte[] binaryForm, int offset)
         {
             if (null == binaryForm)
-                throw new ArgumentNullException("binaryForm");
+                throw new ArgumentNullException(nameof(binaryForm));
 
             int binaryLength = BinaryLength;
             if (offset < 0 || offset > binaryForm.Length - binaryLength)
-                throw new ArgumentOutOfRangeException("offset");
+                throw new ArgumentOutOfRangeException(nameof(offset));
 
             ControlFlags controlFlags = ControlFlags;
             if (DaclIsUnmodifiedAefa)

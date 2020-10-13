@@ -22,8 +22,9 @@
 
 using System;
 using DiscUtils.Streams;
+using DiscUtils.Streams.Util;
 
-namespace DiscUtils
+namespace DiscUtils.Core
 {
     /// <summary>
     /// Base class represented a stored extent of a virtual disk.

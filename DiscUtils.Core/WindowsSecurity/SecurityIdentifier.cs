@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace DiscUtils.Ntfs.WindowsSecurity
+namespace DiscUtils.Core.WindowsSecurity
 {
     [ComVisible(false)]
     public sealed class SecurityIdentifier : IdentityReference, IComparable<SecurityIdentifier>
@@ -16,7 +16,7 @@ namespace DiscUtils.Ntfs.WindowsSecurity
         public SecurityIdentifier(string sddlForm)
         {
             if (sddlForm == null)
-                throw new ArgumentNullException("sddlForm");
+                throw new ArgumentNullException(nameof(sddlForm));
 
             buffer = ParseSddlForm(sddlForm);
         }
@@ -24,7 +24,7 @@ namespace DiscUtils.Ntfs.WindowsSecurity
         public unsafe SecurityIdentifier(byte[] binaryForm, int offset)
         {
             if (binaryForm == null)
-                throw new ArgumentNullException("binaryForm");
+                throw new ArgumentNullException(nameof(binaryForm));
             if ((offset < 0) || (offset > binaryForm.Length - 2))
                 throw new ArgumentException("offset");
 
@@ -64,7 +64,7 @@ namespace DiscUtils.Ntfs.WindowsSecurity
             else
             {
                 if (domainSid == null)
-                    throw new ArgumentNullException("domainSid");
+                    throw new ArgumentNullException(nameof(domainSid));
 
                 buffer = ParseSddlForm(domainSid.Value + "-" + acct.Rid);
             }
@@ -138,7 +138,7 @@ namespace DiscUtils.Ntfs.WindowsSecurity
         public int CompareTo(SecurityIdentifier sid)
         {
             if (sid == null)
-                throw new ArgumentNullException("sid");
+                throw new ArgumentNullException(nameof(sid));
 
             int result;
             if (0 != (result = GetSidAuthority().CompareTo(sid.GetSidAuthority()))) return result;
@@ -164,7 +164,7 @@ namespace DiscUtils.Ntfs.WindowsSecurity
         public void GetBinaryForm(byte[] binaryForm, int offset)
         {
             if (binaryForm == null)
-                throw new ArgumentNullException("binaryForm");
+                throw new ArgumentNullException(nameof(binaryForm));
             if ((offset < 0) || (offset > binaryForm.Length - buffer.Length))
                 throw new ArgumentException("offset");
 
@@ -226,14 +226,14 @@ namespace DiscUtils.Ntfs.WindowsSecurity
 
             if (targetType == typeof(NTAccount))
             {
-                WellKnownAccount acct = WellKnownAccount.LookupBySid(this.Value);
-                if (acct == null || acct.Name == null)
-                    throw new Exception("Unable to map SID: " + this.Value);
+                WellKnownAccount acct = WellKnownAccount.LookupBySid(Value);
+                if (acct?.Name == null)
+                    throw new Exception("Unable to map SID: " + Value);
 
                 return new NTAccount(acct.Name);
             }
 
-            throw new ArgumentException("Unknown type.", "targetType");
+            throw new ArgumentException("Unknown type.", nameof(targetType));
         }
 
         public static bool operator ==(SecurityIdentifier left, SecurityIdentifier right)
@@ -259,7 +259,7 @@ namespace DiscUtils.Ntfs.WindowsSecurity
             string sidString = Value;
 
             WellKnownAccount acct = WellKnownAccount.LookupBySid(sidString);
-            if (acct == null || acct.SddlForm == null)
+            if (acct?.SddlForm == null)
                 return sidString;
 
             return acct.SddlForm;
@@ -268,7 +268,7 @@ namespace DiscUtils.Ntfs.WindowsSecurity
         internal static SecurityIdentifier ParseSddlForm(string sddlForm, ref int pos)
         {
             if (sddlForm.Length - pos < 2)
-                throw new ArgumentException("Invalid SDDL string.", "sddlForm");
+                throw new ArgumentException("Invalid SDDL string.", nameof(sddlForm));
 
             string sid;
             int len;
@@ -279,12 +279,12 @@ namespace DiscUtils.Ntfs.WindowsSecurity
                 // Looks like a SID, try to parse it.
                 int endPos = pos;
 
-                char ch = Char.ToUpperInvariant(sddlForm[endPos]);
+                char ch = char.ToUpperInvariant(sddlForm[endPos]);
                 while (ch == 'S' || ch == '-' || ch == 'X'
                        || (ch >= '0' && ch <= '9') || (ch >= 'A' && ch <= 'F'))
                 {
                     ++endPos;
-                    ch = Char.ToUpperInvariant(sddlForm[endPos]);
+                    ch = char.ToUpperInvariant(sddlForm[endPos]);
                 }
 
                 if (ch == ':' && sddlForm[endPos - 1] == 'D')
@@ -318,11 +318,11 @@ namespace DiscUtils.Ntfs.WindowsSecurity
                 if (acct == null)
                     throw new ArgumentException(
                         "Invalid SDDL string - unrecognized account: " + sddlForm,
-                        "sddlForm");
+                        nameof(sddlForm));
                 if (!acct.IsAbsolute)
                     throw new NotImplementedException(
                         "Mono unable to convert account to SID: "
-                        + (acct.Name != null ? acct.Name : sddlForm));
+                        + (acct.Name ?? sddlForm));
 
                 sid = acct.Sid;
             }
@@ -340,8 +340,7 @@ namespace DiscUtils.Ntfs.WindowsSecurity
             buffer[0] = 1;
             buffer[1] = (byte)numSubAuthorities;
 
-            ulong authority;
-            if (!TryParseAuthority(elements[2], out authority))
+            if (!TryParseAuthority(elements[2], out ulong authority))
                 throw new ArgumentException("Value was invalid.");
             buffer[2] = (byte)((authority >> 40) & 0xFF);
             buffer[3] = (byte)((authority >> 32) & 0xFF);
@@ -352,10 +351,8 @@ namespace DiscUtils.Ntfs.WindowsSecurity
 
             for (int i = 0; i < numSubAuthorities; ++i)
             {
-                uint subAuthority;
-
                 if (!TryParseSubAuthority(elements[i + 3],
-                    out subAuthority))
+                    out uint subAuthority))
                     throw new ArgumentException("Value was invalid.");
 
                 // Note sub authorities little-endian!

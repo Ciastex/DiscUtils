@@ -22,7 +22,7 @@
 
 using System.IO;
 
-namespace DiscUtils.Vfs
+namespace DiscUtils.Core.Vfs
 {
     /// <summary>
     /// Class holding information about a file system.

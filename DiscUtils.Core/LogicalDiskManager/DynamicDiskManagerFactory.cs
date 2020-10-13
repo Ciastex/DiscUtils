@@ -21,9 +21,9 @@
 //
 
 using System.Collections.Generic;
-using DiscUtils.Internal;
+using DiscUtils.Core.Internal;
 
-namespace DiscUtils.LogicalDiskManager
+namespace DiscUtils.Core.LogicalDiskManager
 {
     [LogicalVolumeFactory]
     internal class DynamicDiskManagerFactory : LogicalVolumeFactory

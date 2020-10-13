@@ -21,6 +21,7 @@
 //
 
 using System;
+using DiscUtils.Streams.Util;
 
 namespace DiscUtils.Streams
 {

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace DiscUtils.Ntfs.WindowsSecurity.AccessControl
+namespace DiscUtils.Core.WindowsSecurity.AccessControl
 {
     internal class SddlAccessRight
     {
@@ -24,7 +24,7 @@ namespace DiscUtils.Ntfs.WindowsSecurity.AccessControl
             foreach (var right in rights)
             {
                 if (mask == right.Value)
-                    return new SddlAccessRight[] { right };
+                    return new[] { right };
             }
 
             int foundType = 0;

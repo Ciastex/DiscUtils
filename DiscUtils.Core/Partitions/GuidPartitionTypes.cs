@@ -22,7 +22,7 @@
 
 using System;
 
-namespace DiscUtils.Partitions
+namespace DiscUtils.Core.Partitions
 {
     /// <summary>
     /// Convenient access to well known GPT partition types.

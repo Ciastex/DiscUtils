@@ -22,7 +22,7 @@
 
 using System;
 
-namespace DiscUtils.Compression
+namespace DiscUtils.Core.Compression
 {
     /// <summary>
     /// Implementation of the Adler-32 checksum algorithm.

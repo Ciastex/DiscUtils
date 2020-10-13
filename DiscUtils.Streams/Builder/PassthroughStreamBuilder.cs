@@ -23,7 +23,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace DiscUtils.Streams
+namespace DiscUtils.Streams.Builder
 {
     public class PassthroughStreamBuilder : StreamBuilder
     {

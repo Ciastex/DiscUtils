@@ -22,9 +22,13 @@
 
 using System;
 using System.IO;
-using DiscUtils.Ntfs.WindowsSecurity;
-using DiscUtils.Ntfs.WindowsSecurity.AccessControl; // to fix
+using DiscUtils.Core;
+using DiscUtils.Core.WindowsSecurity;
+using DiscUtils.Core.WindowsSecurity.AccessControl;
+
+// to fix
 using DiscUtils.Streams;
+using DiscUtils.Streams.Util;
 
 namespace DiscUtils.Ntfs
 {

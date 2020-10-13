@@ -24,7 +24,7 @@ using System;
 using System.IO;
 using DiscUtils.Streams;
 
-namespace DiscUtils.Vfs
+namespace DiscUtils.Core.Vfs
 {
     /// <summary>
     /// Base class for read-only file system implementations.

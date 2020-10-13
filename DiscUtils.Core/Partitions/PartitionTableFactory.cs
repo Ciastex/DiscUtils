@@ -22,7 +22,7 @@
 
 using System.IO;
 
-namespace DiscUtils.Partitions
+namespace DiscUtils.Core.Partitions
 {
     internal abstract class PartitionTableFactory
     {

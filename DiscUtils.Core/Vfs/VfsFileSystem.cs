@@ -25,10 +25,11 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Text.RegularExpressions;
-using DiscUtils.Internal;
+using DiscUtils.Core.Internal;
 using DiscUtils.Streams;
+using DiscUtils.Streams.Buffer;
 
-namespace DiscUtils.Vfs
+namespace DiscUtils.Core.Vfs
 {
     /// <summary>
     /// Base class for VFS file systems.

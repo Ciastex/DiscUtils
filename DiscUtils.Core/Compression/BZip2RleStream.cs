@@ -27,7 +27,7 @@
 using System;
 using System.IO;
 
-namespace DiscUtils.Compression
+namespace DiscUtils.Core.Compression
 {
     internal class BZip2RleStream : Stream
     {

@@ -23,7 +23,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace DiscUtils.Streams
+namespace DiscUtils.Streams.Builder
 {
     public abstract class BuilderExtent : IDisposable
     {

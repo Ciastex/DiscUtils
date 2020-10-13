@@ -21,7 +21,9 @@
 //
 
 using System.IO;
-using DiscUtils.Vfs;
+using DiscUtils.Core;
+using DiscUtils.Core.Vfs;
+using FileSystemInfo = DiscUtils.Core.FileSystemInfo;
 
 namespace DiscUtils.Ntfs
 {

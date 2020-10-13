@@ -23,11 +23,11 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
-using DiscUtils.CoreCompat;
-using DiscUtils.Internal;
+using DiscUtils.Core.CoreCompat;
+using DiscUtils.Core.Internal;
 using DiscUtils.Streams;
 
-namespace DiscUtils
+namespace DiscUtils.Core
 {
     /// <summary>
     /// Base class for all disk image builders.

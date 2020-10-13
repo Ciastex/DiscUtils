@@ -20,7 +20,9 @@
 // DEALINGS IN THE SOFTWARE.
 //
 
-namespace DiscUtils.Streams
+using DiscUtils.Streams.Util;
+
+namespace DiscUtils.Streams.Block
 {
     /// <summary>
     /// Settings controlling BlockCache instances.

@@ -23,8 +23,9 @@
 using System;
 using System.IO;
 using DiscUtils.Streams;
+using DiscUtils.Streams.Util;
 
-namespace DiscUtils.LogicalDiskManager
+namespace DiscUtils.Core.LogicalDiskManager
 {
     internal class DynamicVolume
     {

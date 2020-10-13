@@ -22,7 +22,7 @@
 
 using System.IO;
 
-namespace DiscUtils.Vfs
+namespace DiscUtils.Core.Vfs
 {
     /// <summary>
     /// Base class for logic to detect file systems.

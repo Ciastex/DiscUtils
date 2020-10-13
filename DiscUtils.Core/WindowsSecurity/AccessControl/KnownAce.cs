@@ -1,30 +1,18 @@
 using System.Globalization;
 using System.Text;
 
-namespace DiscUtils.Ntfs.WindowsSecurity.AccessControl
+namespace DiscUtils.Core.WindowsSecurity.AccessControl
 {
     public abstract class KnownAce : GenericAce
     {
-        private int access_mask;
-        private SecurityIdentifier identifier;
-
+        public int AccessMask { get; set; }
+        public SecurityIdentifier SecurityIdentifier { get; set; }
+        
         internal KnownAce(AceType type, AceFlags flags)
             : base(type, flags) { }
 
         internal KnownAce(byte[] binaryForm, int offset)
             : base(binaryForm, offset) { }
-
-        public int AccessMask
-        {
-            get => access_mask;
-            set => access_mask = value;
-        }
-
-        public SecurityIdentifier SecurityIdentifier
-        {
-            get => identifier;
-            set => identifier = value;
-        }
 
         internal static string GetSddlAccessRights(int accessMask)
         {

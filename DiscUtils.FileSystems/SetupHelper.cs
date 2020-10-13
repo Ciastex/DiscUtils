@@ -1,4 +1,4 @@
-﻿using DiscUtils.CoreCompat;
+﻿using DiscUtils.Core.CoreCompat;
 using DiscUtils.Ntfs;
 
 namespace DiscUtils.FileSystems
@@ -7,7 +7,7 @@ namespace DiscUtils.FileSystems
     {
         public static void SetupFileSystems()
         {
-            Setup.SetupHelper.RegisterAssembly(ReflectionHelper.GetAssembly(typeof(NtfsFileSystem)));
+            Core.Setup.SetupHelper.RegisterAssembly(ReflectionHelper.GetAssembly(typeof(NtfsFileSystem)));
         }
     }
 }

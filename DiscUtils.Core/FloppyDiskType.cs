@@ -20,7 +20,7 @@
 // DEALINGS IN THE SOFTWARE.
 //
 
-namespace DiscUtils
+namespace DiscUtils.Core
 {
     /// <summary>
     /// The supported Floppy Disk logical formats.

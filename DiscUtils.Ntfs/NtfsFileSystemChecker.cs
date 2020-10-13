@@ -25,8 +25,9 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Text;
+using DiscUtils.Core;
 using DiscUtils.Streams;
-
+using DiscUtils.Streams.Util;
 #if !NETSTANDARD1_5
 using System.Runtime.Serialization;
 #endif

@@ -20,7 +20,7 @@
 // DEALINGS IN THE SOFTWARE.
 //
 
-namespace DiscUtils
+namespace DiscUtils.Core
 {
     /// <summary>
     /// Class whose instances represent a CHS (Cylinder, Head, Sector) address on a disk.

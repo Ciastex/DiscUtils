@@ -24,7 +24,7 @@ using System;
 using System.Globalization;
 using DiscUtils.Streams;
 
-namespace DiscUtils.Partitions
+namespace DiscUtils.Core.Partitions
 {
     /// <summary>
     /// Base class representing a disk partition.
@@ -48,7 +48,7 @@ namespace DiscUtils.Partitions
         /// <summary>
         /// Gets the type of the partition, as a GUID, when available.
         /// </summary>
-        /// <remarks><see cref="System.Guid"/>.Empty for MBR-style partitions.</remarks>
+        /// <remarks><see cref="Guid"/>.Empty for MBR-style partitions.</remarks>
         public abstract Guid GuidType { get; }
 
         /// <summary>

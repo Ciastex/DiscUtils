@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DiscUtils
+namespace DiscUtils.Core
 {
     /// <summary>
     /// Converts a time to/from UTC.

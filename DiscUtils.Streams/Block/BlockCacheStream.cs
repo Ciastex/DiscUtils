@@ -23,8 +23,9 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using DiscUtils.Streams.Util;
 
-namespace DiscUtils.Streams
+namespace DiscUtils.Streams.Block
 {
     /// <summary>
     /// A stream implementing a block-oriented read cache.

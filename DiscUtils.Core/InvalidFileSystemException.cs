@@ -22,12 +22,12 @@
 
 using System;
 using System.IO;
-
-#if !NETSTANDARD1_5
 using System.Runtime.Serialization;
+#if !NETSTANDARD1_5
+
 #endif
 
-namespace DiscUtils
+namespace DiscUtils.Core
 {
     /// <summary>
     /// Exception thrown when some invalid file system data is found, indicating probably corruption.

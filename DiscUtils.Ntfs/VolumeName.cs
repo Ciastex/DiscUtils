@@ -22,6 +22,7 @@
 
 using System.IO;
 using System.Text;
+using DiscUtils.Core;
 using DiscUtils.Streams;
 
 namespace DiscUtils.Ntfs

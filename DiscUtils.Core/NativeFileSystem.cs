@@ -25,10 +25,11 @@
 
 using System;
 using System.IO;
-using DiscUtils.Internal;
+using DiscUtils.Core.Internal;
 using DiscUtils.Streams;
+using DiscUtils.Streams.Util;
 
-namespace DiscUtils
+namespace DiscUtils.Core
 {
     /// <summary>
     /// Provides an implementation for OS-mounted file systems.

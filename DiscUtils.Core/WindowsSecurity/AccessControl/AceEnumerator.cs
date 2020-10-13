@@ -1,31 +1,31 @@
 using System.Collections;
 
-namespace DiscUtils.Ntfs.WindowsSecurity.AccessControl
+namespace DiscUtils.Core.WindowsSecurity.AccessControl
 {
     public sealed class AceEnumerator : IEnumerator
     {
-        GenericAcl owner;
-        int current = -1;
+        private int _current = -1;
+        private readonly GenericAcl _owner;
 
         internal AceEnumerator(GenericAcl owner)
         {
-            this.owner = owner;
+            _owner = owner;
         }
 
-        public GenericAce Current => current < 0 ? null : owner[current];
+        public GenericAce Current => _current < 0 ? null : _owner[_current];
         object IEnumerator.Current => Current;
 
         public bool MoveNext()
         {
-            if (current + 1 == owner.Count)
+            if (_current + 1 == _owner.Count)
                 return false;
-            current++;
+            _current++;
             return true;
         }
 
         public void Reset()
         {
-            current = -1;
+            _current = -1;
         }
     }
 }

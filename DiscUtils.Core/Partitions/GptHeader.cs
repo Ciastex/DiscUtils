@@ -21,10 +21,10 @@
 //
 
 using System;
-using DiscUtils.Internal;
-using DiscUtils.Streams;
+using DiscUtils.Core.Internal;
+using DiscUtils.Streams.Util;
 
-namespace DiscUtils.Partitions
+namespace DiscUtils.Core.Partitions
 {
     internal class GptHeader
     {

@@ -23,7 +23,7 @@
 using System;
 using DiscUtils.Streams;
 
-namespace DiscUtils.Partitions
+namespace DiscUtils.Core.Partitions
 {
     /// <summary>
     /// Provides access to partition records in a BIOS (MBR) partition table.
@@ -64,7 +64,7 @@ namespace DiscUtils.Partitions
         }
 
         /// <summary>
-        /// Always returns <see cref="System.Guid"/>.Empty.
+        /// Always returns <see cref="Guid"/>.Empty.
         /// </summary>
         public override Guid GuidType
         {

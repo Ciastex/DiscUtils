@@ -22,7 +22,7 @@
 
 using System;
 
-namespace DiscUtils.Streams
+namespace DiscUtils.Streams.Builder
 {
     public class BuilderBytesExtent : BuilderExtent
     {

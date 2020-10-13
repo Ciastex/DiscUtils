@@ -20,9 +20,9 @@
 // DEALINGS IN THE SOFTWARE.
 //
 
-using DiscUtils.Ntfs.WindowsSecurity.AccessControl;
+using DiscUtils.Core.WindowsSecurity.AccessControl;
 
-namespace DiscUtils
+namespace DiscUtils.Core
 {
     /// <summary>
     /// Provides the base class for all file systems that support Windows semantics.

@@ -20,7 +20,7 @@
 // DEALINGS IN THE SOFTWARE.
 //
 
-namespace DiscUtils
+namespace DiscUtils.Core
 {
     /// <summary>
     /// Information about a file or directory common to most Unix systems.

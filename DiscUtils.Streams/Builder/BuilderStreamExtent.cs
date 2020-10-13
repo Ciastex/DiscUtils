@@ -21,8 +21,9 @@
 //
 
 using System.IO;
+using DiscUtils.Streams.Util;
 
-namespace DiscUtils.Streams
+namespace DiscUtils.Streams.Builder
 {
     public class BuilderStreamExtent : BuilderExtent
     {

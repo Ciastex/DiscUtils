@@ -20,7 +20,7 @@
 // DEALINGS IN THE SOFTWARE.
 //
 
-namespace DiscUtils.Streams
+namespace DiscUtils.Streams.Buffer
 {
     public interface IMappedBuffer : IBuffer
     {

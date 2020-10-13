@@ -22,10 +22,10 @@
 
 using System;
 using System.IO;
-using DiscUtils.Internal;
-using DiscUtils.Setup;
+using DiscUtils.Core.Internal;
+using DiscUtils.Core.Setup;
 
-namespace DiscUtils
+namespace DiscUtils.Core
 {
     internal abstract class FileLocator
     {

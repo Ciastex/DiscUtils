@@ -22,7 +22,7 @@
 
 using System;
 
-namespace DiscUtils.Streams
+namespace DiscUtils.Streams.Util
 {
     public static class MathUtilities
     {

@@ -30,7 +30,7 @@ namespace DiscUtils.Streams
     /// </summary>
     /// <remarks>This class is useful for storing large sparse buffers in memory, unused
     /// chunks of the buffer are not stored (assumed to be zero).</remarks>
-    public sealed class SparseMemoryBuffer : Buffer
+    public sealed class SparseMemoryBuffer : Buffer.Buffer
     {
         private readonly Dictionary<int, byte[]> _buffers;
 

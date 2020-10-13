@@ -1,6 +1,6 @@
 using System.IO;
 
-namespace DiscUtils.Vfs
+namespace DiscUtils.Core.Vfs
 {
     /// <summary>
     /// Delegate for instantiating a file system.

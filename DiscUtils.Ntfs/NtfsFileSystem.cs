@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Text.RegularExpressions;
-using DiscUtils.Internal;
-using DiscUtils.Ntfs.WindowsSecurity.AccessControl;
+using DiscUtils.Core;
+using DiscUtils.Core.Internal;
+using DiscUtils.Core.WindowsSecurity.AccessControl;
 using DiscUtils.Streams;
+using DiscUtils.Streams.Block;
+using DiscUtils.Streams.Util;
 
 namespace DiscUtils.Ntfs
 {

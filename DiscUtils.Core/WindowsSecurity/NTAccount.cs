@@ -1,31 +1,30 @@
 using System;
 
-namespace DiscUtils.Ntfs.WindowsSecurity
+namespace DiscUtils.Core.WindowsSecurity
 {
     public sealed class NTAccount : IdentityReference
     {
-        private string _value;
-        public override string Value => _value;
+        public override string Value { get; }
 
         public NTAccount(string name)
         {
             if (name == null)
-                throw new ArgumentNullException("name");
+                throw new ArgumentNullException(nameof(name));
             if (name.Length == 0)
-                throw new ArgumentException("empty", "name");
-            _value = name;
+                throw new ArgumentException("empty", nameof(name));
+            Value = name;
         }
 
         public NTAccount(string domainName, string accountName)
         {
             if (accountName == null)
-                throw new ArgumentNullException("accountName");
+                throw new ArgumentNullException(nameof(accountName));
             if (accountName.Length == 0)
-                throw new ArgumentException("empty", "accountName");
+                throw new ArgumentException("empty", nameof(accountName));
             if (domainName == null)
-                _value = accountName;
+                Value = accountName;
             else
-                _value = domainName + "\\" + accountName;
+                Value = domainName + "\\" + accountName;
         }
 
 
@@ -64,13 +63,13 @@ namespace DiscUtils.Ntfs.WindowsSecurity
             if (targetType == typeof(SecurityIdentifier))
             {
                 WellKnownAccount acct = WellKnownAccount.LookupByName(this.Value);
-                if (acct == null || acct.Sid == null)
+                if (acct?.Sid == null)
                     throw new Exception("Cannot map account name: " + this.Value);
 
                 return new SecurityIdentifier(acct.Sid);
             }
 
-            throw new ArgumentException("Unknown type", "targetType");
+            throw new ArgumentException("Unknown type", nameof(targetType));
         }
 
         public static bool operator ==(NTAccount left, NTAccount right)

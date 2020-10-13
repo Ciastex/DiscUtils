@@ -26,10 +26,10 @@
 
 using System;
 using System.IO;
-using DiscUtils.Internal;
-using DiscUtils.Streams;
+using DiscUtils.Core.Internal;
+using DiscUtils.Streams.Util;
 
-namespace DiscUtils.Compression
+namespace DiscUtils.Core.Compression
 {
     /// <summary>
     /// Implementation of a BZip2 decoder.

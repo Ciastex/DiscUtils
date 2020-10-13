@@ -23,7 +23,8 @@
 using System;
 using System.Globalization;
 using System.IO;
-using DiscUtils.Internal;
+using DiscUtils.Core;
+using DiscUtils.Core.Internal;
 
 namespace DiscUtils.Vhd
 {

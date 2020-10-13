@@ -22,9 +22,9 @@
 
 using System.Collections.Generic;
 using System.IO;
-using DiscUtils.Partitions;
+using DiscUtils.Core.Partitions;
 
-namespace DiscUtils.LogicalDiskManager
+namespace DiscUtils.Core.LogicalDiskManager
 {
     /// <summary>
     /// A class that understands Windows LDM structures, mapping physical volumes to logical volumes.

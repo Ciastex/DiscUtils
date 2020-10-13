@@ -24,7 +24,7 @@ using System;
 using System.IO;
 using System.IO.Compression;
 
-namespace DiscUtils.Compression
+namespace DiscUtils.Core.Compression
 {
     internal class SizedDeflateStream : DeflateStream
     {

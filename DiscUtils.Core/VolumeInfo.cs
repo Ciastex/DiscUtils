@@ -25,7 +25,7 @@ using System;
 #endif
 using DiscUtils.Streams;
 
-namespace DiscUtils
+namespace DiscUtils.Core
 {
     /// <summary>
     /// Base class that holds information about a disk volume.

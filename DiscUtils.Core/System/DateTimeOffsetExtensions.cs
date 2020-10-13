@@ -1,4 +1,6 @@
-﻿namespace System
+﻿using System;
+
+namespace DiscUtils.Core.System
 {
     /// <summary>
     /// DateTimeOffset extension methods.

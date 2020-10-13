@@ -20,7 +20,7 @@
 // DEALINGS IN THE SOFTWARE.
 //
 
-namespace DiscUtils.LogicalDiskManager
+namespace DiscUtils.Core.LogicalDiskManager
 {
     internal sealed class ExtentRecord : DatabaseRecord
     {

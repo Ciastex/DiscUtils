@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
-using DiscUtils.CoreCompat;
-using DiscUtils.Internal;
+using DiscUtils.Core.CoreCompat;
+using DiscUtils.Core.Internal;
 
-namespace DiscUtils
+namespace DiscUtils.Core
 {
     /// <summary>
     /// Helps discover and use VirtualDiskFactory's

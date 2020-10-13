@@ -24,6 +24,8 @@ using System;
 using System.IO;
 using System.Text;
 using DiscUtils.Streams;
+using DiscUtils.Streams.Buffer;
+using DiscUtils.Streams.Util;
 
 namespace DiscUtils.Ntfs
 {

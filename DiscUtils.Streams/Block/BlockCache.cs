@@ -22,7 +22,7 @@
 
 using System.Collections.Generic;
 
-namespace DiscUtils.Streams
+namespace DiscUtils.Streams.Block
 {
     public class BlockCache<T>
         where T : Block, new()

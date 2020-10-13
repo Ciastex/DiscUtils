@@ -22,8 +22,9 @@
 
 using System;
 using System.IO;
+using DiscUtils.Streams.Buffer;
 
-namespace DiscUtils.Streams
+namespace DiscUtils.Streams.Util
 {
     public static class StreamUtilities
     {

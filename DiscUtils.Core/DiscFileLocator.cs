@@ -22,9 +22,9 @@
 
 using System;
 using System.IO;
-using DiscUtils.Internal;
+using DiscUtils.Core.Internal;
 
-namespace DiscUtils
+namespace DiscUtils.Core
 {
     internal sealed class DiscFileLocator : FileLocator
     {

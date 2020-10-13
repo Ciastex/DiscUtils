@@ -22,7 +22,7 @@
 
 using System;
 
-namespace DiscUtils.Compression
+namespace DiscUtils.Core.Compression
 {
     internal sealed class InverseBurrowsWheeler : DataBlockTransform
     {

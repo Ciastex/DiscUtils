@@ -1,4 +1,4 @@
-namespace DiscUtils
+namespace DiscUtils.Core
 {
     /// <summary>
     /// Enumeration of the health status of a logical volume.

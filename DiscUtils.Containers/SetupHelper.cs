@@ -1,4 +1,4 @@
-﻿using DiscUtils.CoreCompat;
+﻿using DiscUtils.Core.CoreCompat;
 
 namespace DiscUtils.Containers
 {
@@ -6,7 +6,7 @@ namespace DiscUtils.Containers
     {
         public static void SetupContainers()
         {
-            Setup.SetupHelper.RegisterAssembly(ReflectionHelper.GetAssembly(typeof(Vhd.Disk)));
+            Core.Setup.SetupHelper.RegisterAssembly(ReflectionHelper.GetAssembly(typeof(Vhd.Disk)));
         }
     }
 }

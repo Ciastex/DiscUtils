@@ -22,10 +22,10 @@
 
 using System;
 using System.IO;
-using DiscUtils.Internal;
-using DiscUtils.Streams;
+using DiscUtils.Core.Internal;
+using DiscUtils.Streams.Util;
 
-namespace DiscUtils.Raw
+namespace DiscUtils.Core.Raw
 {
     [VirtualDiskFactory("RAW", ".img,.ima,.vfd,.flp,.bif")]
     internal sealed class DiskFactory : VirtualDiskFactory

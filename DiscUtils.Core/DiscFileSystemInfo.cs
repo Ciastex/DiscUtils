@@ -22,9 +22,9 @@
 
 using System;
 using System.IO;
-using DiscUtils.Internal;
+using DiscUtils.Core.Internal;
 
-namespace DiscUtils
+namespace DiscUtils.Core
 {
     /// <summary>
     /// Provides the base class for both <see cref="DiscFileInfo"/> and <see cref="DiscDirectoryInfo"/> objects.
@@ -43,7 +43,7 @@ namespace DiscUtils
         }
 
         /// <summary>
-        /// Gets or sets the <see cref="System.IO.FileAttributes"/> of the current <see cref="DiscFileSystemInfo"/> object.
+        /// Gets or sets the <see cref="FileAttributes"/> of the current <see cref="DiscFileSystemInfo"/> object.
         /// </summary>
         public virtual FileAttributes Attributes
         {

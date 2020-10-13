@@ -23,8 +23,9 @@
 using System;
 using System.Collections.Generic;
 using DiscUtils.Streams;
+using DiscUtils.Streams.Util;
 
-namespace DiscUtils
+namespace DiscUtils.Core
 {
     /// <summary>
     /// Represents the base layer, or a differencing layer of a VirtualDisk.

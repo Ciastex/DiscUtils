@@ -1,13 +1,14 @@
 using System;
 using System.Globalization;
 
-namespace DiscUtils.Ntfs.WindowsSecurity.AccessControl
+namespace DiscUtils.Core.WindowsSecurity.AccessControl
 {
     public sealed class ObjectAce : QualifiedAce
     {
-        private Guid object_ace_type;
-        private Guid inherited_object_type;
-        private ObjectAceFlags object_ace_flags;
+        private Guid _objectAceType;
+        private Guid _inheritedObjectType;
+        
+        public ObjectAceFlags ObjectAceFlags { get; set; }
 
         public ObjectAce(AceFlags aceFlags, AceQualifier qualifier,
                          int accessMask, SecurityIdentifier sid,
@@ -42,9 +43,9 @@ namespace DiscUtils.Ntfs.WindowsSecurity.AccessControl
             int lenMinimum = 12 + SecurityIdentifier.MinBinaryLength;
 
             if (offset > binaryForm.Length - len)
-                throw new ArgumentException("Invalid ACE - truncated", "binaryForm");
+                throw new ArgumentException("Invalid ACE - truncated", nameof(binaryForm));
             if (len < lenMinimum)
-                throw new ArgumentException("Invalid ACE", "binaryForm");
+                throw new ArgumentException("Invalid ACE", nameof(binaryForm));
 
             AccessMask = ReadInt(binaryForm, offset + 4);
             ObjectAceFlags = (ObjectAceFlags)ReadInt(binaryForm, offset + 8);
@@ -52,7 +53,7 @@ namespace DiscUtils.Ntfs.WindowsSecurity.AccessControl
             if (ObjectAceTypePresent) lenMinimum += 16;
             if (InheritedObjectAceTypePresent) lenMinimum += 16;
             if (len < lenMinimum)
-                throw new ArgumentException("Invalid ACE", "binaryForm");
+                throw new ArgumentException("Invalid ACE", nameof(binaryForm));
 
             int pos = 12;
             if (ObjectAceTypePresent)
@@ -91,22 +92,17 @@ namespace DiscUtils.Ntfs.WindowsSecurity.AccessControl
 
         public Guid InheritedObjectAceType
         {
-            get => inherited_object_type;
-            set => inherited_object_type = value;
+            get => _inheritedObjectType;
+            set => _inheritedObjectType = value;
         }
 
         bool InheritedObjectAceTypePresent => 0 != (ObjectAceFlags & ObjectAceFlags.InheritedObjectAceTypePresent);
 
-        public ObjectAceFlags ObjectAceFlags
-        {
-            get => object_ace_flags;
-            set => object_ace_flags = value;
-        }
 
         public Guid ObjectAceType
         {
-            get => object_ace_type;
-            set => object_ace_type = value;
+            get => _objectAceType;
+            set => _objectAceType = value;
         }
 
         bool ObjectAceTypePresent => 0 != (ObjectAceFlags & ObjectAceFlags.ObjectAceTypePresent);
@@ -114,8 +110,8 @@ namespace DiscUtils.Ntfs.WindowsSecurity.AccessControl
         public override void GetBinaryForm(byte[] binaryForm, int offset)
         {
             int len = BinaryLength;
-            binaryForm[offset++] = (byte)this.AceType;
-            binaryForm[offset++] = (byte)this.AceFlags;
+            binaryForm[offset++] = (byte)AceType;
+            binaryForm[offset++] = (byte)AceFlags;
             WriteUShort((ushort)len, binaryForm, offset);
             offset += 2;
             WriteInt(AccessMask, binaryForm, offset);
@@ -159,11 +155,11 @@ namespace DiscUtils.Ntfs.WindowsSecurity.AccessControl
 
             string objType = "";
             if ((ObjectAceFlags & ObjectAceFlags.ObjectAceTypePresent) != 0)
-                objType = object_ace_type.ToString("D");
+                objType = _objectAceType.ToString("D");
 
             string inhObjType = "";
             if ((ObjectAceFlags & ObjectAceFlags.InheritedObjectAceTypePresent) != 0)
-                inhObjType = inherited_object_type.ToString("D");
+                inhObjType = _inheritedObjectType.ToString("D");
 
             return string.Format(CultureInfo.InvariantCulture,
                 "({0};{1};{2};{3};{4};{5})",
@@ -204,7 +200,7 @@ namespace DiscUtils.Ntfs.WindowsSecurity.AccessControl
                         return AceType.SystemAuditObject;
 
                 default:
-                    throw new ArgumentException("Unrecognized ACE qualifier: " + qualifier, "qualifier");
+                    throw new ArgumentException("Unrecognized ACE qualifier: " + qualifier, nameof(qualifier));
             }
         }
 

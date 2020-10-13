@@ -1,8 +1,10 @@
 ﻿using System;
 using System.IO;
+using DiscUtils.Core;
+using DiscUtils.Core.Partitions;
 using DiscUtils.Ntfs;
-using DiscUtils.Partitions;
 using DiscUtils.Streams;
+using DiscUtils.Streams.Util;
 using DiscUtils.Vhd;
 using File = System.IO.File;
 
@@ -15,19 +17,17 @@ namespace DiscUtils.Test
 
         static void Main(string[] args)
         {
-            if (!File.Exists("disk.vhd"))
+            if (File.Exists("disk.vhd"))
+            {
+                File.Delete("disk.vhd");
+            }
+            else
             {
                 var diskStream = File.Create("disk.vhd");
                 Vhd = Disk.InitializeDynamic(diskStream, Ownership.None, 1024 * 1024 * 1024);
                 BiosPartitionTable.Initialize(Vhd, WellKnownPartitionType.WindowsNtfs);
                 var volmgr = new VolumeManager(Vhd);
                 Ntfs = NtfsFileSystem.Format(volmgr.GetPhysicalVolumes()[0], "test");
-            }
-            else
-            {
-                var diskStream = File.Open("disk.vhd", FileMode.Open);
-                Vhd = new Disk(diskStream, Ownership.None);
-                Ntfs = new NtfsFileSystem(Vhd.Partitions[0].Open());
             }
         }
     }

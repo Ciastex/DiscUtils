@@ -21,6 +21,7 @@
 //
 
 using System.IO;
+using DiscUtils.Streams.Buffer;
 
 namespace DiscUtils.Streams
 {

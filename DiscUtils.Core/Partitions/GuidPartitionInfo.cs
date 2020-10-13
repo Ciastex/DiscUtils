@@ -23,7 +23,7 @@
 using System;
 using DiscUtils.Streams;
 
-namespace DiscUtils.Partitions
+namespace DiscUtils.Core.Partitions
 {
     /// <summary>
     /// Provides access to partition records in a GUID partition table.

@@ -20,7 +20,7 @@
 // DEALINGS IN THE SOFTWARE.
 //
 
-namespace DiscUtils.Streams
+namespace DiscUtils.Streams.Block
 {
     /// <summary>
     /// Statistical information about the effectiveness of a BlockCache instance.

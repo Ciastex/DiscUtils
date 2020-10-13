@@ -21,8 +21,9 @@
 //
 
 using System.Collections.Generic;
+using DiscUtils.Streams.Util;
 
-namespace DiscUtils.Streams
+namespace DiscUtils.Streams.Builder
 {
     public class BuilderSparseStreamExtent : BuilderExtent
     {

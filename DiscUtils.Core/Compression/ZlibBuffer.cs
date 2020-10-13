@@ -24,9 +24,10 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using DiscUtils.Streams;
-using Buffer=DiscUtils.Streams.Buffer;
+using DiscUtils.Streams.Util;
+using Buffer=DiscUtils.Streams.Buffer.Buffer;
 
-namespace DiscUtils.Compression
+namespace DiscUtils.Core.Compression
 {
     internal class ZlibBuffer : Buffer
     {

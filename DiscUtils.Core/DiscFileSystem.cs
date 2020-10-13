@@ -24,7 +24,7 @@ using System;
 using System.IO;
 using DiscUtils.Streams;
 
-namespace DiscUtils
+namespace DiscUtils.Core
 {
     /// <summary>
     /// Provides the base class for all file systems.

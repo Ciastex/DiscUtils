@@ -23,7 +23,7 @@
 using System;
 using System.IO;
 
-namespace DiscUtils.Vfs
+namespace DiscUtils.Core.Vfs
 {
     /// <summary>
     /// Base class for directory entries in a file system.

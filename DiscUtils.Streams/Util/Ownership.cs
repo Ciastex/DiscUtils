@@ -20,7 +20,7 @@
 // DEALINGS IN THE SOFTWARE.
 //
 
-namespace DiscUtils.Streams
+namespace DiscUtils.Streams.Util
 {
     /// <summary>
     /// Enumeration used to indicate transfer of disposable objects.

@@ -22,8 +22,10 @@
 
 using System;
 using System.IO;
-using DiscUtils.Internal;
+using DiscUtils.Core;
+using DiscUtils.Core.Internal;
 using DiscUtils.Streams;
+using DiscUtils.Streams.Util;
 #if !NETSTANDARD1_5
 using System.Runtime.Serialization;
 #endif

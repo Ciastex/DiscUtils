@@ -22,8 +22,9 @@
 
 using System.Collections.Generic;
 using System.IO;
+using DiscUtils.Streams.Util;
 
-namespace DiscUtils.Streams
+namespace DiscUtils.Streams.Buffer
 {
     /// <summary>
     /// Converts a Buffer into a Stream.

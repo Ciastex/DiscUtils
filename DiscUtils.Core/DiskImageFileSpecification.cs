@@ -21,8 +21,9 @@
 //
 
 using DiscUtils.Streams;
+using DiscUtils.Streams.Builder;
 
-namespace DiscUtils
+namespace DiscUtils.Core
 {
     /// <summary>
     /// Describes a particular file that is a constituent part of a virtual disk.

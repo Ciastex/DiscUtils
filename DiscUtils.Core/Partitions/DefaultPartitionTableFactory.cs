@@ -22,7 +22,7 @@
 
 using System.IO;
 
-namespace DiscUtils.Partitions
+namespace DiscUtils.Core.Partitions
 {
     [PartitionTableFactory]
     internal sealed class DefaultPartitionTableFactory : PartitionTableFactory

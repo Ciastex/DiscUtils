@@ -22,8 +22,9 @@
 
 using System;
 using System.IO;
+using DiscUtils.Streams.Util;
 
-namespace DiscUtils.Streams
+namespace DiscUtils.Streams.ReaderWriter
 {
     /// <summary>
     /// Class for reading little-endian data from a stream.

@@ -20,7 +20,8 @@
 // DEALINGS IN THE SOFTWARE.
 //
 
-using DiscUtils.Compression;
+using DiscUtils.Core;
+using DiscUtils.Core.Compression;
 
 namespace DiscUtils.Ntfs
 {

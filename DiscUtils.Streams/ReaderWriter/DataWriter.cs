@@ -23,7 +23,7 @@
 using System;
 using System.IO;
 
-namespace DiscUtils.Streams
+namespace DiscUtils.Streams.ReaderWriter
 {
     public abstract class DataWriter
     {

@@ -23,7 +23,7 @@
 using System;
 using DiscUtils.Streams;
 
-namespace DiscUtils
+namespace DiscUtils.Core
 {
     /// <summary>
     /// Information about a logical disk volume, which may be backed by one or more physical volumes.

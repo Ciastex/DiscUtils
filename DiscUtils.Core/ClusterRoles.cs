@@ -1,6 +1,6 @@
 using System;
 
-namespace DiscUtils
+namespace DiscUtils.Core
 {
     /// <summary>
     /// Enumeration of possible cluster roles.

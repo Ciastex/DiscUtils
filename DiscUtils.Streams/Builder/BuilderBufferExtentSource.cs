@@ -20,7 +20,7 @@
 // DEALINGS IN THE SOFTWARE.
 //
 
-namespace DiscUtils.Streams
+namespace DiscUtils.Streams.Builder
 {
     public class BuilderBufferExtentSource : BuilderExtentSource
     {

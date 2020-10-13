@@ -23,13 +23,14 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using DiscUtils.Streams.Util;
 
 namespace DiscUtils.Streams
 {
     /// <summary>
     /// Converts a Stream into an IBuffer instance.
     /// </summary>
-    public sealed class StreamBuffer : Buffer, IDisposable
+    public sealed class StreamBuffer : Buffer.Buffer, IDisposable
     {
         private readonly Ownership _ownership;
         private SparseStream _stream;

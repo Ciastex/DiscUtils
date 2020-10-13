@@ -1,8 +1,9 @@
 ﻿#if NETSTANDARD
 using System.Text;
+
 #endif
 
-namespace DiscUtils.CoreCompat
+namespace DiscUtils.Core.CoreCompat
 {
     internal static class EncodingHelper
     {

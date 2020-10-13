@@ -22,9 +22,9 @@
 
 using System;
 using System.Globalization;
-using DiscUtils.Streams;
+using DiscUtils.Streams.Util;
 
-namespace DiscUtils
+namespace DiscUtils.Core
 {
     /// <summary>
     /// Class whose instances represent disk geometries.

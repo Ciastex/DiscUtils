@@ -21,11 +21,12 @@
 //
 
 using System.Collections.Generic;
+
 #if !NETSTANDARD
 using System;
 #endif
 
-namespace DiscUtils.Streams
+namespace DiscUtils.Streams.Buffer
 {
     /// <summary>
     /// Abstract base class for implementations of IBuffer.

@@ -21,8 +21,10 @@
 //
 
 using System.IO;
-using DiscUtils.Ntfs.WindowsSecurity.AccessControl;
+using DiscUtils.Core;
+using DiscUtils.Core.WindowsSecurity.AccessControl;
 using DiscUtils.Streams;
+using DiscUtils.Streams.Util;
 
 namespace DiscUtils.Ntfs
 {

@@ -24,8 +24,9 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
-using DiscUtils.Ntfs.WindowsSecurity;
+using DiscUtils.Core.WindowsSecurity;
 using DiscUtils.Streams;
+using DiscUtils.Streams.Util;
 
 namespace DiscUtils.Ntfs
 {

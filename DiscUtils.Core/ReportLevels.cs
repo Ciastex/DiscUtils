@@ -1,6 +1,6 @@
 using System;
 
-namespace DiscUtils
+namespace DiscUtils.Core
 {
     /// <summary>
     /// Flags for the amount of detail to include in a report.

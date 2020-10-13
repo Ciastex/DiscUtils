@@ -24,8 +24,10 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
-using DiscUtils.Internal;
+using DiscUtils.Core;
+using DiscUtils.Core.Internal;
 using DiscUtils.Streams;
+using DiscUtils.Streams.Util;
 
 namespace DiscUtils.Vhd
 {

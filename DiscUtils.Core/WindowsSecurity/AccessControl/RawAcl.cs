@@ -2,50 +2,50 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DiscUtils.Ntfs.WindowsSecurity.AccessControl
+namespace DiscUtils.Core.WindowsSecurity.AccessControl
 {
     public sealed class RawAcl : GenericAcl
     {
-        private byte revision;
-        private List<GenericAce> list;
+        private readonly byte _revision;
+        private readonly List<GenericAce> _list;
 
         public RawAcl(byte revision, int capacity)
         {
-            this.revision = revision;
-            list = new List<GenericAce>(capacity);
+            _revision = revision;
+            _list = new List<GenericAce>(capacity);
         }
 
         public RawAcl(byte[] binaryForm, int offset)
         {
             if (binaryForm == null)
-                throw new ArgumentNullException("binaryForm");
+                throw new ArgumentNullException(nameof(binaryForm));
 
             if (offset < 0 || offset > binaryForm.Length - 8)
-                throw new ArgumentOutOfRangeException("offset", offset, "Offset out of range");
+                throw new ArgumentOutOfRangeException(nameof(offset), offset, "Offset out of range");
 
-            revision = binaryForm[offset];
-            if (revision != AclRevision && revision != AclRevisionDS)
-                throw new ArgumentException("Invalid ACL - unknown revision", "binaryForm");
+            _revision = binaryForm[offset];
+            if (_revision != AclRevision && _revision != AclRevisionDS)
+                throw new ArgumentException("Invalid ACL - unknown revision", nameof(binaryForm));
 
             int binaryLength = ReadUShort(binaryForm, offset + 2);
             if (offset > binaryForm.Length - binaryLength)
-                throw new ArgumentException("Invalid ACL - truncated", "binaryForm");
+                throw new ArgumentException("Invalid ACL - truncated", nameof(binaryForm));
 
             int pos = offset + 8;
             int numAces = ReadUShort(binaryForm, offset + 4);
-            list = new List<GenericAce>(numAces);
+            _list = new List<GenericAce>(numAces);
             for (int i = 0; i < numAces; ++i)
             {
                 GenericAce newAce = GenericAce.CreateFromBinaryForm(binaryForm, pos);
-                list.Add(newAce);
+                _list.Add(newAce);
                 pos += newAce.BinaryLength;
             }
         }
 
         internal RawAcl(byte revision, List<GenericAce> aces)
         {
-            this.revision = revision;
-            this.list = aces;
+            this._revision = revision;
+            this._list = aces;
         }
 
         public override int BinaryLength
@@ -53,7 +53,7 @@ namespace DiscUtils.Ntfs.WindowsSecurity.AccessControl
             get
             {
                 int len = 8;
-                foreach (var ace in list)
+                foreach (var ace in _list)
                 {
                     len += ace.BinaryLength;
                 }
@@ -61,35 +61,35 @@ namespace DiscUtils.Ntfs.WindowsSecurity.AccessControl
             }
         }
 
-        public override int Count => list.Count;
+        public override int Count => _list.Count;
 
         public override GenericAce this[int index]
         {
-            get => list[index];
-            set => list[index] = value;
+            get => _list[index];
+            set => _list[index] = value;
         }
 
-        public override byte Revision => revision;
+        public override byte Revision => _revision;
 
         public override void GetBinaryForm(byte[] binaryForm, int offset)
         {
             if (binaryForm == null)
-                throw new ArgumentNullException("binaryForm");
+                throw new ArgumentNullException(nameof(binaryForm));
 
             if (offset < 0
                 || offset > binaryForm.Length - BinaryLength)
-                throw new ArgumentException("Offset out of range", "offset");
+                throw new ArgumentException("Offset out of range", nameof(offset));
 
             binaryForm[offset] = Revision;
             binaryForm[offset + 1] = 0;
             WriteUShort((ushort)BinaryLength, binaryForm,
                 offset + 2);
-            WriteUShort((ushort)list.Count, binaryForm,
+            WriteUShort((ushort)_list.Count, binaryForm,
                 offset + 4);
             WriteUShort(0, binaryForm, offset + 6);
 
             int pos = offset + 8;
-            foreach (var ace in list)
+            foreach (var ace in _list)
             {
                 ace.GetBinaryForm(binaryForm, pos);
                 pos += ace.BinaryLength;
@@ -99,13 +99,13 @@ namespace DiscUtils.Ntfs.WindowsSecurity.AccessControl
         public void InsertAce(int index, GenericAce ace)
         {
             if (ace == null)
-                throw new ArgumentNullException("ace");
-            list.Insert(index, ace);
+                throw new ArgumentNullException(nameof(ace));
+            _list.Insert(index, ace);
         }
 
         public void RemoveAce(int index)
         {
-            list.RemoveAt(index);
+            _list.RemoveAt(index);
         }
 
         internal override string GetSddlForm(ControlFlags sdFlags,
@@ -132,7 +132,7 @@ namespace DiscUtils.Ntfs.WindowsSecurity.AccessControl
                     result.Append("AI");
             }
 
-            foreach (var ace in list)
+            foreach (var ace in _list)
             {
                 result.Append(ace.GetSddlForm());
             }
@@ -147,14 +147,14 @@ namespace DiscUtils.Ntfs.WindowsSecurity.AccessControl
         {
             ParseFlags(sddlForm, isDacl, ref sdFlags, ref pos);
 
-            byte revision = GenericAcl.AclRevision;
+            byte revision = AclRevision;
             List<GenericAce> aces = new List<GenericAce>();
             while (pos < sddlForm.Length && sddlForm[pos] == '(')
             {
                 GenericAce ace = GenericAce.CreateFromSddlForm(
                     sddlForm, ref pos);
                 if ((ace as ObjectAce) != null)
-                    revision = GenericAcl.AclRevisionDS;
+                    revision = AclRevisionDS;
                 aces.Add(ace);
             }
 
@@ -198,12 +198,12 @@ namespace DiscUtils.Ntfs.WindowsSecurity.AccessControl
                     }
                     else
                     {
-                        throw new ArgumentException("Invalid SDDL string.", "sddlForm");
+                        throw new ArgumentException("Invalid SDDL string.", nameof(sddlForm));
                     }
                 }
                 else
                 {
-                    throw new ArgumentException("Invalid SDDL string.", "sddlForm");
+                    throw new ArgumentException("Invalid SDDL string.", nameof(sddlForm));
                 }
 
                 ch = Char.ToUpperInvariant(sddlForm[pos]);

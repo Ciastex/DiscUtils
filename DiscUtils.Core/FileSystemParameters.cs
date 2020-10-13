@@ -22,7 +22,7 @@
 
 using System.Text;
 
-namespace DiscUtils
+namespace DiscUtils.Core
 {
     /// <summary>
     /// Class with generic file system parameters.

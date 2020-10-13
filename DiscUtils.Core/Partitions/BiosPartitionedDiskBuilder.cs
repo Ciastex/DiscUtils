@@ -23,8 +23,10 @@
 using System;
 using System.Collections.Generic;
 using DiscUtils.Streams;
+using DiscUtils.Streams.Builder;
+using DiscUtils.Streams.Util;
 
-namespace DiscUtils.Partitions
+namespace DiscUtils.Core.Partitions
 {
     /// <summary>
     /// Builds a stream with the contents of a BIOS partitioned disk.

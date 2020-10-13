@@ -22,7 +22,7 @@
 
 using System.Collections.Generic;
 
-namespace DiscUtils.Streams
+namespace DiscUtils.Streams.Buffer
 {
     /// <summary>
     /// Interface shared by all buffers.

@@ -22,7 +22,7 @@
 
 using System;
 
-namespace DiscUtils.Internal
+namespace DiscUtils.Core.Internal
 {
     [AttributeUsage(AttributeTargets.Class)]
     internal sealed class VirtualDiskFactoryAttribute : Attribute

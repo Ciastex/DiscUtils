@@ -1,10 +1,10 @@
 using System;
 
-namespace DiscUtils.Ntfs.WindowsSecurity.AccessControl
+namespace DiscUtils.Core.WindowsSecurity.AccessControl
 {
     public abstract class QualifiedAce : KnownAce
     {
-        private byte[] opaque;
+        private byte[] _opaque;
 
         internal QualifiedAce(AceType type, AceFlags flags, byte[] opaque)
             : base(type, flags)
@@ -66,25 +66,23 @@ namespace DiscUtils.Ntfs.WindowsSecurity.AccessControl
         {
             get
             {
-                if (opaque == null)
+                if (_opaque == null)
                     return 0;
-                return opaque.Length;
+                return _opaque.Length;
             }
         }
 
         public byte[] GetOpaque()
         {
-            if (opaque == null)
-                return null;
-            return (byte[])opaque.Clone();
+            return (byte[])_opaque?.Clone();
         }
 
         public void SetOpaque(byte[] opaque)
         {
             if (opaque == null)
-                this.opaque = null;
+                _opaque = null;
             else
-                this.opaque = (byte[])opaque.Clone();
+                _opaque = (byte[])opaque.Clone();
         }
     }
 }

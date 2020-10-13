@@ -1,6 +1,6 @@
 using DiscUtils.Streams;
 
-namespace DiscUtils.Vfs
+namespace DiscUtils.Core.Vfs
 {
     /// <summary>
     /// Interface implemented by classes representing files, in file systems that support multi-stream files.

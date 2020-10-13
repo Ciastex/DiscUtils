@@ -23,10 +23,10 @@
 using System;
 using System.Collections.ObjectModel;
 using System.IO;
-using DiscUtils.Partitions;
-using DiscUtils.Streams;
+using DiscUtils.Core.Partitions;
+using DiscUtils.Streams.Util;
 
-namespace DiscUtils.ApplePartitionMap
+namespace DiscUtils.Core.ApplePartitionMap
 {
     /// <summary>
     /// Interprets Apple Partition Map structures that partition a disk.

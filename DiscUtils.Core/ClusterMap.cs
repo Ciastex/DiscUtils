@@ -22,7 +22,7 @@
 
 using System.Collections.Generic;
 
-namespace DiscUtils
+namespace DiscUtils.Core
 {
     /// <summary>
     /// Class that identifies the role of each cluster in a file system.

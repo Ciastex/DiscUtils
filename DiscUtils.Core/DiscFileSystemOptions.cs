@@ -22,7 +22,7 @@
 
 using System;
 
-namespace DiscUtils
+namespace DiscUtils.Core
 {
     /// <summary>
     /// Common file system options.

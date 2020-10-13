@@ -1,39 +1,46 @@
 using System;
 
-namespace DiscUtils.Ntfs.WindowsSecurity.AccessControl
+namespace DiscUtils.Core.WindowsSecurity.AccessControl
 {
     public sealed class RawSecurityDescriptor : GenericSecurityDescriptor
     {
-        private ControlFlags control_flags;
-        private SecurityIdentifier owner_sid;
-        private SecurityIdentifier group_sid;
-        private RawAcl system_acl;
-        private RawAcl discretionary_acl;
-        private byte resourcemgr_control;
+        private ControlFlags _controlFlags;
 
+        internal override GenericAcl InternalDacl => DiscretionaryAcl;
+        internal override GenericAcl InternalSacl => SystemAcl;
+        internal override byte InternalReservedField => ResourceManagerControl;
+        
+        public override ControlFlags ControlFlags => _controlFlags;
+
+        public RawAcl DiscretionaryAcl { get; set; }
+        public override SecurityIdentifier Group { get; set; }
+        public override SecurityIdentifier Owner { get; set; }
+        public byte ResourceManagerControl { get; set; }
+        public RawAcl SystemAcl { get; set; }
+        
         public RawSecurityDescriptor(string sddlForm)
         {
             if (sddlForm == null)
-                throw new ArgumentNullException("sddlForm");
+                throw new ArgumentNullException(nameof(sddlForm));
 
             ParseSddl(sddlForm.Replace(" ", ""));
 
-            control_flags |= ControlFlags.SelfRelative;
+            _controlFlags |= ControlFlags.SelfRelative;
         }
 
         public RawSecurityDescriptor(byte[] binaryForm, int offset)
         {
             if (binaryForm == null)
-                throw new ArgumentNullException("binaryForm");
+                throw new ArgumentNullException(nameof(binaryForm));
 
             if (offset < 0 || offset > binaryForm.Length - 0x14)
-                throw new ArgumentOutOfRangeException("offset", offset, "Offset out of range");
+                throw new ArgumentOutOfRangeException(nameof(offset), offset, "Offset out of range");
 
             if (binaryForm[offset] != 1)
-                throw new ArgumentException("Unrecognized Security Descriptor revision.", "binaryForm");
+                throw new ArgumentException("Unrecognized Security Descriptor revision.", nameof(binaryForm));
 
-            resourcemgr_control = binaryForm[offset + 0x01];
-            control_flags = (ControlFlags)ReadUShort(binaryForm, offset + 0x02);
+            ResourceManagerControl = binaryForm[offset + 0x01];
+            _controlFlags = (ControlFlags)ReadUShort(binaryForm, offset + 0x02);
 
             int ownerPos = ReadInt(binaryForm, offset + 0x04);
             int groupPos = ReadInt(binaryForm, offset + 0x08);
@@ -41,84 +48,34 @@ namespace DiscUtils.Ntfs.WindowsSecurity.AccessControl
             int daclPos = ReadInt(binaryForm, offset + 0x10);
 
             if (ownerPos != 0)
-                owner_sid = new SecurityIdentifier(binaryForm, ownerPos);
+                Owner = new SecurityIdentifier(binaryForm, ownerPos);
 
             if (groupPos != 0)
-                group_sid = new SecurityIdentifier(binaryForm, groupPos);
+                Group = new SecurityIdentifier(binaryForm, groupPos);
 
             if (saclPos != 0)
-                system_acl = new RawAcl(binaryForm, saclPos);
+                SystemAcl = new RawAcl(binaryForm, saclPos);
 
             if (daclPos != 0)
-                discretionary_acl = new RawAcl(binaryForm, daclPos);
+                DiscretionaryAcl = new RawAcl(binaryForm, daclPos);
         }
 
         public RawSecurityDescriptor(ControlFlags flags,
                                      SecurityIdentifier owner,
-                                     SecurityIdentifier @group,
+                                     SecurityIdentifier group,
                                      RawAcl systemAcl,
                                      RawAcl discretionaryAcl)
         {
-            control_flags = flags;
-            owner_sid = owner;
-            group_sid = @group;
-            system_acl = systemAcl;
-            discretionary_acl = discretionaryAcl;
-        }
-
-        public override ControlFlags ControlFlags
-        {
-            get { return control_flags; }
-        }
-
-        public RawAcl DiscretionaryAcl
-        {
-            get { return discretionary_acl; }
-            set { discretionary_acl = value; }
-        }
-
-        public override SecurityIdentifier Group
-        {
-            get { return group_sid; }
-            set { group_sid = value; }
-        }
-
-        public override SecurityIdentifier Owner
-        {
-            get { return owner_sid; }
-            set { owner_sid = value; }
-        }
-
-        public byte ResourceManagerControl
-        {
-            get { return resourcemgr_control; }
-            set { resourcemgr_control = value; }
-        }
-
-        public RawAcl SystemAcl
-        {
-            get { return system_acl; }
-            set { system_acl = value; }
+            _controlFlags = flags;
+            Owner = owner;
+            Group = group;
+            SystemAcl = systemAcl;
+            DiscretionaryAcl = discretionaryAcl;
         }
 
         public void SetFlags(ControlFlags flags)
         {
-            control_flags = flags | ControlFlags.SelfRelative;
-        }
-
-        internal override GenericAcl InternalDacl
-        {
-            get { return this.DiscretionaryAcl; }
-        }
-
-        internal override GenericAcl InternalSacl
-        {
-            get { return this.SystemAcl; }
-        }
-
-        internal override byte InternalReservedField
-        {
-            get { return this.ResourceManagerControl; }
+            _controlFlags = flags | ControlFlags.SelfRelative;
         }
 
         private void ParseSddl(string sddlForm)
@@ -153,13 +110,13 @@ namespace DiscUtils.Ntfs.WindowsSecurity.AccessControl
                         break;
                     default:
 
-                        throw new ArgumentException("Invalid SDDL.", "sddlForm");
+                        throw new ArgumentException("Invalid SDDL.", nameof(sddlForm));
                 }
             }
 
             if (pos != sddlForm.Length)
             {
-                throw new ArgumentException("Invalid SDDL.", "sddlForm");
+                throw new ArgumentException("Invalid SDDL.", nameof(sddlForm));
             }
 
             SetFlags(flags);

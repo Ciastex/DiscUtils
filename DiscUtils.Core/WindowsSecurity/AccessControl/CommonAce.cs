@@ -1,10 +1,13 @@
 using System;
 using System.Globalization;
 
-namespace DiscUtils.Ntfs.WindowsSecurity.AccessControl
+namespace DiscUtils.Core.WindowsSecurity.AccessControl
 {
     public sealed class CommonAce : QualifiedAce
     {
+        public override int BinaryLength => 8 + SecurityIdentifier.BinaryLength
+                                              + OpaqueLength;
+        
         public CommonAce(AceFlags flags, AceQualifier qualifier,
                          int accessMask, SecurityIdentifier sid,
                          bool isCallback, byte[] opaque)
@@ -29,9 +32,9 @@ namespace DiscUtils.Ntfs.WindowsSecurity.AccessControl
         {
             int len = ReadUShort(binaryForm, offset + 2);
             if (offset > binaryForm.Length - len)
-                throw new ArgumentException("Invalid ACE - truncated", "binaryForm");
+                throw new ArgumentException("Invalid ACE - truncated", nameof(binaryForm));
             if (len < 8 + SecurityIdentifier.MinBinaryLength)
-                throw new ArgumentException("Invalid ACE", "binaryForm");
+                throw new ArgumentException("Invalid ACE", nameof(binaryForm));
 
             AccessMask = ReadInt(binaryForm, offset + 4);
             SecurityIdentifier = new SecurityIdentifier(binaryForm,
@@ -47,9 +50,6 @@ namespace DiscUtils.Ntfs.WindowsSecurity.AccessControl
                 SetOpaque(opaque);
             }
         }
-
-        public override int BinaryLength => 8 + SecurityIdentifier.BinaryLength
-                                              + OpaqueLength;
 
         public override void GetBinaryForm(byte[] binaryForm, int offset)
         {
@@ -119,7 +119,7 @@ namespace DiscUtils.Ntfs.WindowsSecurity.AccessControl
                         return AceType.SystemAudit;
 
                 default:
-                    throw new ArgumentException("Unrecognized ACE qualifier: " + qualifier, "qualifier");
+                    throw new ArgumentException("Unrecognized ACE qualifier: " + qualifier, nameof(qualifier));
             }
         }
     }

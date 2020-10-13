@@ -20,6 +20,8 @@
 // DEALINGS IN THE SOFTWARE.
 //
 
+using DiscUtils.Streams.Util;
+
 namespace DiscUtils.Streams
 {
     /// <summary>

@@ -22,8 +22,9 @@
 
 using System;
 using DiscUtils.Streams;
+using DiscUtils.Streams.Util;
 
-namespace DiscUtils.ApplePartitionMap
+namespace DiscUtils.Core.ApplePartitionMap
 {
     internal sealed class BlockZero : IByteArraySerializable
     {

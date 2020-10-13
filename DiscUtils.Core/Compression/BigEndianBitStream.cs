@@ -22,7 +22,7 @@
 
 using System.IO;
 
-namespace DiscUtils.Compression
+namespace DiscUtils.Core.Compression
 {
     /// <summary>
     /// Converts a byte stream into a bit stream.

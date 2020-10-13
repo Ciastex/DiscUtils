@@ -21,8 +21,9 @@
 //
 
 using DiscUtils.Streams;
+using DiscUtils.Streams.Util;
 
-namespace DiscUtils
+namespace DiscUtils.Core
 {
     /// <summary>
     /// Base class for all file systems based on a cluster model.

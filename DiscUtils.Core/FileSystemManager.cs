@@ -24,10 +24,10 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
-using DiscUtils.CoreCompat;
-using DiscUtils.Vfs;
+using DiscUtils.Core.CoreCompat;
+using DiscUtils.Core.Vfs;
 
-namespace DiscUtils
+namespace DiscUtils.Core
 {
     /// <summary>
     /// FileSystemManager determines which file systems are present on a volume.

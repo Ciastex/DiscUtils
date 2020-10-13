@@ -24,8 +24,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using DiscUtils.Streams;
+using DiscUtils.Streams.Util;
 
-namespace DiscUtils.Archives
+namespace DiscUtils.Core.Archives
 {
     /// <summary>
     /// Minimal tar file format implementation.

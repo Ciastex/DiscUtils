@@ -22,10 +22,11 @@
 
 using System;
 using System.IO;
-using DiscUtils.Partitions;
+using DiscUtils.Core.Partitions;
 using DiscUtils.Streams;
+using DiscUtils.Streams.Util;
 
-namespace DiscUtils.Raw
+namespace DiscUtils.Core.Raw
 {
     /// <summary>
     /// Represents a single raw disk image file.

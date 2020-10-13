@@ -22,8 +22,9 @@
 
 using System;
 using System.IO;
+using DiscUtils.Streams.Util;
 
-namespace DiscUtils.Streams
+namespace DiscUtils.Streams.ReaderWriter
 {
     /// <summary>
     /// Base class for reading binary data from a stream.

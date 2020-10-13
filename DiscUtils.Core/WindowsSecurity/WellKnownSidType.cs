@@ -1,4 +1,4 @@
-namespace DiscUtils.Ntfs.WindowsSecurity
+namespace DiscUtils.Core.WindowsSecurity
 {
     public enum WellKnownSidType
     {
