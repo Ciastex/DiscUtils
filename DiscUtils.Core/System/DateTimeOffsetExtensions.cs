@@ -19,16 +19,9 @@ namespace DiscUtils.Core.System
         /// <returns>DateTimeOffset.</returns>
         public static DateTimeOffset FromUnixTimeSeconds(this long seconds)
         {
-#if NETSTANDARD
             return DateTimeOffset.FromUnixTimeSeconds(seconds);
-#else
-            DateTimeOffset dateTimeOffset = new DateTimeOffset(DateTimeOffsetExtensions.UnixEpoch);
-            dateTimeOffset = dateTimeOffset.AddSeconds(seconds);
-            return dateTimeOffset;
-#endif
         }
 
-#if !NETSTANDARD1_5
         /// <summary>
         /// Converts the current DateTimeOffset to Unix time.
         /// </summary>
@@ -39,6 +32,5 @@ namespace DiscUtils.Core.System
             long unixTimeStampInTicks = (dateTimeOffset.ToUniversalTime() - DateTimeOffsetExtensions.UnixEpoch).Ticks;
             return unixTimeStampInTicks / TimeSpan.TicksPerSecond;
         }
-#endif
     }
 }

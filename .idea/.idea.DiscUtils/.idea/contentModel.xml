@@ -60,7 +60,6 @@
         <e p="CoreCompat" t="Include">
           <e p="EncodingHelper.cs" t="Include" />
           <e p="ReflectionHelper.cs" t="Include" />
-          <e p="StringExtensions.cs" t="Include" />
         </e>
         <e p="DiscDirectoryInfo.cs" t="Include" />
         <e p="DiscFileInfo.cs" t="Include" />
@@ -171,9 +170,6 @@
         </e>
         <e p="System" t="Include">
           <e p="DateTimeOffsetExtensions.cs" t="Include" />
-          <e p="ExtensionAttribute.cs" t="Include" />
-          <e p="HashSet.cs" t="Include" />
-          <e p="Tuple.cs" t="Include" />
         </e>
         <e p="TimeConverter.cs" t="Include" />
         <e p="UnixFilePermissions.cs" t="Include" />
@@ -433,9 +429,6 @@
         <e p="StreamPump.cs" t="Include" />
         <e p="StripedStream.cs" t="Include" />
         <e p="SubStream.cs" t="Include" />
-        <e p="System" t="Include">
-          <e p="Func.cs" t="Include" />
-        </e>
         <e p="ThreadSafeStream.cs" t="Include" />
         <e p="Util" t="Include">
           <e p="BitCounter.cs" t="Include" />

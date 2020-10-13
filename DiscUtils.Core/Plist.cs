@@ -1,25 +1,3 @@
-//
-// Copyright (c) 2008-2011, Kenneth Bell
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and/or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -34,17 +12,14 @@ namespace DiscUtils.Core
         internal static Dictionary<string, object> Parse(Stream stream)
         {
             XmlDocument xmlDoc = new XmlDocument();
-#if !NETSTANDARD1_5
             xmlDoc.XmlResolver = null;
-#endif
 
             XmlReaderSettings settings = new XmlReaderSettings();
-#if !NET20
+
             // DTD processing is disabled on anything but .NET 2.0, so this must be set to
             // Ignore.
             // See https://msdn.microsoft.com/en-us/magazine/ee335713.aspx for additional information.
             settings.DtdProcessing = DtdProcessing.Ignore;
-#endif
 
             using (XmlReader reader = XmlReader.Create(stream, settings))
             {
@@ -63,17 +38,13 @@ namespace DiscUtils.Core
         internal static void Write(Stream stream, Dictionary<string, object> plist)
         {
             XmlDocument xmlDoc = new XmlDocument();
-#if !NETSTANDARD1_5
             xmlDoc.XmlResolver = null;
-#endif
 
             XmlDeclaration xmlDecl = xmlDoc.CreateXmlDeclaration("1.0", "UTF-8", null);
             xmlDoc.AppendChild(xmlDecl);
 
-#if !NETSTANDARD1_5
             XmlDocumentType xmlDocType = xmlDoc.CreateDocumentType("plist", "-//Apple//DTD PLIST 1.0//EN", "http://www.apple.com/DTDs/PropertyList-1.0.dtd", null);
             xmlDoc.AppendChild(xmlDocType);
-#endif
 
             XmlElement rootElement = xmlDoc.CreateElement("plist");
             rootElement.SetAttribute("Version", "1.0");

@@ -1,25 +1,3 @@
-//
-// Copyright (c) 2008-2011, Kenneth Bell
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and/or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-
 using System;
 using System.IO;
 using DiscUtils.Core.Internal;
@@ -47,8 +25,8 @@ namespace DiscUtils.Core
         /// </summary>
         public virtual FileAttributes Attributes
         {
-            get { return FileSystem.GetAttributes(Path); }
-            set { FileSystem.SetAttributes(Path, value); }
+            get => FileSystem.GetAttributes(Path);
+            set => FileSystem.SetAttributes(Path, value);
         }
 
         /// <summary>
@@ -56,8 +34,8 @@ namespace DiscUtils.Core
         /// </summary>
         public virtual DateTime CreationTime
         {
-            get { return CreationTimeUtc.ToLocalTime(); }
-            set { CreationTimeUtc = value.ToUniversalTime(); }
+            get => CreationTimeUtc.ToLocalTime();
+            set => CreationTimeUtc = value.ToUniversalTime();
         }
 
         /// <summary>
@@ -65,17 +43,14 @@ namespace DiscUtils.Core
         /// </summary>
         public virtual DateTime CreationTimeUtc
         {
-            get { return FileSystem.GetCreationTimeUtc(Path); }
-            set { FileSystem.SetCreationTimeUtc(Path, value); }
+            get => FileSystem.GetCreationTimeUtc(Path);
+            set => FileSystem.SetCreationTimeUtc(Path, value);
         }
 
         /// <summary>
         /// Gets a value indicating whether the file system object exists.
         /// </summary>
-        public virtual bool Exists
-        {
-            get { return FileSystem.Exists(Path); }
-        }
+        public virtual bool Exists => FileSystem.Exists(Path);
 
         /// <summary>
         /// Gets the extension part of the file or directory name.
@@ -103,10 +78,7 @@ namespace DiscUtils.Core
         /// <summary>
         /// Gets the full path of the file or directory.
         /// </summary>
-        public virtual string FullName
-        {
-            get { return Path; }
-        }
+        public virtual string FullName => Path;
 
         /// <summary>
         /// Gets or sets the last time (in local time) the file or directory was accessed.
@@ -114,8 +86,8 @@ namespace DiscUtils.Core
         /// <remarks>Read-only file systems will never update this value, it will remain at a fixed value.</remarks>
         public virtual DateTime LastAccessTime
         {
-            get { return LastAccessTimeUtc.ToLocalTime(); }
-            set { LastAccessTimeUtc = value.ToUniversalTime(); }
+            get => LastAccessTimeUtc.ToLocalTime();
+            set => LastAccessTimeUtc = value.ToUniversalTime();
         }
 
         /// <summary>
@@ -124,8 +96,8 @@ namespace DiscUtils.Core
         /// <remarks>Read-only file systems will never update this value, it will remain at a fixed value.</remarks>
         public virtual DateTime LastAccessTimeUtc
         {
-            get { return FileSystem.GetLastAccessTimeUtc(Path); }
-            set { FileSystem.SetLastAccessTimeUtc(Path, value); }
+            get => FileSystem.GetLastAccessTimeUtc(Path);
+            set => FileSystem.SetLastAccessTimeUtc(Path, value);
         }
 
         /// <summary>
@@ -133,8 +105,8 @@ namespace DiscUtils.Core
         /// </summary>
         public virtual DateTime LastWriteTime
         {
-            get { return LastWriteTimeUtc.ToLocalTime(); }
-            set { LastWriteTimeUtc = value.ToUniversalTime(); }
+            get => LastWriteTimeUtc.ToLocalTime();
+            set => LastWriteTimeUtc = value.ToUniversalTime();
         }
 
         /// <summary>
@@ -142,17 +114,14 @@ namespace DiscUtils.Core
         /// </summary>
         public virtual DateTime LastWriteTimeUtc
         {
-            get { return FileSystem.GetLastWriteTimeUtc(Path); }
-            set { FileSystem.SetLastWriteTimeUtc(Path, value); }
+            get => FileSystem.GetLastWriteTimeUtc(Path);
+            set => FileSystem.SetLastWriteTimeUtc(Path, value);
         }
 
         /// <summary>
         /// Gets the name of the file or directory.
         /// </summary>
-        public virtual string Name
-        {
-            get { return Utilities.GetFileFromPath(Path); }
-        }
+        public virtual string Name => Utilities.GetFileFromPath(Path);
 
         /// <summary>
         /// Gets the <see cref="DiscDirectoryInfo"/> of the directory containing the current <see cref="DiscFileSystemInfo"/> object.

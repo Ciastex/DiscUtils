@@ -1,25 +1,3 @@
-//
-// Copyright (c) 2008-2011, Kenneth Bell
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and/or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-
 using System;
 using System.IO;
 using DiscUtils.Streams;
@@ -29,11 +7,7 @@ namespace DiscUtils.Core
     /// <summary>
     /// Provides the base class for all file systems.
     /// </summary>
-    public abstract class DiscFileSystem :
-#if !NETSTANDARD
-        MarshalByRefObject, 
-#endif
-        IFileSystem, IDisposable
+    public abstract class DiscFileSystem : IFileSystem, IDisposable
     {
         /// <summary>
         /// Initializes a new instance of the DiscFileSystem class.
@@ -79,26 +53,17 @@ namespace DiscUtils.Core
         /// <summary>
         /// Gets the root directory of the file system.
         /// </summary>
-        public virtual DiscDirectoryInfo Root
-        {
-            get { return new DiscDirectoryInfo(this, string.Empty); }
-        }
+        public virtual DiscDirectoryInfo Root => new DiscDirectoryInfo(this, string.Empty);
 
         /// <summary>
         /// Gets the volume label.
         /// </summary>
-        public virtual string VolumeLabel
-        {
-            get { return string.Empty; }
-        }
+        public virtual string VolumeLabel => string.Empty;
 
         /// <summary>
         /// Gets a value indicating whether the file system is thread-safe.
         /// </summary>
-        public virtual bool IsThreadSafe
-        {
-            get { return false; }
-        }
+        public virtual bool IsThreadSafe => false;
 
         /// <summary>
         /// Copies an existing file to a new file.

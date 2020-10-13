@@ -1,25 +1,3 @@
-//
-// Copyright (c) 2008-2011, Kenneth Bell
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and/or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -131,18 +109,12 @@ namespace DiscUtils.Vhd
             }
         }
 
-        internal override long Capacity
-        {
-            get { return _footer.CurrentSize; }
-        }
+        internal override long Capacity => _footer.CurrentSize;
 
         /// <summary>
         /// Gets the timestamp for this file (when it was created).
         /// </summary>
-        public DateTime CreationTimestamp
-        {
-            get { return _footer.Timestamp; }
-        }
+        public DateTime CreationTimestamp => _footer.Timestamp;
 
         /// <summary>
         /// Gets the extent that comprises this file.
@@ -176,60 +148,36 @@ namespace DiscUtils.Vhd
         /// <summary>
         /// Gets the geometry of the virtual disk.
         /// </summary>
-        public override Geometry Geometry
-        {
-            get { return _footer.Geometry; }
-        }
+        public override Geometry Geometry => _footer.Geometry;
 
         /// <summary>
         /// Gets detailed information about the VHD file.
         /// </summary>
-        public DiskImageFileInfo Information
-        {
-            get { return new DiskImageFileInfo(_footer, _dynamicHeader, _fileStream); }
-        }
+        public DiskImageFileInfo Information => new DiskImageFileInfo(_footer, _dynamicHeader, _fileStream);
 
         /// <summary>
         /// Gets a value indicating if the layer only stores meaningful sectors.
         /// </summary>
-        public override bool IsSparse
-        {
-            get { return _footer.DiskType != FileType.Fixed; }
-        }
+        public override bool IsSparse => _footer.DiskType != FileType.Fixed;
 
         /// <summary>
         /// Gets a value indicating whether the file is a differencing disk.
         /// </summary>
-        public override bool NeedsParent
-        {
-            get { return _footer.DiskType == FileType.Differencing; }
-        }
+        public override bool NeedsParent => _footer.DiskType == FileType.Differencing;
 
         /// <summary>
         /// Gets the unique id of the parent disk.
         /// </summary>
-        public Guid ParentUniqueId
-        {
-            get { return _dynamicHeader == null ? Guid.Empty : _dynamicHeader.ParentUniqueId; }
-        }
+        public Guid ParentUniqueId => _dynamicHeader == null ? Guid.Empty : _dynamicHeader.ParentUniqueId;
 
-        internal override FileLocator RelativeFileLocator
-        {
-            get { return _fileLocator; }
-        }
+        internal override FileLocator RelativeFileLocator => _fileLocator;
 
-        internal long StoredSize
-        {
-            get { return _fileStream.Length; }
-        }
+        internal long StoredSize => _fileStream.Length;
 
         /// <summary>
         /// Gets the unique id of this file.
         /// </summary>
-        public Guid UniqueId
-        {
-            get { return _footer.UniqueId; }
-        }
+        public Guid UniqueId => _footer.UniqueId;
 
         /// <summary>
         /// Initializes a stream as a fixed-sized VHD file.

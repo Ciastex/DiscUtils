@@ -1,25 +1,3 @@
-//
-// Copyright (c) 2008-2011, Kenneth Bell
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and/or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -55,10 +33,7 @@ namespace DiscUtils.Ntfs
         /// <summary>
         /// Gets an enumeration of all the attributes.
         /// </summary>
-        internal IEnumerable<NtfsAttribute> AllAttributes
-        {
-            get { return _attributes; }
-        }
+        internal IEnumerable<NtfsAttribute> AllAttributes => _attributes;
 
         public IEnumerable<NtfsStream> AllStreams
         {
@@ -98,10 +73,7 @@ namespace DiscUtils.Ntfs
             }
         }
 
-        internal INtfsContext Context
-        {
-            get { return _context; }
-        }
+        internal INtfsContext Context => _context;
 
         public DirectoryEntry DirectoryEntry
         {
@@ -132,8 +104,8 @@ namespace DiscUtils.Ntfs
 
         public ushort HardLinkCount
         {
-            get { return _records[0].HardLinkCount; }
-            set { _records[0].HardLinkCount = value; }
+            get => _records[0].HardLinkCount;
+            set => _records[0].HardLinkCount = value;
         }
 
         public bool HasWin32OrDosName
@@ -153,27 +125,15 @@ namespace DiscUtils.Ntfs
             }
         }
 
-        public uint IndexInMft
-        {
-            get { return _records[0].MasterFileTableIndex; }
-        }
+        public uint IndexInMft => _records[0].MasterFileTableIndex;
 
-        public bool IsDirectory
-        {
-            get { return (_records[0].Flags & FileRecordFlags.IsDirectory) != 0; }
-        }
+        public bool IsDirectory => (_records[0].Flags & FileRecordFlags.IsDirectory) != 0;
 
-        public uint MaxMftRecordSize
-        {
-            get { return _records[0].AllocatedSize; }
-        }
+        public uint MaxMftRecordSize => _records[0].AllocatedSize;
 
         public bool MftRecordIsDirty { get; private set; }
 
-        public FileRecordReference MftReference
-        {
-            get { return _records[0].Reference; }
-        }
+        public FileRecordReference MftReference => _records[0].Reference;
 
         public List<string> Names
         {
@@ -206,10 +166,7 @@ namespace DiscUtils.Ntfs
             }
         }
 
-        public StandardInformation StandardInformation
-        {
-            get { return GetStream(AttributeType.StandardInformation, null).GetContent<StandardInformation>(); }
-        }
+        public StandardInformation StandardInformation => GetStream(AttributeType.StandardInformation, null).GetContent<StandardInformation>();
 
         public static File CreateNew(INtfsContext context, FileAttributeFlags dirFlags)
         {
@@ -1145,36 +1102,21 @@ namespace DiscUtils.Ntfs
                 _wrapped = attr.Open(access);
             }
 
-            public override bool CanRead
-            {
-                get { return _wrapped.CanRead; }
-            }
+            public override bool CanRead => _wrapped.CanRead;
 
-            public override bool CanSeek
-            {
-                get { return _wrapped.CanSeek; }
-            }
+            public override bool CanSeek => _wrapped.CanSeek;
 
-            public override bool CanWrite
-            {
-                get { return _wrapped.CanWrite; }
-            }
+            public override bool CanWrite => _wrapped.CanWrite;
 
-            public override IEnumerable<StreamExtent> Extents
-            {
-                get { return _wrapped.Extents; }
-            }
+            public override IEnumerable<StreamExtent> Extents => _wrapped.Extents;
 
-            public override long Length
-            {
-                get { return _wrapped.Length; }
-            }
+            public override long Length => _wrapped.Length;
 
             public override long Position
             {
-                get { return _wrapped.Position; }
+                get => _wrapped.Position;
 
-                set { _wrapped.Position = value; }
+                set => _wrapped.Position = value;
             }
 
             protected override void Dispose(bool disposing)

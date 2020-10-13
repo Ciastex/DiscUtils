@@ -1,25 +1,3 @@
-//
-// Copyright (c) 2008-2011, Kenneth Bell
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and/or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -62,35 +40,23 @@ namespace DiscUtils.Streams
         /// <summary>
         /// Can this buffer be read.
         /// </summary>
-        public override bool CanRead
-        {
-            get { return _stream.CanRead; }
-        }
+        public override bool CanRead => _stream.CanRead;
 
         /// <summary>
         /// Can this buffer be written.
         /// </summary>
-        public override bool CanWrite
-        {
-            get { return _stream.CanWrite; }
-        }
+        public override bool CanWrite => _stream.CanWrite;
 
         /// <summary>
         /// Gets the current capacity of the buffer, in bytes.
         /// </summary>
-        public override long Capacity
-        {
-            get { return _stream.Length; }
-        }
+        public override long Capacity => _stream.Length;
 
         /// <summary>
         /// Gets the parts of the stream that are stored.
         /// </summary>
         /// <remarks>This may be an empty enumeration if all bytes are zero.</remarks>
-        public override IEnumerable<StreamExtent> Extents
-        {
-            get { return _stream.Extents; }
-        }
+        public override IEnumerable<StreamExtent> Extents => _stream.Extents;
 
         /// <summary>
         /// Disposes of this instance.

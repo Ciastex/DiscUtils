@@ -1,25 +1,3 @@
-//
-// Copyright (c) 2008-2011, Kenneth Bell
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and/or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-
 using System;
 using System.Globalization;
 using DiscUtils.Streams.Util;
@@ -84,10 +62,7 @@ namespace DiscUtils.Core
         /// <summary>
         /// Gets the total capacity of the disk (in bytes).
         /// </summary>
-        public long Capacity
-        {
-            get { return TotalSectorsLong * BytesPerSector; }
-        }
+        public long Capacity => TotalSectorsLong * BytesPerSector;
 
         /// <summary>
         /// Gets the number of cylinders.
@@ -102,42 +77,27 @@ namespace DiscUtils.Core
         /// <summary>
         /// Gets a value indicating whether the Geometry is representable both by the BIOS and by IDE.
         /// </summary>
-        public bool IsBiosAndIdeSafe
-        {
-            get { return Cylinders <= 1024 && HeadsPerCylinder <= 16 && SectorsPerTrack <= 63; }
-        }
+        public bool IsBiosAndIdeSafe => Cylinders <= 1024 && HeadsPerCylinder <= 16 && SectorsPerTrack <= 63;
 
         /// <summary>
         /// Gets a value indicating whether the Geometry is consistent with the values a BIOS can support.
         /// </summary>
-        public bool IsBiosSafe
-        {
-            get { return Cylinders <= 1024 && HeadsPerCylinder <= 255 && SectorsPerTrack <= 63; }
-        }
+        public bool IsBiosSafe => Cylinders <= 1024 && HeadsPerCylinder <= 255 && SectorsPerTrack <= 63;
 
         /// <summary>
         /// Gets a value indicating whether the Geometry is consistent with the values IDE can represent.
         /// </summary>
-        public bool IsIdeSafe
-        {
-            get { return Cylinders <= 65536 && HeadsPerCylinder <= 16 && SectorsPerTrack <= 255; }
-        }
+        public bool IsIdeSafe => Cylinders <= 65536 && HeadsPerCylinder <= 16 && SectorsPerTrack <= 255;
 
         /// <summary>
         /// Gets the address of the last sector on the disk.
         /// </summary>
-        public ChsAddress LastSector
-        {
-            get { return new ChsAddress(Cylinders - 1, HeadsPerCylinder - 1, SectorsPerTrack); }
-        }
+        public ChsAddress LastSector => new ChsAddress(Cylinders - 1, HeadsPerCylinder - 1, SectorsPerTrack);
 
         /// <summary>
         /// Gets a null geometry, which has 512-byte sectors but zero sectors, tracks or cylinders.
         /// </summary>
-        public static Geometry Null
-        {
-            get { return new Geometry(0, 0, 0, 512); }
-        }
+        public static Geometry Null => new Geometry(0, 0, 0, 512);
 
         /// <summary>
         /// Gets the number of sectors per track.
@@ -148,18 +108,12 @@ namespace DiscUtils.Core
         /// Gets the total size of the disk (in sectors).
         /// </summary>
         [Obsolete("Use TotalSectorsLong instead, to support very large disks.")]
-        public int TotalSectors
-        {
-            get { return Cylinders * HeadsPerCylinder * SectorsPerTrack; }
-        }
+        public int TotalSectors => Cylinders * HeadsPerCylinder * SectorsPerTrack;
 
         /// <summary>
         /// Gets the total size of the disk (in sectors).
         /// </summary>
-        public long TotalSectorsLong
-        {
-            get { return Cylinders * (long)HeadsPerCylinder * SectorsPerTrack; }
-        }
+        public long TotalSectorsLong => Cylinders * (long)HeadsPerCylinder * SectorsPerTrack;
 
         /// <summary>
         /// Gets the 'Large' BIOS geometry for a disk, given it's physical geometry.

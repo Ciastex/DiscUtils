@@ -1,7 +1,4 @@
-﻿#if NETSTANDARD
-using System.Text;
-
-#endif
+﻿using System.Text;
 
 namespace DiscUtils.Core.CoreCompat
 {
@@ -16,9 +13,7 @@ namespace DiscUtils.Core.CoreCompat
 
             _registered = true;
 
-#if NETSTANDARD
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
-#endif
         }
     }
 }

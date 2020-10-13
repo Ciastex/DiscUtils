@@ -1,25 +1,3 @@
-//
-// Copyright (c) 2008-2011, Kenneth Bell
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and/or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -97,14 +75,14 @@ namespace DiscUtils.Ntfs
         /// </summary>
         public override long AllocatedLength
         {
-            get { return (long)_dataAllocatedSize; }
-            set { _dataAllocatedSize = (ulong)value; }
+            get => (long)_dataAllocatedSize;
+            set => _dataAllocatedSize = (ulong)value;
         }
 
         public long CompressedDataSize
         {
-            get { return (long)_compressedSize; }
-            set { _compressedSize = (ulong)value; }
+            get => (long)_compressedSize;
+            set => _compressedSize = (ulong)value;
         }
 
         /// <summary>
@@ -112,8 +90,8 @@ namespace DiscUtils.Ntfs
         /// </summary>
         public int CompressionUnitSize
         {
-            get { return 1 << _compressionUnitSize; }
-            set { _compressionUnitSize = (ushort)MathUtilities.Log2(value); }
+            get => 1 << _compressionUnitSize;
+            set => _compressionUnitSize = (ushort)MathUtilities.Log2(value);
         }
 
         /// <summary>
@@ -121,8 +99,8 @@ namespace DiscUtils.Ntfs
         /// </summary>
         public override long DataLength
         {
-            get { return (long)_dataRealSize; }
-            set { _dataRealSize = (ulong)value; }
+            get => (long)_dataRealSize;
+            set => _dataRealSize = (ulong)value;
         }
 
         public List<DataRun> DataRuns { get; private set; }
@@ -132,14 +110,14 @@ namespace DiscUtils.Ntfs
         /// </summary>
         public override long InitializedDataLength
         {
-            get { return (long)_initializedDataSize; }
-            set { _initializedDataSize = (ulong)value; }
+            get => (long)_initializedDataSize;
+            set => _initializedDataSize = (ulong)value;
         }
 
         public long LastVcn
         {
-            get { return (long)_lastVCN; }
-            set { _lastVCN = (ulong)value; }
+            get => (long)_lastVCN;
+            set => _lastVCN = (ulong)value;
         }
 
         public override int Size
@@ -169,10 +147,7 @@ namespace DiscUtils.Ntfs
             }
         }
 
-        public override long StartVcn
-        {
-            get { return (long)_startingVCN; }
-        }
+        public override long StartVcn => (long)_startingVCN;
 
         public void ReplaceRun(DataRun oldRun, DataRun newRun)
         {

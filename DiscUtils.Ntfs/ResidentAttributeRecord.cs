@@ -1,25 +1,3 @@
-//
-// Copyright (c) 2008-2011, Kenneth Bell
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and/or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-
 using System;
 using System.IO;
 using System.Text;
@@ -49,19 +27,16 @@ namespace DiscUtils.Ntfs
 
         public override long AllocatedLength
         {
-            get { return MathUtilities.RoundUp(DataLength, 8); }
-            set { throw new NotSupportedException(); }
+            get => MathUtilities.RoundUp(DataLength, 8);
+            set => throw new NotSupportedException();
         }
 
-        public IBuffer DataBuffer
-        {
-            get { return _memoryBuffer; }
-        }
+        public IBuffer DataBuffer => _memoryBuffer;
 
         public override long DataLength
         {
-            get { return _memoryBuffer.Capacity; }
-            set { throw new NotSupportedException(); }
+            get => _memoryBuffer.Capacity;
+            set => throw new NotSupportedException();
         }
 
         public int DataOffset
@@ -83,8 +58,8 @@ namespace DiscUtils.Ntfs
         /// </summary>
         public override long InitializedDataLength
         {
-            get { return DataLength; }
-            set { throw new NotSupportedException(); }
+            get => DataLength;
+            set => throw new NotSupportedException();
         }
 
         public override int Size
@@ -103,10 +78,7 @@ namespace DiscUtils.Ntfs
             }
         }
 
-        public override long StartVcn
-        {
-            get { return 0; }
-        }
+        public override long StartVcn => 0;
 
         public override IBuffer GetReadOnlyDataBuffer(INtfsContext context)
         {

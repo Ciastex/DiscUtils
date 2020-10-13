@@ -34,25 +34,13 @@ namespace DiscUtils.Ntfs
             _ioBuffer = new byte[_bytesPerCluster];
         }
 
-        public long VirtualClusterCount
-        {
-            get { return _cookedRuns.NextVirtualCluster; }
-        }
+        public long VirtualClusterCount => _cookedRuns.NextVirtualCluster;
 
-        public override bool CanRead
-        {
-            get { return _context.RawStream.CanRead; }
-        }
+        public override bool CanRead => _context.RawStream.CanRead;
 
-        public override bool CanWrite
-        {
-            get { return false; }
-        }
+        public override bool CanWrite => false;
 
-        public override long Capacity
-        {
-            get { return VirtualClusterCount * _bytesPerCluster; }
-        }
+        public override long Capacity => VirtualClusterCount * _bytesPerCluster;
 
         public override IEnumerable<StreamExtent> Extents
         {

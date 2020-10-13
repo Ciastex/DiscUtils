@@ -1,28 +1,3 @@
-//
-// DiscUtils Copyright (c) 2008-2011, Kenneth Bell
-//
-// Original NativeFileSystem contributed by bsobel:
-//    http://discutils.codeplex.com/workitem/5190
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and/or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-
 using System;
 using System.IO;
 using DiscUtils.Core.Internal;
@@ -63,43 +38,28 @@ namespace DiscUtils.Core
         /// Indicates whether the file system is read-only or read-write.
         /// </summary>
         /// <returns>true if the file system is read-write.</returns>
-        public override bool CanWrite
-        {
-            get { return !_readOnly; }
-        }
+        public override bool CanWrite => !_readOnly;
 
         /// <summary>
         /// Provides a friendly description of the file system type.
         /// </summary>
-        public override string FriendlyName
-        {
-            get { return "Native"; }
-        }
+        public override string FriendlyName => "Native";
 
         /// <summary>
         /// Gets a value indicating whether the file system is thread-safe.
         /// </summary>
         /// <remarks>The Native File System is thread safe.</remarks>
-        public override bool IsThreadSafe
-        {
-            get { return true; }
-        }
+        public override bool IsThreadSafe => true;
 
         /// <summary>
         /// Gets the root directory of the file system.
         /// </summary>
-        public override DiscDirectoryInfo Root
-        {
-            get { return new DiscDirectoryInfo(this, string.Empty); }
-        }
+        public override DiscDirectoryInfo Root => new DiscDirectoryInfo(this, string.Empty);
 
         /// <summary>
         /// Gets the volume label.
         /// </summary>
-        public override string VolumeLabel
-        {
-            get { return string.Empty; }
-        }
+        public override string VolumeLabel => string.Empty;
 
         /// <summary>
         /// Copies an existing file to a new file.
@@ -774,11 +734,8 @@ namespace DiscUtils.Core
         /// <summary>
         /// Used space of the Filesystem in bytes
         /// </summary>
-        public override long UsedSpace
-        {
-            get { return Size - AvailableSpace; }
-        }
- 
+        public override long UsedSpace => Size - AvailableSpace;
+
         /// <summary>
         /// Available space of the Filesystem in bytes
         /// </summary>

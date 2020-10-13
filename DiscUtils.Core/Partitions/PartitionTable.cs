@@ -1,25 +1,3 @@
-//
-// Copyright (c) 2008-2011, Kenneth Bell
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and/or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -43,10 +21,7 @@ namespace DiscUtils.Core.Partitions
         /// <summary>
         /// Gets the number of User partitions on the disk.
         /// </summary>
-        public int Count
-        {
-            get { return Partitions.Count; }
-        }
+        public int Count => Partitions.Count;
 
         /// <summary>
         /// Gets the GUID that uniquely identifies this disk, if supported (else returns <c>null</c>).
@@ -81,10 +56,7 @@ namespace DiscUtils.Core.Partitions
         /// </summary>
         /// <param name="index">The index of the partition.</param>
         /// <returns>Information about the partition.</returns>
-        public PartitionInfo this[int index]
-        {
-            get { return Partitions[index]; }
-        }
+        public PartitionInfo this[int index] => Partitions[index];
 
         /// <summary>
         /// Gets the list of partitions that contain user data (i.e. non-system / empty).

@@ -1,25 +1,3 @@
-//
-// Copyright (c) 2008-2011, Kenneth Bell
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and/or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -34,11 +12,7 @@ namespace DiscUtils.Core
     /// <summary>
     /// Base class representing virtual hard disks.
     /// </summary>
-    public abstract class VirtualDisk :
-#if !NETSTANDARD
-        MarshalByRefObject, 
-#endif
-        IDisposable
+    public abstract class VirtualDisk : IDisposable
     {
         private VirtualDiskTransport _transport;
 
@@ -54,19 +28,13 @@ namespace DiscUtils.Core
         /// Gets the set of disk formats supported as an array of file extensions.
         /// </summary>
         [Obsolete("Use VirtualDiskManager.SupportedDiskFormats")]
-        public static ICollection<string> SupportedDiskFormats
-        {
-            get { return VirtualDiskManager.SupportedDiskFormats; }
-        }
+        public static ICollection<string> SupportedDiskFormats => VirtualDiskManager.SupportedDiskFormats;
 
         /// <summary>
         /// Gets the set of disk types supported, as an array of identifiers.
         /// </summary>
         [Obsolete("Use VirtualDiskManager.SupportedDiskTypes")]
-        public static ICollection<string> SupportedDiskTypes
-        {
-            get { return VirtualDiskManager.SupportedDiskTypes; }
-        }
+        public static ICollection<string> SupportedDiskTypes => VirtualDiskManager.SupportedDiskTypes;
 
         /// <summary>
         /// Gets the geometry of the disk.
@@ -76,10 +44,7 @@ namespace DiscUtils.Core
         /// <summary>
         /// Gets the geometry of the disk as it is anticipated a hypervisor BIOS will represent it.
         /// </summary>
-        public virtual Geometry BiosGeometry
-        {
-            get { return Geometry.MakeBiosSafe(Geometry, Capacity); }
-        }
+        public virtual Geometry BiosGeometry => Geometry.MakeBiosSafe(Geometry, Capacity);
 
         /// <summary>
         /// Gets the type of disk represented by this object.
@@ -94,19 +59,13 @@ namespace DiscUtils.Core
         /// <summary>
         /// Gets the size of the disk's logical blocks (aka sector size), in bytes.
         /// </summary>
-        public virtual int BlockSize
-        {
-            get { return Sizes.Sector; }
-        }
+        public virtual int BlockSize => Sizes.Sector;
 
         /// <summary>
         /// Gets the logical sector size of the disk, in bytes.
         /// </summary>
         /// <remarks>This is an alias for the <c>BlockSize</c> property.</remarks>
-        public int SectorSize
-        {
-            get { return BlockSize; }
-        }
+        public int SectorSize => BlockSize;
 
         /// <summary>
         /// Gets the content of the disk as a stream.
@@ -126,7 +85,7 @@ namespace DiscUtils.Core
         /// </summary>
         public virtual int Signature
         {
-            get { return EndianUtilities.ToInt32LittleEndian(GetMasterBootRecord(), 0x01B8); }
+            get => EndianUtilities.ToInt32LittleEndian(GetMasterBootRecord(), 0x01B8);
 
             set
             {
@@ -142,10 +101,7 @@ namespace DiscUtils.Core
         /// <remarks>There is no reliable way to determine whether a disk has a valid partition
         /// table.  The 'guess' consists of checking for basic indicators and looking for obviously
         /// invalid data, such as overlapping partitions.</remarks>
-        public virtual bool IsPartitioned
-        {
-            get { return PartitionTable.IsPartitioned(Content); }
-        }
+        public virtual bool IsPartitioned => PartitionTable.IsPartitioned(Content);
 
         /// <summary>
         /// Gets the object that interprets the partition structure.
@@ -197,20 +153,15 @@ namespace DiscUtils.Core
         /// Gets the parameters of the disk.
         /// </summary>
         /// <remarks>Most of the parameters are also available individually, such as DiskType and Capacity.</remarks>
-        public virtual VirtualDiskParameters Parameters
-        {
-            get
+        public virtual VirtualDiskParameters Parameters =>
+            new VirtualDiskParameters
             {
-                return new VirtualDiskParameters
-                {
-                    DiskType = DiskClass,
-                    Capacity = Capacity,
-                    Geometry = Geometry,
-                    BiosGeometry = BiosGeometry,
-                    AdapterType = GenericDiskAdapterType.Ide
-                };
-            }
-        }
+                DiskType = DiskClass,
+                Capacity = Capacity,
+                Geometry = Geometry,
+                BiosGeometry = BiosGeometry,
+                AdapterType = GenericDiskAdapterType.Ide
+            };
 
         /// <summary>
         /// Gets information about the type of disk.
@@ -333,7 +284,7 @@ namespace DiscUtils.Core
         public static VirtualDisk CreateDisk(string type, string variant, string path, VirtualDiskParameters diskParameters, string user, string password)
         {
             Uri uri = PathToUri(path);
-            VirtualDisk result = null;
+            VirtualDisk result;
 
             Type transportType;
             if (!VirtualDiskManager.DiskTransports.TryGetValue(uri.Scheme.ToUpperInvariant(), out transportType))

@@ -1,25 +1,3 @@
-//
-// Copyright (c) 2008-2011, Kenneth Bell
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and/or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -77,18 +55,12 @@ namespace DiscUtils.Streams
         /// <summary>
         /// Gets an indication as to whether the stream can be read.
         /// </summary>
-        public override bool CanRead
-        {
-            get { return _baseStream.CanRead; }
-        }
+        public override bool CanRead => _baseStream.CanRead;
 
         /// <summary>
         /// Gets an indication as to whether the stream position can be changed.
         /// </summary>
-        public override bool CanSeek
-        {
-            get { return _baseStream.CanSeek; }
-        }
+        public override bool CanSeek => _baseStream.CanSeek;
 
         /// <summary>
         /// Gets an indication as to whether the stream can be written to.
@@ -96,10 +68,7 @@ namespace DiscUtils.Streams
         /// <remarks>This property is orthogonal to Freezing/Thawing, it's
         /// perfectly possible for a stream to be frozen and this method
         /// return <c>true</c>.</remarks>
-        public override bool CanWrite
-        {
-            get { return _diffStream != null ? true : _baseStream.CanWrite; }
-        }
+        public override bool CanWrite => _diffStream != null ? true : _baseStream.CanWrite;
 
         /// <summary>
         /// Returns an enumeration over the parts of the stream that contain real data.
@@ -137,9 +106,9 @@ namespace DiscUtils.Streams
         /// </summary>
         public override long Position
         {
-            get { return _position; }
+            get => _position;
 
-            set { _position = value; }
+            set => _position = value;
         }
 
         /// <summary>

@@ -46,9 +46,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d474c619-74ba-4a7b-a15d-3a1eb8a72c59" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DiscUtils/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DiscUtils/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DiscUtils/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DiscUtils/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Containers/SetupHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Containers/SetupHelper.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/ApplePartitionMap/BlockZero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/ApplePartitionMap/BlockZero.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/ApplePartitionMap/PartitionMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/ApplePartitionMap/PartitionMap.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/ApplePartitionMap/PartitionMapEntry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/ApplePartitionMap/PartitionMapEntry.cs" afterDir="false" />
@@ -61,7 +62,6 @@
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/Archives/UnixBuildFileRecord.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/Archives/UnixBuildFileRecord.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/ChsAddress.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/ChsAddress.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/ClusterMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/ClusterMap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/ClusterRoles.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/ClusterRoles.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/Compression/Adler32.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/Compression/Adler32.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/Compression/BZip2BlockDecoder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/Compression/BZip2BlockDecoder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/Compression/BZip2CombinedHuffmanTrees.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/Compression/BZip2CombinedHuffmanTrees.cs" afterDir="false" />
@@ -81,6 +81,7 @@
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/Compression/ZlibStream.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/Compression/ZlibStream.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/CoreCompat/EncodingHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/CoreCompat/EncodingHelper.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/CoreCompat/ReflectionHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/CoreCompat/ReflectionHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/CoreCompat/StringExtensions.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/DiscDirectoryInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/DiscDirectoryInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/DiscFileInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/DiscFileInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/DiscFileLocator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/DiscFileLocator.cs" afterDir="false" />
@@ -98,7 +99,6 @@
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/FloppyDiskType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/FloppyDiskType.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/GenericDiskAdapterType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/GenericDiskAdapterType.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/Geometry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/Geometry.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/GeometryCalculation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/GeometryCalculation.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/GeometryTranslation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/GeometryTranslation.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/IClusterBasedFileSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/IClusterBasedFileSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/IDiagnosticTraceable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/IDiagnosticTraceable.cs" afterDir="false" />
@@ -137,7 +137,6 @@
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/LogicalDiskManager/TocBlock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/LogicalDiskManager/TocBlock.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/LogicalDiskManager/VolumeRecord.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/LogicalDiskManager/VolumeRecord.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/LogicalVolumeInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/LogicalVolumeInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/LogicalVolumeStatus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/LogicalVolumeStatus.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/NativeFileSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/NativeFileSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/Partitions/BiosExtendedPartitionTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/Partitions/BiosExtendedPartitionTable.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/Partitions/BiosPartitionInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/Partitions/BiosPartitionInfo.cs" afterDir="false" />
@@ -157,24 +156,22 @@
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/Partitions/PartitionTableFactoryAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/Partitions/PartitionTableFactoryAttribute.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/Partitions/WellKnownPartitionType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/Partitions/WellKnownPartitionType.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/PhysicalVolumeInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/PhysicalVolumeInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/PhysicalVolumeType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/PhysicalVolumeType.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/Plist.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/Plist.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/Raw/Disk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/Raw/Disk.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/Raw/DiskFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/Raw/DiskFactory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/Raw/DiskImageFile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/Raw/DiskImageFile.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/ReadOnlyDiscFileSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/ReadOnlyDiscFileSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/ReparsePoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/ReparsePoint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/ReportLevels.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/ReportLevels.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/Setup/FileOpenEventArgs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/Setup/FileOpenEventArgs.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/Setup/SetupHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/Setup/SetupHelper.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/System/DateTimeOffsetExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/System/DateTimeOffsetExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/TimeConverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/TimeConverter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/System/ExtensionAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/System/HashSet.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/System/Tuple.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/UnixFilePermissions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/UnixFilePermissions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/UnixFileSystemInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/UnixFileSystemInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/UnixFileType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/UnixFileType.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/Vfs/IVfsDirectory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/Vfs/IVfsDirectory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/Vfs/IVfsFile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/Vfs/IVfsFile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/Vfs/IVfsFileWithStreams.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/Vfs/IVfsFileWithStreams.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/Vfs/IVfsSymlink.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/Vfs/IVfsSymlink.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/Vfs/VfsContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/Vfs/VfsContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/Vfs/VfsDirEntry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/Vfs/VfsDirEntry.cs" afterDir="false" />
@@ -183,7 +180,6 @@
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/Vfs/VfsFileSystemFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/Vfs/VfsFileSystemFactory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/Vfs/VfsFileSystemFactoryAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/Vfs/VfsFileSystemFactoryAttribute.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/Vfs/VfsFileSystemInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/Vfs/VfsFileSystemInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/Vfs/VfsFileSystemOpener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/Vfs/VfsFileSystemOpener.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/Vfs/VfsReadOnlyFileSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/Vfs/VfsReadOnlyFileSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/VirtualDisk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/VirtualDisk.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/VirtualDiskClass.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/VirtualDiskClass.cs" afterDir="false" />
@@ -195,60 +191,56 @@
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/VolumeInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/VolumeInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/VolumeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/VolumeManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Core/WindowsFileInformation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsFileInformation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/AccessControlSections.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/AccessControlSections.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/AceEnumerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/AceEnumerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/AceFlags.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/AceFlags.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/AceQualifier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/AceQualifier.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/AceType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/AceType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/AuditFlags.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/AuditFlags.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/CommonAce.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/CommonAce.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/ControlFlags.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/ControlFlags.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/GenericAce.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/GenericAce.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/GenericAcl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/GenericAcl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/GenericSecurityDescriptor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/GenericSecurityDescriptor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/InheritanceFlags.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/InheritanceFlags.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/KnownAce.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/KnownAce.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/ObjectAce.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/ObjectAce.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/ObjectAceFlags.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/ObjectAceFlags.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/PropagationFlags.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/PropagationFlags.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/QualifiedAce.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/QualifiedAce.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/RawAcl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/RawAcl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/RawSecurityDescriptor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/RawSecurityDescriptor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/SddlAccessRight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/SddlAccessRight.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/IdentityReference.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/IdentityReference.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/NTAccount.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/NTAccount.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/SecurityIdentifier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/SecurityIdentifier.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/WellKnownAccount.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/WellKnownAccount.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/WellKnownSidType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/WellKnownSidType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.FileSystems/SetupHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.FileSystems/SetupHelper.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/AttributeDefinitionRecord.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/AttributeDefinitionRecord.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/AttributeDefinitions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/AttributeDefinitions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/AttributeList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/AttributeList.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/AttributeListRecord.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/AttributeListRecord.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/AttributeRecord.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/AttributeRecord.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/AttributeReference.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/AttributeReference.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/AttributeType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/AttributeType.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/BiosParameterBlock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/BiosParameterBlock.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/Bitmap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/Bitmap.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/ClusterBitmap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/ClusterBitmap.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/ClusterStream.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/ClusterStream.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/CompressedClusterStream.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/CompressedClusterStream.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/CookedDataRun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/CookedDataRun.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/CookedDataRuns.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/CookedDataRuns.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/DataRun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/DataRun.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/Directory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/Directory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/DirectoryEntry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/DirectoryEntry.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/File.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/File.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/FileNameRecord.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/FileNameRecord.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/FileRecord.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/FileRecord.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/FileRecordReference.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/FileRecordReference.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/FileSystemFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/FileSystemFactory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/FixupRecordBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/FixupRecordBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/GenericFixupRecord.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/GenericFixupRecord.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/Index.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/Index.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/IndexBlock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/IndexBlock.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/IndexEntry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/IndexEntry.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/IndexHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/IndexHeader.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/IndexNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/IndexNode.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/IndexRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/IndexRoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/IndexView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/IndexView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/Internals/AttributeFlags.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/Internals/AttributeFlags.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/Internals/AttributeListAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/Internals/AttributeListAttribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/Internals/AttributeListEntry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/Internals/AttributeListEntry.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/Internals/EntryState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/Internals/EntryState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/Internals/EntryStates.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/Internals/EntryStates.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/Internals/FileNameAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/Internals/FileNameAttribute.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/Internals/GenericAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/Internals/GenericAttribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/Internals/MasterFileTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/Internals/MasterFileTable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/Internals/MasterFileTableEntry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/Internals/MasterFileTableEntry.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/Internals/MasterFileTableEntryFlags.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/Internals/MasterFileTableEntryFlags.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/Internals/MasterFileTableRecord.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/Internals/MasterFileTableRecord.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/Internals/MasterFileTableRecordFlags.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/Internals/MasterFileTableRecordFlags.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/Internals/MasterFileTableReference.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/Internals/MasterFileTableReference.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/Internals/NtfsFileAttributes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/Internals/NtfsFileAttributes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/Internals/NtfsNamespace.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/Internals/NtfsNamespace.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/Internals/StandardInformationAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/Internals/StandardInformationAttribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/Internals/UnknownAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/Internals/UnknownAttribute.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/LZNT1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/LZNT1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/LzWindowDictionary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/LzWindowDictionary.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/MasterFileTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/MasterFileTable.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/NewFileOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/NewFileOptions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/NonResidentAttributeBuffer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/NonResidentAttributeBuffer.cs" afterDir="false" />
@@ -256,6 +248,7 @@
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/NonResidentDataBuffer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/NonResidentDataBuffer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsAttribute.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsAttributeBuffer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsAttributeBuffer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsFileStream.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsFileStream.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsFileSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsFileSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsFileSystemChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsFileSystemChecker.cs" afterDir="false" />
@@ -263,6 +256,7 @@
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsFormatter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsFormatter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsOptions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsStream.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsStream.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsTransaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsTransaction.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/ObjectId.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/ObjectId.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/ObjectIdRecord.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/ObjectIdRecord.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/ObjectIds.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/ObjectIds.cs" afterDir="false" />
@@ -274,11 +268,13 @@
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/SecurityDescriptor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/SecurityDescriptor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/SecurityDescriptorRecord.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/SecurityDescriptorRecord.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/SecurityDescriptors.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/SecurityDescriptors.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/ShortFileNameOption.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/ShortFileNameOption.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/SparseClusterStream.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/SparseClusterStream.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/StandardInformation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/StandardInformation.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/StructuredNtfsAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/StructuredNtfsAttribute.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/UpperCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/UpperCase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/VolumeInformation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/VolumeInformation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/VolumeInformationFlags.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/VolumeInformationFlags.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Ntfs/VolumeName.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Ntfs/VolumeName.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Streams/AligningStream.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Streams/AligningStream.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Streams/Block/Block.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Streams/Block/Block.cs" afterDir="false" />
@@ -304,10 +300,13 @@
       <change beforePath="$PROJECT_DIR$/DiscUtils.Streams/BuiltStream.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Streams/BuiltStream.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Streams/CircularStream.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Streams/CircularStream.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Streams/ConcatStream.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Streams/ConcatStream.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Streams/DiscUtils.Streams.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Streams/DiscUtils.Streams.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Streams/IByteArraySerializable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Streams/IByteArraySerializable.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Streams/LengthWrappingStream.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Streams/LengthWrappingStream.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Streams/MappedStream.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Streams/MappedStream.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Streams/MirrorStream.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Streams/MirrorStream.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Streams/PositionWrappingStream.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Streams/PositionWrappingStream.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Streams/PumpProgressEventArgs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Streams/PumpProgressEventArgs.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Streams/ReaderWriter/BigEndianDataReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Streams/ReaderWriter/BigEndianDataReader.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Streams/ReaderWriter/BigEndianDataWriter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Streams/ReaderWriter/BigEndianDataWriter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Streams/ReaderWriter/DataReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Streams/ReaderWriter/DataReader.cs" afterDir="false" />
@@ -322,6 +321,7 @@
       <change beforePath="$PROJECT_DIR$/DiscUtils.Streams/StreamPump.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Streams/StreamPump.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Streams/StripedStream.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Streams/StripedStream.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Streams/SubStream.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Streams/SubStream.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Streams/System/Func.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Streams/ThreadSafeStream.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Streams/ThreadSafeStream.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Streams/Util/BitCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Streams/Util/BitCounter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Streams/Util/EndianUtilities.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Streams/Util/EndianUtilities.cs" afterDir="false" />
@@ -333,7 +333,8 @@
       <change beforePath="$PROJECT_DIR$/DiscUtils.Streams/Util/StreamUtilities.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Streams/Util/StreamUtilities.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Streams/WrappingMappedStream.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Streams/WrappingMappedStream.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Streams/WrappingStream.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Streams/WrappingStream.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscUtils.Test/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Test/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Streams/ZeroStream.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Streams/ZeroStream.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Vhd/DiscUtils.Vhd.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Vhd/DiscUtils.Vhd.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Vhd/Disk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Vhd/Disk.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Vhd/DiskBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Vhd/DiskBuilder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Vhd/DiskExtent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Vhd/DiskExtent.cs" afterDir="false" />
@@ -344,6 +345,7 @@
       <change beforePath="$PROJECT_DIR$/DiscUtils.Vhd/DynamicHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Vhd/DynamicHeader.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Vhd/DynamicStream.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Vhd/DynamicStream.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Vhd/FileChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Vhd/FileChecker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiscUtils.Vhd/FileType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Vhd/FileType.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Vhd/Footer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Vhd/Footer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Vhd/Header.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Vhd/Header.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscUtils.Vhd/ParentLocator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiscUtils.Vhd/ParentLocator.cs" afterDir="false" />
@@ -362,57 +364,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/WellKnownAccount.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/SecurityIdentifier.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/WellKnownSidType.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/IdentityReference.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/NTAccount.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/ControlFlags.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/AceType.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/AceFlags.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/SddlAccessRight.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/KnownAce.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/AuditFlags.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/InheritanceFlags.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/PropagationFlags.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/GenericAce.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/AceQualifier.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/QualifiedAce.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/ObjectAceFlags.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/AceEnumerator.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/GenericAcl.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/AccessControlSections.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/GenericSecurityDescriptor.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/CommonAce.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/ObjectAce.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/RawAcl.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/WindowsSecurity/AccessControl/RawSecurityDescriptor.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsFormatter.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Core/IWindowsFileSystem.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/NewFileOptions.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/SecurityDescriptor.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/SecurityDescriptors.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Core/DiscUtils.Core.csproj" />
-        <option value="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/WellKnownAccount.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsFileSystem.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/Quotas.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Test/Program.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Core/Compression/ZlibBuffer.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/NtfsAttributeBuffer.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Ntfs/NonResidentDataBuffer.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/AceEnumerator.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/CommonAce.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/GenericAce.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/GenericAcl.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/GenericSecurityDescriptor.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/KnownAce.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/ObjectAce.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/QualifiedAce.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/RawAcl.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/RawSecurityDescriptor.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/AccessControl/SddlAccessRight.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/NTAccount.cs" />
-        <option value="$PROJECT_DIR$/DiscUtils.Core/WindowsSecurity/SecurityIdentifier.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Streams/Builder/StreamBuilder.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Streams/ReaderWriter/BigEndianDataReader.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Streams/ReaderWriter/BigEndianDataWriter.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Streams/ReaderWriter/DataReader.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Streams/ReaderWriter/DataWriter.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Streams/ReaderWriter/LittleEndianDataReader.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Streams/Util/BitCounter.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Streams/Util/EndianUtilities.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Streams/Util/MathUtilities.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Streams/Util/Numbers.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Streams/Util/Ownership.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Streams/Util/Range.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Streams/Util/Sizes.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Streams/Util/StreamUtilities.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Streams/AligningStream.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Streams/BuiltStream.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Streams/CircularStream.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Streams/ConcatStream.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Streams/IByteArraySerializable.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Streams/LengthWrappingStream.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Streams/MappedStream.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Streams/MirrorStream.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Streams/PositionWrappingStream.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Streams/PumpProgressEventArgs.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Streams/SnapshotStream.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Streams/SparseMemoryBuffer.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Streams/SparseMemoryStream.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Streams/SparseStream.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Streams/StreamBuffer.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Streams/StreamExtent.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Streams/StreamPump.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Streams/StripedStream.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Streams/SubStream.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Streams/ThreadSafeStream.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Streams/WrappingMappedStream.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Streams/WrappingStream.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Streams/ZeroStream.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Vhd/Disk.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Vhd/DiskBuilder.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Vhd/DiskExtent.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Vhd/DiskFactory.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Vhd/DiskImageFile.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Vhd/DiskImageFileInfo.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Vhd/DynamicDiskBuilder.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Vhd/DynamicHeader.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Vhd/DynamicStream.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Vhd/FileChecker.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Vhd/FileType.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Vhd/Footer.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Vhd/Header.cs" />
+        <option value="$PROJECT_DIR$/DiscUtils.Vhd/ParentLocator.cs" />
       </list>
     </option>
   </component>
@@ -482,121 +484,121 @@
       <screen x="36" y="0" width="1330" height="768" />
     </state>
     <state x="495" y="142" key="FileChooserDialogImpl/36.0.1330.768@36.0.1330.768" timestamp="1602511472353" />
-    <state width="1877" height="379" key="GridCell.Tab.0.bottom" timestamp="1602562470887">
+    <state width="1877" height="379" key="GridCell.Tab.0.bottom" timestamp="1602565212844">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1874" height="367" key="GridCell.Tab.0.bottom/0.0.1920.1044@0.0.1920.1044" timestamp="1602534339198" />
-    <state width="1877" height="379" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1602562470887" />
+    <state width="1877" height="379" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1602565212844" />
     <state width="1284" height="255" key="GridCell.Tab.0.bottom/36.0.1330.768@36.0.1330.768" timestamp="1602561461290" />
-    <state width="1877" height="379" key="GridCell.Tab.0.center" timestamp="1602562470887">
+    <state width="1877" height="379" key="GridCell.Tab.0.center" timestamp="1602565212844">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1874" height="367" key="GridCell.Tab.0.center/0.0.1920.1044@0.0.1920.1044" timestamp="1602534339198" />
-    <state width="1877" height="379" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1602562470887" />
+    <state width="1877" height="379" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1602565212844" />
     <state width="1284" height="255" key="GridCell.Tab.0.center/36.0.1330.768@36.0.1330.768" timestamp="1602561461289" />
-    <state width="1877" height="379" key="GridCell.Tab.0.left" timestamp="1602562470887">
+    <state width="1877" height="379" key="GridCell.Tab.0.left" timestamp="1602565212844">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1874" height="367" key="GridCell.Tab.0.left/0.0.1920.1044@0.0.1920.1044" timestamp="1602534339198" />
-    <state width="1877" height="379" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1602562470887" />
+    <state width="1877" height="379" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1602565212844" />
     <state width="1284" height="255" key="GridCell.Tab.0.left/36.0.1330.768@36.0.1330.768" timestamp="1602561461289" />
-    <state width="1877" height="379" key="GridCell.Tab.0.right" timestamp="1602562470887">
+    <state width="1877" height="379" key="GridCell.Tab.0.right" timestamp="1602565212844">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1874" height="367" key="GridCell.Tab.0.right/0.0.1920.1044@0.0.1920.1044" timestamp="1602534339198" />
-    <state width="1877" height="379" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1602562470887" />
+    <state width="1877" height="379" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1602565212844" />
     <state width="1284" height="255" key="GridCell.Tab.0.right/36.0.1330.768@36.0.1330.768" timestamp="1602561461289" />
-    <state width="1877" height="379" key="GridCell.Tab.1.bottom" timestamp="1602562470887">
+    <state width="1877" height="379" key="GridCell.Tab.1.bottom" timestamp="1602565212844">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1874" height="367" key="GridCell.Tab.1.bottom/0.0.1920.1044@0.0.1920.1044" timestamp="1602534340198" />
-    <state width="1877" height="379" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1602562470887" />
+    <state width="1877" height="379" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1602565212844" />
     <state width="1284" height="255" key="GridCell.Tab.1.bottom/36.0.1330.768@36.0.1330.768" timestamp="1602561461290" />
-    <state width="1877" height="379" key="GridCell.Tab.1.center" timestamp="1602562470887">
+    <state width="1877" height="379" key="GridCell.Tab.1.center" timestamp="1602565212844">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1874" height="367" key="GridCell.Tab.1.center/0.0.1920.1044@0.0.1920.1044" timestamp="1602534340197" />
-    <state width="1877" height="379" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1602562470887" />
+    <state width="1877" height="379" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1602565212844" />
     <state width="1284" height="255" key="GridCell.Tab.1.center/36.0.1330.768@36.0.1330.768" timestamp="1602561461290" />
-    <state width="1877" height="379" key="GridCell.Tab.1.left" timestamp="1602562470887">
+    <state width="1877" height="379" key="GridCell.Tab.1.left" timestamp="1602565212844">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1874" height="367" key="GridCell.Tab.1.left/0.0.1920.1044@0.0.1920.1044" timestamp="1602534340197" />
-    <state width="1877" height="379" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1602562470887" />
+    <state width="1877" height="379" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1602565212844" />
     <state width="1284" height="255" key="GridCell.Tab.1.left/36.0.1330.768@36.0.1330.768" timestamp="1602561461290" />
-    <state width="1877" height="379" key="GridCell.Tab.1.right" timestamp="1602562470887">
+    <state width="1877" height="379" key="GridCell.Tab.1.right" timestamp="1602565212844">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1874" height="367" key="GridCell.Tab.1.right/0.0.1920.1044@0.0.1920.1044" timestamp="1602534340198" />
-    <state width="1877" height="379" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1602562470887" />
+    <state width="1877" height="379" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1602565212844" />
     <state width="1284" height="255" key="GridCell.Tab.1.right/36.0.1330.768@36.0.1330.768" timestamp="1602561461290" />
-    <state width="1877" height="379" key="GridCell.Tab.2.bottom" timestamp="1602562470887">
+    <state width="1877" height="379" key="GridCell.Tab.2.bottom" timestamp="1602565212844">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1874" height="367" key="GridCell.Tab.2.bottom/0.0.1920.1044@0.0.1920.1044" timestamp="1602534339200" />
-    <state width="1877" height="379" key="GridCell.Tab.2.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1602562470887" />
+    <state width="1877" height="379" key="GridCell.Tab.2.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1602565212844" />
     <state width="1284" height="255" key="GridCell.Tab.2.bottom/36.0.1330.768@36.0.1330.768" timestamp="1602561461291" />
-    <state width="1877" height="379" key="GridCell.Tab.2.center" timestamp="1602562470887">
+    <state width="1877" height="379" key="GridCell.Tab.2.center" timestamp="1602565212844">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1874" height="367" key="GridCell.Tab.2.center/0.0.1920.1044@0.0.1920.1044" timestamp="1602534339199" />
-    <state width="1877" height="379" key="GridCell.Tab.2.center/0.0.1920.1050@0.0.1920.1050" timestamp="1602562470887" />
+    <state width="1877" height="379" key="GridCell.Tab.2.center/0.0.1920.1050@0.0.1920.1050" timestamp="1602565212844" />
     <state width="1284" height="255" key="GridCell.Tab.2.center/36.0.1330.768@36.0.1330.768" timestamp="1602561461291" />
-    <state width="1877" height="379" key="GridCell.Tab.2.left" timestamp="1602562470887">
+    <state width="1877" height="379" key="GridCell.Tab.2.left" timestamp="1602565212844">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1874" height="367" key="GridCell.Tab.2.left/0.0.1920.1044@0.0.1920.1044" timestamp="1602534339199" />
-    <state width="1877" height="379" key="GridCell.Tab.2.left/0.0.1920.1050@0.0.1920.1050" timestamp="1602562470887" />
+    <state width="1877" height="379" key="GridCell.Tab.2.left/0.0.1920.1050@0.0.1920.1050" timestamp="1602565212844" />
     <state width="1284" height="255" key="GridCell.Tab.2.left/36.0.1330.768@36.0.1330.768" timestamp="1602561461291" />
-    <state width="1877" height="379" key="GridCell.Tab.2.right" timestamp="1602562470887">
+    <state width="1877" height="379" key="GridCell.Tab.2.right" timestamp="1602565212844">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1874" height="367" key="GridCell.Tab.2.right/0.0.1920.1044@0.0.1920.1044" timestamp="1602534339200" />
-    <state width="1877" height="379" key="GridCell.Tab.2.right/0.0.1920.1050@0.0.1920.1050" timestamp="1602562470887" />
+    <state width="1877" height="379" key="GridCell.Tab.2.right/0.0.1920.1050@0.0.1920.1050" timestamp="1602565212844" />
     <state width="1284" height="255" key="GridCell.Tab.2.right/36.0.1330.768@36.0.1330.768" timestamp="1602561461291" />
-    <state width="1877" height="379" key="GridCell.Tab.3.bottom" timestamp="1602562470888">
+    <state width="1877" height="379" key="GridCell.Tab.3.bottom" timestamp="1602565212844">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1874" height="367" key="GridCell.Tab.3.bottom/0.0.1920.1044@0.0.1920.1044" timestamp="1602534339189" />
-    <state width="1877" height="379" key="GridCell.Tab.3.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1602562470888" />
+    <state width="1877" height="379" key="GridCell.Tab.3.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1602565212844" />
     <state width="1284" height="255" key="GridCell.Tab.3.bottom/36.0.1330.768@36.0.1330.768" timestamp="1602561461292" />
-    <state width="1877" height="379" key="GridCell.Tab.3.center" timestamp="1602562470888">
+    <state width="1877" height="379" key="GridCell.Tab.3.center" timestamp="1602565212844">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1874" height="367" key="GridCell.Tab.3.center/0.0.1920.1044@0.0.1920.1044" timestamp="1602534339189" />
-    <state width="1877" height="379" key="GridCell.Tab.3.center/0.0.1920.1050@0.0.1920.1050" timestamp="1602562470888" />
+    <state width="1877" height="379" key="GridCell.Tab.3.center/0.0.1920.1050@0.0.1920.1050" timestamp="1602565212844" />
     <state width="1284" height="255" key="GridCell.Tab.3.center/36.0.1330.768@36.0.1330.768" timestamp="1602561461292" />
-    <state width="1877" height="379" key="GridCell.Tab.3.left" timestamp="1602562470888">
+    <state width="1877" height="379" key="GridCell.Tab.3.left" timestamp="1602565212844">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1874" height="367" key="GridCell.Tab.3.left/0.0.1920.1044@0.0.1920.1044" timestamp="1602534339189" />
-    <state width="1877" height="379" key="GridCell.Tab.3.left/0.0.1920.1050@0.0.1920.1050" timestamp="1602562470888" />
+    <state width="1877" height="379" key="GridCell.Tab.3.left/0.0.1920.1050@0.0.1920.1050" timestamp="1602565212844" />
     <state width="1284" height="255" key="GridCell.Tab.3.left/36.0.1330.768@36.0.1330.768" timestamp="1602561461292" />
-    <state width="1877" height="379" key="GridCell.Tab.3.right" timestamp="1602562470888">
+    <state width="1877" height="379" key="GridCell.Tab.3.right" timestamp="1602565212844">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1874" height="367" key="GridCell.Tab.3.right/0.0.1920.1044@0.0.1920.1044" timestamp="1602534339189" />
-    <state width="1877" height="379" key="GridCell.Tab.3.right/0.0.1920.1050@0.0.1920.1050" timestamp="1602562470888" />
+    <state width="1877" height="379" key="GridCell.Tab.3.right/0.0.1920.1050@0.0.1920.1050" timestamp="1602565212844" />
     <state width="1284" height="255" key="GridCell.Tab.3.right/36.0.1330.768@36.0.1330.768" timestamp="1602561461292" />
-    <state width="1877" height="379" key="GridCell.Tab.4.bottom" timestamp="1602562470888">
+    <state width="1877" height="379" key="GridCell.Tab.4.bottom" timestamp="1602565212845">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="379" key="GridCell.Tab.4.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1602562470888" />
+    <state width="1877" height="379" key="GridCell.Tab.4.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1602565212845" />
     <state width="1284" height="255" key="GridCell.Tab.4.bottom/36.0.1330.768@36.0.1330.768" timestamp="1602561461293" />
-    <state width="1877" height="379" key="GridCell.Tab.4.center" timestamp="1602562470888">
+    <state width="1877" height="379" key="GridCell.Tab.4.center" timestamp="1602565212845">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="379" key="GridCell.Tab.4.center/0.0.1920.1050@0.0.1920.1050" timestamp="1602562470888" />
+    <state width="1877" height="379" key="GridCell.Tab.4.center/0.0.1920.1050@0.0.1920.1050" timestamp="1602565212845" />
     <state width="1284" height="255" key="GridCell.Tab.4.center/36.0.1330.768@36.0.1330.768" timestamp="1602561461293" />
-    <state width="1877" height="379" key="GridCell.Tab.4.left" timestamp="1602562470888">
+    <state width="1877" height="379" key="GridCell.Tab.4.left" timestamp="1602565212845">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="379" key="GridCell.Tab.4.left/0.0.1920.1050@0.0.1920.1050" timestamp="1602562470888" />
+    <state width="1877" height="379" key="GridCell.Tab.4.left/0.0.1920.1050@0.0.1920.1050" timestamp="1602565212845" />
     <state width="1284" height="255" key="GridCell.Tab.4.left/36.0.1330.768@36.0.1330.768" timestamp="1602561461292" />
-    <state width="1877" height="379" key="GridCell.Tab.4.right" timestamp="1602562470888">
+    <state width="1877" height="379" key="GridCell.Tab.4.right" timestamp="1602565212845">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="379" key="GridCell.Tab.4.right/0.0.1920.1050@0.0.1920.1050" timestamp="1602562470888" />
+    <state width="1877" height="379" key="GridCell.Tab.4.right/0.0.1920.1050@0.0.1920.1050" timestamp="1602565212845" />
     <state width="1284" height="255" key="GridCell.Tab.4.right/36.0.1330.768@36.0.1330.768" timestamp="1602561461293" />
     <state x="301" y="119" key="Rider.ProjectTemplateDialog.Size" timestamp="1602510534533">
       <screen x="36" y="0" width="1330" height="768" />

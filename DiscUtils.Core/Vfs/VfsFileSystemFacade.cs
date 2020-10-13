@@ -1,25 +1,3 @@
-//
-// Copyright (c) 2008-2011, Kenneth Bell
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and/or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-
 using System;
 using System.IO;
 using DiscUtils.Streams;
@@ -50,50 +28,32 @@ namespace DiscUtils.Core.Vfs
         /// Indicates whether the file system is read-only or read-write.
         /// </summary>
         /// <returns>true if the file system is read-write.</returns>
-        public override bool CanWrite
-        {
-            get { return _wrapped.CanWrite; }
-        }
+        public override bool CanWrite => _wrapped.CanWrite;
 
         /// <summary>
         /// Gets a friendly name for the file system.
         /// </summary>
-        public override string FriendlyName
-        {
-            get { return _wrapped.FriendlyName; }
-        }
+        public override string FriendlyName => _wrapped.FriendlyName;
 
         /// <summary>
         /// Gets a value indicating whether the file system is thread-safe.
         /// </summary>
-        public override bool IsThreadSafe
-        {
-            get { return _wrapped.IsThreadSafe; }
-        }
+        public override bool IsThreadSafe => _wrapped.IsThreadSafe;
 
         /// <summary>
         /// Gets the file system options, which can be modified.
         /// </summary>
-        public override DiscFileSystemOptions Options
-        {
-            get { return _wrapped.Options; }
-        }
+        public override DiscFileSystemOptions Options => _wrapped.Options;
 
         /// <summary>
         /// Gets the root directory of the file system.
         /// </summary>
-        public override DiscDirectoryInfo Root
-        {
-            get { return new DiscDirectoryInfo(this, string.Empty); }
-        }
+        public override DiscDirectoryInfo Root => new DiscDirectoryInfo(this, string.Empty);
 
         /// <summary>
         /// Gets the volume label.
         /// </summary>
-        public override string VolumeLabel
-        {
-            get { return _wrapped.VolumeLabel; }
-        }
+        public override string VolumeLabel => _wrapped.VolumeLabel;
 
         /// <summary>
         /// Copies an existing file to a new file.
@@ -514,26 +474,17 @@ namespace DiscUtils.Core.Vfs
         /// <summary>
         /// Size of the Filesystem in bytes
         /// </summary>
-        public override long Size
-        {
-            get { return _wrapped.Size; }
-        }
- 
+        public override long Size => _wrapped.Size;
+
         /// <summary>
         /// Used space of the Filesystem in bytes
         /// </summary>
-        public override long UsedSpace
-        {
-            get { return _wrapped.UsedSpace; }
-        }
- 
+        public override long UsedSpace => _wrapped.UsedSpace;
+
         /// <summary>
         /// Available space of the Filesystem in bytes
         /// </summary>
-        public override long AvailableSpace
-        {
-            get { return _wrapped.AvailableSpace; }
-        }
+        public override long AvailableSpace => _wrapped.AvailableSpace;
 
         /// <summary>
         /// Provides access to the actual file system implementation.

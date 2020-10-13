@@ -1,25 +1,3 @@
-//
-// Copyright (c) 2008-2011, Kenneth Bell
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and/or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-
 using System;
 using System.Globalization;
 using DiscUtils.Core.Partitions;
@@ -75,34 +53,22 @@ namespace DiscUtils.Core
         /// <summary>
         /// Gets the disk geometry of the underlying storage medium (as used in BIOS calls), may be null.
         /// </summary>
-        public override Geometry BiosGeometry
-        {
-            get { return _disk.BiosGeometry; }
-        }
+        public override Geometry BiosGeometry => _disk.BiosGeometry;
 
         /// <summary>
         /// Gets the one-byte BIOS type for this volume, which indicates the content.
         /// </summary>
-        public override byte BiosType
-        {
-            get { return Partition == null ? (byte)0 : Partition.BiosType; }
-        }
+        public override byte BiosType => Partition == null ? (byte)0 : Partition.BiosType;
 
         /// <summary>
         /// Gets the unique identity of the disk containing the volume, if known.
         /// </summary>
-        public Guid DiskIdentity
-        {
-            get { return VolumeType != PhysicalVolumeType.EntireDisk ? _disk.Partitions.DiskGuid : Guid.Empty; }
-        }
+        public Guid DiskIdentity => VolumeType != PhysicalVolumeType.EntireDisk ? _disk.Partitions.DiskGuid : Guid.Empty;
 
         /// <summary>
         /// Gets the signature of the disk containing the volume (only valid for partition-type volumes).
         /// </summary>
-        public int DiskSignature
-        {
-            get { return VolumeType != PhysicalVolumeType.EntireDisk ? _disk.Signature : 0; }
-        }
+        public int DiskSignature => VolumeType != PhysicalVolumeType.EntireDisk ? _disk.Signature : 0;
 
         /// <summary>
         /// Gets the stable identity for this physical volume.
@@ -143,10 +109,7 @@ namespace DiscUtils.Core
         /// <summary>
         /// Gets the size of the volume, in bytes.
         /// </summary>
-        public override long Length
-        {
-            get { return Partition == null ? _disk.Capacity : Partition.SectorCount * _disk.SectorSize; }
-        }
+        public override long Length => Partition == null ? _disk.Capacity : Partition.SectorCount * _disk.SectorSize;
 
         /// <summary>
         /// Gets the underlying partition (if any).
@@ -173,18 +136,12 @@ namespace DiscUtils.Core
         /// <summary>
         /// Gets the disk geometry of the underlying storage medium, if any (may be null).
         /// </summary>
-        public override Geometry PhysicalGeometry
-        {
-            get { return _disk.Geometry; }
-        }
+        public override Geometry PhysicalGeometry => _disk.Geometry;
 
         /// <summary>
         /// Gets the offset of this volume in the underlying storage medium, if any (may be Zero).
         /// </summary>
-        public override long PhysicalStartSector
-        {
-            get { return VolumeType == PhysicalVolumeType.EntireDisk ? 0 : Partition.FirstSector; }
-        }
+        public override long PhysicalStartSector => VolumeType == PhysicalVolumeType.EntireDisk ? 0 : Partition.FirstSector;
 
         /// <summary>
         /// Gets the type of the volume.

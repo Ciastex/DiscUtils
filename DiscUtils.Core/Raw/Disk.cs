@@ -1,25 +1,3 @@
-//
-// Copyright (c) 2008-2011, Kenneth Bell
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and/or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -87,10 +65,7 @@ namespace DiscUtils.Core.Raw
         /// <summary>
         /// Gets the capacity of the disk (in bytes).
         /// </summary>
-        public override long Capacity
-        {
-            get { return _file.Capacity; }
-        }
+        public override long Capacity => _file.Capacity;
 
         /// <summary>
         /// Gets the content of the disk as a stream.
@@ -98,36 +73,24 @@ namespace DiscUtils.Core.Raw
         /// <remarks>Note the returned stream is not guaranteed to be at any particular position.  The actual position
         /// will depend on the last partition table/file system activity, since all access to the disk contents pass
         /// through a single stream instance.  Set the stream position before accessing the stream.</remarks>
-        public override SparseStream Content
-        {
-            get { return _file.Content; }
-        }
+        public override SparseStream Content => _file.Content;
 
         /// <summary>
         /// Gets the type of disk represented by this object.
         /// </summary>
-        public override VirtualDiskClass DiskClass
-        {
-            get { return _file.DiskType; }
-        }
+        public override VirtualDiskClass DiskClass => _file.DiskType;
 
         /// <summary>
         /// Gets information about the type of disk.
         /// </summary>
         /// <remarks>This property provides access to meta-data about the disk format, for example whether the
         /// BIOS geometry is preserved in the disk file.</remarks>
-        public override VirtualDiskTypeInfo DiskTypeInfo
-        {
-            get { return DiskFactory.MakeDiskTypeInfo(); }
-        }
+        public override VirtualDiskTypeInfo DiskTypeInfo => DiskFactory.MakeDiskTypeInfo();
 
         /// <summary>
         /// Gets the geometry of the disk.
         /// </summary>
-        public override Geometry Geometry
-        {
-            get { return _file.Geometry; }
-        }
+        public override Geometry Geometry => _file.Geometry;
 
         /// <summary>
         /// Gets the layers that make up the disk.

@@ -107,31 +107,20 @@ namespace DiscUtils.Ntfs
 #endif
         }
 
-        private bool CreateShortNames
-        {
-            get
-            {
-                return _context.Options.ShortNameCreation == ShortFileNameOption.Enabled
-                       || (_context.Options.ShortNameCreation == ShortFileNameOption.UseVolumeFlag
-                           && (_volumeInfo.Flags & VolumeInformationFlags.DisableShortNameCreation) == 0);
-            }
-        }
+        private bool CreateShortNames =>
+            _context.Options.ShortNameCreation == ShortFileNameOption.Enabled
+            || (_context.Options.ShortNameCreation == ShortFileNameOption.UseVolumeFlag
+                && (_volumeInfo.Flags & VolumeInformationFlags.DisableShortNameCreation) == 0);
 
         /// <summary>
         /// Gets the friendly name for the file system.
         /// </summary>
-        public override string FriendlyName
-        {
-            get { return "Microsoft NTFS"; }
-        }
+        public override string FriendlyName => "Microsoft NTFS";
 
         /// <summary>
         /// Gets the options that control how the file system is interpreted.
         /// </summary>
-        public NtfsOptions NtfsOptions
-        {
-            get { return (NtfsOptions)Options; }
-        }
+        public NtfsOptions NtfsOptions => (NtfsOptions)Options;
 
         /// <summary>
         /// Gets the volume label.
@@ -149,31 +138,22 @@ namespace DiscUtils.Ntfs
         /// <summary>
         /// Indicates if the file system supports write operations.
         /// </summary>
-        public override bool CanWrite
-        {
+        public override bool CanWrite =>
+
             // For now, we don't...
-            get { return !_context.ReadOnly; }
-        }
+            !_context.ReadOnly;
 
         /// <summary>
         /// Gets the size of each cluster (in bytes).
         /// </summary>
-        public long ClusterSize
-        {
-            get { return _context.BiosParameterBlock.BytesPerCluster; }
-        }
+        public long ClusterSize => _context.BiosParameterBlock.BytesPerCluster;
 
         /// <summary>
         /// Gets the total number of clusters managed by the file system.
         /// </summary>
-        public long TotalClusters
-        {
-            get
-            {
-                return MathUtilities.Ceil(_context.BiosParameterBlock.TotalSectors64,
-                    _context.BiosParameterBlock.SectorsPerCluster);
-            }
-        }
+        public long TotalClusters =>
+            MathUtilities.Ceil(_context.BiosParameterBlock.TotalSectors64,
+                _context.BiosParameterBlock.SectorsPerCluster);
 
         /// <summary>
         /// Copies an existing file to a new file, allowing overwriting of an existing file.
@@ -2382,11 +2362,8 @@ namespace DiscUtils.Ntfs
         /// <summary>
         /// Size of the Filesystem in bytes
         /// </summary>
-        public override long Size
-        {
-            get { return TotalClusters* ClusterSize;  }
-        }
- 
+        public override long Size => TotalClusters* ClusterSize;
+
         /// <summary>
         /// Used space of the Filesystem in bytes
         /// </summary>
@@ -2411,6 +2388,6 @@ namespace DiscUtils.Ntfs
         /// <summary>
         /// Available space of the Filesystem in bytes
         /// </summary>
-        public override long AvailableSpace { get { return Size - UsedSpace; } }
+        public override long AvailableSpace => Size - UsedSpace;
     }
 }

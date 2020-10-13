@@ -2,7 +2,6 @@
   <PropertyGroup>
     <Description>DiscUtils Streams</Description>
     <Authors>Kenneth Bell;LordMike;Bianco Veigel</Authors>
-    <PackageTags>DiscUtils;Streams</PackageTags>
 
     <TargetFramework>netstandard2.0</TargetFramework>
     

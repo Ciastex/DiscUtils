@@ -1,25 +1,3 @@
-//
-// Copyright (c) 2008-2011, Kenneth Bell
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the "Software"),
-// to deal in the Software without restriction, including without limitation
-// the rights to use, copy, modify, merge, publish, distribute, sublicense,
-// and/or sell copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following conditions:
-//
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
-
 using System.Collections.Generic;
 using System.IO;
 using DiscUtils.Streams;
@@ -49,41 +27,27 @@ namespace DiscUtils.Ntfs
 
         public FileRecordReference BaseFile { get; set; }
 
-        public AttributeRecord FirstAttribute
-        {
-            get { return Attributes.Count > 0 ? Attributes[0] : null; }
-        }
+        public AttributeRecord FirstAttribute => Attributes.Count > 0 ? Attributes[0] : null;
 
         public FileRecordFlags Flags { get; set; }
 
         public ushort HardLinkCount { get; set; }
 
-        public bool IsMftRecord
-        {
-            get
-            {
-                return MasterFileTableIndex == MasterFileTable.MftIndex ||
-                       (BaseFile.MftIndex == MasterFileTable.MftIndex && BaseFile.SequenceNumber != 0);
-            }
-        }
+        public bool IsMftRecord =>
+            MasterFileTableIndex == MasterFileTable.MftIndex ||
+            (BaseFile.MftIndex == MasterFileTable.MftIndex && BaseFile.SequenceNumber != 0);
 
         public uint LoadedIndex { get; set; }
 
         public ulong LogFileSequenceNumber { get; private set; }
 
-        public uint MasterFileTableIndex
-        {
-            get { return _haveIndex ? _index : LoadedIndex; }
-        }
+        public uint MasterFileTableIndex => _haveIndex ? _index : LoadedIndex;
 
         public ushort NextAttributeId { get; private set; }
 
         public uint RealSize { get; private set; }
 
-        public FileRecordReference Reference
-        {
-            get { return new FileRecordReference(MasterFileTableIndex, SequenceNumber); }
-        }
+        public FileRecordReference Reference => new FileRecordReference(MasterFileTableIndex, SequenceNumber);
 
         public ushort SequenceNumber { get; set; }
 

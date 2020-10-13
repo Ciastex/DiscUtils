@@ -1,0 +1,2 @@
+Look, I just wanted NTFS to work on Linux in VHD containers, alright? Feel free to backport these to upstream if you care enough.  
+Thanks to Mono project for providing necessary Windows security classes - those are located in DiscUtils.Core.WindowsSecurity.
