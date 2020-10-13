@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Globalization;
 using System.IO;
+using System.Linq;
 using DiscUtils.Core.Internal;
 using DiscUtils.Streams;
 using DiscUtils.Streams.Util;
@@ -61,9 +62,19 @@ namespace DiscUtils.Core.Partitions
         {
             get
             {
-                return
-                    new ReadOnlyCollection<PartitionInfo>(Utilities.Map(GetAllEntries(),
-                        e => new GuidPartitionInfo(this, e)));
+                return new ReadOnlyCollection<PartitionInfo>(
+                    GetAllEntries()
+                        .Select(x => new GuidPartitionInfo(this, x))
+                        .Cast<PartitionInfo>()
+                        .ToList()
+                );
+                
+                // return new ReadOnlyCollection<PartitionInfo>(
+                //     Utilities.Map(
+                //         GetAllEntries(),
+                //         e => new GuidPartitionInfo(this, e)
+                //     )
+                // );
             }
         }
 
@@ -208,7 +219,8 @@ namespace DiscUtils.Core.Partitions
             EstablishReservedPartition(allEntries);
 
             // Fill the rest of the disk with the requested partition
-            long start = MathUtilities.RoundUp(FirstAvailableSector(allEntries), alignment / _diskGeometry.BytesPerSector);
+            long start = MathUtilities.RoundUp(FirstAvailableSector(allEntries),
+                alignment / _diskGeometry.BytesPerSector);
             long end = MathUtilities.RoundDown(FindLastFreeSector(start, allEntries) + 1,
                 alignment / _diskGeometry.BytesPerSector);
 
@@ -528,7 +540,8 @@ namespace DiscUtils.Core.Partitions
         private bool ReadEntries(GptHeader header)
         {
             _diskData.Position = header.PartitionEntriesLba * _diskGeometry.BytesPerSector;
-            _entryBuffer = StreamUtilities.ReadExact(_diskData, (int)(header.PartitionEntrySize * header.PartitionEntryCount));
+            _entryBuffer =
+                StreamUtilities.ReadExact(_diskData, (int)(header.PartitionEntrySize * header.PartitionEntryCount));
             if (header.EntriesCrc != CalcEntriesCrc())
             {
                 return false;
