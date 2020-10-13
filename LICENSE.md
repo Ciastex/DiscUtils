@@ -1,6 +1,6 @@
-Copyright (c) 2008-2011, Kenneth Bell
-Copyright (c) 2014, Quamotion
-Copyright (c) 2020, Ciastex
+Copyright (c) 2008-2011, Kenneth Bell  
+Copyright (c) 2014, Quamotion  
+Copyright (c) 2020, Ciastex  
 
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the "Software"),
@@ -26,17 +26,17 @@ DEALINGS IN THE SOFTWARE.
 
 ---
 
-LZNT1.cs:
-//
-// Contributions by bsobel:
-//   - Compression algorithm distantly derived from Puyo tools (BSD license)*
-//   - Decompression adjusted to support variety of block sizes
-//
-// (*) Puyo tools implements a different LZ-style algorithm
-//
+LZNT1.cs:  
+//  
+// Contributions by bsobel:  
+//   - Compression algorithm distantly derived from Puyo tools (BSD license)*  
+//   - Decompression adjusted to support variety of block sizes  
+//  
+// (*) Puyo tools implements a different LZ-style algorithm  
+//  
 
-LzWindowDictionary.cs:
-//
-// Contributed by bsobel:
-//   - Derived from Puyo tools (BSD license)
-//
+LzWindowDictionary.cs:  
+//  
+// Contributed by bsobel:  
+//   - Derived from Puyo tools (BSD license)  
+//  
