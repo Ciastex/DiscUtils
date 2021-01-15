@@ -12,7 +12,7 @@
     <Authors>Kenneth Bell;LordMike</Authors>
     <PackageTags>DiscUtils;VHD;VHDX;XVA;VMDK;DMG</PackageTags>
 
-    <TargetFramework>netstandard20</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>

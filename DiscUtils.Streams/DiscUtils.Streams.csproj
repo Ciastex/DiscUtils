@@ -3,7 +3,7 @@
     <Description>DiscUtils Streams</Description>
     <Authors>Kenneth Bell;LordMike;Bianco Veigel</Authors>
 
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     
     <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
